@@ -1,0 +1,151 @@
+/*
+Theme Name: manaten-wp
+Theme URI: http://manaten.net/
+Description: 
+Author: manaten
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, blue, white, two-columns, fixed-width, custom-header, custom-background, threaded-comments, sticky-post, translation-ready, microformats, rtl-language-support, editor-style, custom-menu
+Text Domain: manaten
+*/
+body {
+	margin:0; padding:0; border:0; outline:0; vertical-align:baseline;
+	font-family: "MS ゴシック";
+	font-size:90%;
+	background: #DDE8DB;
+	text-align: center;
+}
+
+a {
+	color: ;
+}
+
+div#bodyWrapper {
+	margin: 0 auto;
+	width: 1024px;
+}
+
+div#header {
+	background: #FFF url('images/header.gif') no-repeat;
+	width: 1024px;
+	height: 128px;
+	margin-top: 4px;
+
+	border-radius: 5px;
+	box-shadow: 0 0 10px #999;
+}
+
+div#menu {
+	background: #333;
+	margin-top: 4px;
+	padding: 5px 20px;
+	height: 16px;
+
+	border-radius: 5px;
+	box-shadow: 0 0 10px #999;
+}
+div#menu ul {
+	margin:0; padding:0;
+}
+div#menu ul li {
+	list-style: none;
+	float: left;
+	margin:0; padding:0;
+	margin-left: 16px;
+}
+div#menu ul li a {
+	font-size: 0%;
+	width: 100px;
+	height: 16px;
+	display: block;
+}
+div#menu ul li a.top {
+	background: url('images/icons.gif') no-repeat;
+	background-position: 0px 0px;
+}
+div#menu ul li a.blog {
+	background: url('images/icons.gif') no-repeat;
+	background-position: 0px -32px;
+}
+div#menu ul li a.bbs {
+	background: url('images/icons.gif') no-repeat;
+	background-position: 0px -16px;
+}
+div#menu ul li a.twitter {
+	background: url('images/icons.gif') no-repeat;
+	background-position: 0px -48px;
+}
+div#menu ul li a.gallery {
+	background: url('images/icons.gif') no-repeat;
+	background-position: 0px -64px;
+}
+div#menu ul li a:hover {
+	background-color: #3A645F;
+	border-radius: 3px;
+}
+
+div#content {
+	text-align: left;
+	background: #FFF;
+	margin-top: 4px;
+	padding: 16px 48px;
+
+	border-radius: 5px;
+	box-shadow: 0 0 10px #999;
+}
+div#contentLeft {
+	width: 600px;
+	min-height: 600px;
+	margin-right: 24px;
+	float: left;
+}
+div#contentRight {
+	width: 300px;
+	min-height: 600px;
+	float: right;
+}
+div#contentFooter {
+	width:100%;
+ 	clear: both;
+}
+div.topImage {
+	text-align: center;
+	margin: 20px;
+}
+
+div#footer {
+	background: #333;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding: 5px;
+	text-align: center;
+
+	font-size: 80%;
+	color: #FFF;
+
+	border-radius: 5px;
+	box-shadow: 0 0 10px #999;
+}
+
+h1 {
+	font-size: 120%;
+	font-weight: bold;
+	border: solid #3B988D;
+	border-width: 0 0 1px 3px;
+	padding: 2px 4px;
+	margin: 2px;
+}
+h2 {
+	font-size: 100%;
+	font-weight: bold;
+	border: solid #143221;
+	border-width: 0 0 1px 3px;
+	padding: 2px 4px;
+	margin: 2px;
+}
+
+div.contact {
+	margin-left: 24px;
+	font-size: 80%;
+}
