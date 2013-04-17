@@ -11,7 +11,7 @@ Text Domain: manaten
 */
 body {
 	margin:0; padding:0; border:0; outline:0; vertical-align:baseline;
-	font-family: "MS ゴシック";
+	font-family: "sans-serif";
 	font-size:90%;
 	background: #DDE8DB;
 	text-align: center;

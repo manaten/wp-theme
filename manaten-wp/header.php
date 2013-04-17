@@ -24,7 +24,7 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" href="http://manaten.net/style/style.css" type="text/css">
+<link rel="shortcut icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
@@ -49,7 +49,7 @@
 		<div id="menu">
 			<ul>
 				<li><a class="top" href="http://manaten.net"></a></li>
-				<li><a class="blog" href="http://blog.manaten.net"></a></li>
+				<li><a class="blog" href="http://manaten.net"></a></li>
 				<li><a class="gallery" href="http://manaten.net/index.php?gallery"></a></li>
 				<li><a class="bbs" href="http://dot.manaten.net"></a></li>
 				<li><a class="twitter" href="http://twitter.com/manaten"></a></li>
