@@ -1,21 +1,4 @@
-<?php
-/**
- * The loop that displays an attachment.
- *
- * The loop displays the posts and the post content. See
- * http://codex.wordpress.org/The_Loop to understand it and
- * http://codex.wordpress.org/Template_Tags to understand
- * the tags used in it.
- *
- * This can be overridden in child themes with loop-attachment.php.
- *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.2
- */
-?>
-
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<?php while ( have_posts() ) : the_post(); ?>
 
 				<?php if ( ! empty( $post->post_parent ) ) : ?>
 					<p class="page-title"><a href="<?php echo get_permalink( $post->post_parent ); ?>" title="<?php echo esc_attr( sprintf( __( 'Return to %s', 'twentyten' ), strip_tags( get_the_title( $post->post_parent ) ) ) ); ?>" rel="gallery"><?php

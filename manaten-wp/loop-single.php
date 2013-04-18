@@ -1,21 +1,4 @@
-<?php
-/**
- * The loop that displays a single post.
- *
- * The loop displays the posts and the post content. See
- * http://codex.wordpress.org/The_Loop to understand it and
- * http://codex.wordpress.org/Template_Tags to understand
- * the tags used in it.
- *
- * This can be overridden in child themes with loop-single.php.
- *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.2
- */
-?>
-
-<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+<?php while ( have_posts() ) : the_post(); ?>
 
 				<div id="nav-above" class="navigation">
 					<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentyten' ) . '</span> %title' ); ?></div>

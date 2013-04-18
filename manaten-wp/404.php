@@ -1,13 +1,4 @@
-<?php
-/**
- * The template for displaying 404 pages (Not Found).
- *
- * @package WordPress
- * @subpackage Twenty_Ten
- * @since Twenty Ten 1.0
- */
-
-get_header(); ?>
+<?php get_header(); ?>
 
 	<div id="container">
 		<div id="content" role="main">
