@@ -9,15 +9,14 @@
 		</div><!-- #nav-above -->
 
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h1 class="entry-title"><?php the_title(); ?></h1>
+			<h1 class="entry-title">
+				<span class="category-name"><?php echo get_the_category_list(' ') ?></span>
+				<?php the_title(); ?>
+			</h1>
 
 			<div class="entry-meta">
 				<?php twentyten_posted_on(); ?>
 			</div><!-- .entry-meta -->
-
-			<div class="entry-utility">
-				<?php twentyten_posted_in(); ?>
-			</div><!-- .entry-utility -->
 
 			<div class="entry-content">
 				<?php the_content(); ?>

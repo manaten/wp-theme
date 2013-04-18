@@ -4,13 +4,11 @@
 		<h1 class="page-title"><?php
 			printf( __( 'Category Archives: %s', 'twentyten' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 		?></h1>
-		<?php
-		 get_template_part( 'loop', 'tag' );
-		?>
+		<?php get_template_part( 'loop', 'tag' ); ?>
 	</div><!-- #content -->
 
 	<div id="contentRight">
-<?php get_sidebar(); ?>
+		<?php get_sidebar(); ?>
 	</div>
 	<div id="contentFooter"></div>
 </div><!-- #container -->
