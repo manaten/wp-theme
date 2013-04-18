@@ -29,7 +29,7 @@
 		<div id="menu">
 			<ul>
 				<li><a class="top" href="<?php bloginfo('url'); ?>"></a></li>
-				<li><a class="blog" href="<?php bloginfo('url'); ?>"></a></li>
+				<li><a class="blog" href="<?php bloginfo('url'); ?>/archives"></a></li>
 				<li><a class="gallery" href="<?php bloginfo('url'); ?>/gallery"></a></li>
 				<li><a class="bbs" href="http://dot.manaten.net"></a></li>
 				<li><a class="twitter" href="http://twitter.com/manaten"></a></li>
