@@ -8,10 +8,10 @@
 			<div class="entry-content">
 				<?php the_content(); ?>
 				<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
-			</div><!-- .entry-content -->
-		</div><!-- #post-## -->
-		<?php endwhile; // end of the loop. ?>
+			</div>
+		</div>
+		<?php endwhile; ?>
 
-	</div><!-- #content -->
-</div><!-- #container -->
+	</div>
+</div>
 <?php get_footer(); ?>

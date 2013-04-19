@@ -2,10 +2,10 @@
 <div id="content">
 	<div id="contentLeft">
 		<?php get_template_part( 'loop', 'index' ); ?>
-	</div><!-- #content -->
+	</div>
 	<div id="contentRight">
 		<?php get_sidebar(); ?>
 	</div>
 	<div id="contentFooter"></div>
-</div><!-- #container -->
+</div>
 <?php get_footer(); ?>

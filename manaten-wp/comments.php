@@ -19,8 +19,8 @@
 <div class="navigation">
 	<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments', 'twentyten' ) ); ?></div>
 	<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?></div>
-</div> <!-- .navigation -->
-<?php endif; // check for comment navigation ?>
+</div>
+<?php endif; ?>
 
 <ol class="commentlist">
 	<?php wp_list_comments( array( 'callback' => 'twentyten_comment' ) ); ?>
@@ -30,15 +30,15 @@
 <div class="navigation">
 	<div class="nav-previous"><?php previous_comments_link( __( '<span class="meta-nav">&larr;</span> Older Comments', 'twentyten' ) ); ?></div>
 	<div class="nav-next"><?php next_comments_link( __( 'Newer Comments <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?></div>
-</div><!-- .navigation -->
-<?php endif; // check for comment navigation ?>
+</div>
+<?php endif; ?>
 
 <?php else : ?>
 	<?php if ( ! comments_open() ) : ?>
 		<p class="nocomments"><?php _e( 'Comments are closed.', 'twentyten' ); ?></p>
-	<?php endif; // end ! comments_open() ?>
-<?php endif; // end have_comments() ?>
+	<?php endif; ?>
+<?php endif; ?>
 
 <?php comment_form(); ?>
 
-</div><!-- #comments -->
+</div>

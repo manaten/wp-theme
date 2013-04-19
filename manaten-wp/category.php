@@ -5,12 +5,12 @@
 			printf( __( 'Category Archives: %s', 'twentyten' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 		?></h1>
 		<?php get_template_part( 'loop', 'tag' ); ?>
-	</div><!-- #content -->
+	</div>
 
 	<div id="contentRight">
 		<?php get_sidebar(); ?>
 	</div>
 	<div id="contentFooter"></div>
-</div><!-- #container -->
+</div>
 <?php get_footer(); ?>
 
