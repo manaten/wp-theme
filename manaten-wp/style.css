@@ -226,7 +226,7 @@ div#content .entry-title .category-name :after {
 div#content .entry-content,
 div#content .entry-summary {
 	clear: both;
-	padding: 12px 0 0 0;
+	padding: 12px 0 0 12px;
 }
 
 div#content .widget-area ul {
