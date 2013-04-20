@@ -194,19 +194,13 @@ div#footer {
 	border-radius: 5px;
 	box-shadow: 0 0 10px #999;
 }
+div#content .entry-title,
 div#content .page-title {
 	color: #000;
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 1.3em;
-	margin-bottom: 24px;
-}
-div#content .entry-title {
-	color: #000;
-	font-size: 21px;
-	font-weight: bold;
-	line-height: 1.3em;
-	margin-bottom: 0;
+	border-bottom: 1px solid #000;
 }
 div#content .entry-title a:link,
 div#content .entry-title a:visited {
@@ -236,80 +230,85 @@ div#content .widget-container {
 	margin-bottom: 32px;
 }
 div#content .widget-container h3 {
+	font-weight: bold;
 	font-size: 16px;
 	margin-bottom: 0;
+	color: #000;
+	border-bottom: solid 1px;
 }
 div#content .widget-container ul {
+	margin-left: 16px;
 	font-size: 12px;
 	list-style: square;
 }
 
 
 
-/*-------- #content .post --------*/
-div#content .post {
+/*-------- #content  .entry-content --------*/
+div#content .entry-content {
 	margin: 12px 0 64px 0;
 }
-div#content h1,
-div#content h2,
-div#content h3,
-div#content h4,
-div#content h5,
-div#content h6 {
+div#content .entry-content h1,
+div#content .entry-content h2,
+div#content .entry-content h3,
+div#content .entry-content h4,
+div#content .entry-content h5,
+div#content .entry-content h6 {
 	font-size: 150%;
 	font-weight: bold;
 	color: #000;
 	line-height: 1.5em;
 	margin: 0 0 20px 0;
-	border-bottom: solid 1px;
+	border-left: solid 4px #447766;
+	padding-left: 8px;
 }
-div#content strong {
+div#content .entry-content strong {
 	font-weight: bold;
 }
-div#content p,
-div#content ul,
-div#content ol,
-div#content dd,
-div#content pre,
-div#content hr {
+div#content .entry-content p,
+div#content .entry-content ul,
+div#content .entry-content ol,
+div#content .entry-content dd,
+div#content .entry-content pre,
+div#content .entry-content hr {
 	margin-bottom: 32px;
 }
-div#content ul ul,
-div#content ol ol,
-div#content ul ol,
-div#content ol ul {
+div#content .entry-content ul ul,
+div#content .entry-content ol ol,
+div#content .entry-content ul ol,
+div#content .entry-content ol ul {
 	margin-bottom: 0;
 }
-div#content ul {
+div#content .entry-content ul {
 	list-style: square;
 	margin: 0 0 18px 1.5em;
 }
-div#content ol {
+div#content .entry-content ol {
 	list-style: decimal;
 	margin: 0 0 18px 1.5em;
 }
-div#content ol ol {
+div#content .entry-content ol ol {
 	list-style: upper-alpha;
 }
-div#content ol ol ol {
+div#content .entry-content ol ol ol {
 	list-style: lower-roman;
 }
-div#content ol ol ol ol {
+div#content .entry-content ol ol ol ol {
 	list-style: lower-alpha;
 }
-div#content ul ul,
-div#content ol ol,
-div#content ul ol,
-div#content ol ul {
+div#content .entry-content ul ul,
+div#content .entry-content ol ol,
+div#content .entry-content ul ol,
+div#content .entry-content ol ul {
 	margin-bottom: 0;
 }
-div#content dl {
+div#content .entry-content dl {
 	margin: 0 0 24px 0;
 }
-div#content dt {
+div#content .entry-content dt {
 	font-weight: bold;
 }
-div#content dd {
+div#content .entry-content dd {
 	margin-bottom: 18px;
 }
 
