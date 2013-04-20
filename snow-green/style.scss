@@ -45,7 +45,6 @@ table {
 a img {
 	border: none;
 }
-/*-------- reset --------*/
 
 
 
@@ -257,8 +256,6 @@ div#content {
 		}
 	}
 
-
-	/*-------- #content  .entry-content --------*/
 	.entry-content {
 		margin: 12px 0 80px 0;
 		h1, h2, h3, h4, h5, h6 {
@@ -308,8 +305,6 @@ div#content {
 		}
 	}
 
-
-	/*--------.navigation --------*/
 	.navigation {
 		color: $thin-text-color;
 		font-size: 12px;
@@ -333,7 +328,6 @@ div#content {
 		}
 	}
 
-	/*-------- Comments form --------*/
 	input[type=submit] {
 		color: #333;
 	}
