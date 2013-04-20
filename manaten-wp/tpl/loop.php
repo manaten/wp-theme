@@ -11,38 +11,12 @@
 			<?php ManatenWp::postedOn(); ?>
 		</div>
 
-		<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
-			<div class="entry-summary">
-				<?php the_excerpt(); ?>
-			</div>
-		<?php else : ?>
-			<div class="entry-content">
-				<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?>
-				<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'twentyten' ), 'after' => '</div>' ) ); ?>
-			</div>
-		<?php endif; ?>
-
-		<div class="entry-utility">
-			<?php if ( count( get_the_category() ) ) : ?>
-				<span class="cat-links">
-					<?php printf( __( '<span class="%1$s">Posted in</span> %2$s', 'twentyten' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
-				</span>
-				<span class="meta-sep">|</span>
-			<?php endif; ?>
-			<?php
-				$tags_list = get_the_tag_list( '', ', ' );
-				if ( $tags_list ):
-			?>
-				<span class="tag-links">
-					<?php printf( __( '<span class="%1$s">Tagged</span> %2$s', 'twentyten' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
-				</span>
-				<span class="meta-sep">|</span>
-			<?php endif; ?>
-			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'twentyten' ), __( '1 Comment', 'twentyten' ), __( '% Comments', 'twentyten' ) ); ?></span>
-			<?php edit_post_link( __( 'Edit', 'twentyten' ), '<span class="meta-sep">|</span> <span class="edit-link">', '</span>' ); ?>
+		<div class="entry-content">
+			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?>
 		</div>
+
 	</div>
+	<?php ManatenWp::writeNavigation(); ?>
 	<?php comments_template( '', true ); ?>
 <?php endwhile; ?>
 
-<?php ManatenWp::writeNavigation(); ?>

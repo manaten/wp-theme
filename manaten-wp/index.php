@@ -36,13 +36,7 @@
 			} else { ?>
 				<div id="contentLeft">
 					<?php
-					if (is_category()) {
-						get_template_part( 'tpl/category' );
-					} else if (is_search()) {
-						get_template_part( 'tpl/search' );
-					} else if (is_single()) {
-						get_template_part( 'tpl/single' );
-					} else if (is_archive()) {
+					if (is_archive() || is_category() || is_search()) {
 						get_template_part( 'tpl/archive' );
 					} else {
 						get_template_part( 'tpl/loop' );
