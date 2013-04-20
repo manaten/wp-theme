@@ -120,7 +120,7 @@ div#menu ul li a:hover {
 }
 
 div#content {
-	color: #331100;
+	color: #411;
 	line-height: 1.6em;
 	font-family: "sans-serif";
 	font-size: 0.95em;
@@ -135,11 +135,11 @@ div#content {
 }
 div#content a:link,
 div#content a:visited {
-	color: #447766;
+	color: #476;
 }
 div#content a:hover,
 div#content a:hover {
-	color: #33AA99;
+	color: #3A9;
 }
 div#contentLeft {
 	width: 680px;
@@ -153,7 +153,7 @@ div#contentRight {
 	float: right;
 }
 div#contentFooter {
-	width:100%;
+	width: 100%;
 	clear: both;
 }
 div#content div.topImage {
@@ -178,7 +178,12 @@ div#content .entry-utility a {
 }
 div#content .entry-meta a:hover,
 div#content .entry-utility a:hover {
-	color: #334bff;
+	color: #C66;
+}
+div#content .syntaxhighlighter {
+	border: solid 1px #9C9;
+	padding: 2px;
+	border-radius: 8px;
 }
 
 div#footer {
@@ -196,20 +201,20 @@ div#footer {
 }
 div#content .entry-title,
 div#content .page-title {
-	color: #000;
+	color: #411;
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 1.3em;
-	border-bottom: 1px solid #000;
+	border-bottom: 1px solid #410;
 }
 div#content .entry-title a:link,
 div#content .entry-title a:visited {
-	color: #000;
+	color: #411;
 	text-decoration: none;
 }
 div#content .entry-title a:active,
 div#content .entry-title a:hover {
-	color: #334bff;
+	color: #C66;
 }
 div#content .entry-title .category-name :before {
 	content: "[";
@@ -233,8 +238,8 @@ div#content .widget-container h3 {
 	font-weight: bold;
 	font-size: 16px;
 	margin-bottom: 0;
-	color: #000;
-	border-bottom: solid 1px;
+	color: #410;
+	border-bottom: solid 1px #410;
 }
 div#content .widget-container ul {
 	margin-left: 16px;
@@ -259,7 +264,7 @@ div#content .entry-content h6 {
 	color: #000;
 	line-height: 1.5em;
 	margin: 0 0 20px 0;
-	border-left: solid 4px #447766;
+	border-left: solid 4px #476;
 	padding-left: 8px;
 	margin-left: -12px;
 }
@@ -328,7 +333,7 @@ div#content .navigation a:visited {
 }
 div#content .navigation a:active,
 div#content .navigation a:hover {
-	color: #334bff;
+	color: #C66;
 }
 div#content .nav-previous {
 	float: left;
