@@ -2,12 +2,7 @@
 <div id="content">
 	<div id="contentLeft">
 		<?php while ( have_posts() ) : the_post(); ?>
-
-		<div id="nav-above" class="navigation">
-			<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentyten' ) . '</span> %title' ); ?></div>
-			<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '</span>' ); ?></div>
-		</div>
-
+		<?php ManatenWp::writePageNavigation(); ?>
 		<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<h1 class="entry-title">
 				<span class="category-name"><?php echo get_the_category_list(' ') ?></span>
@@ -15,7 +10,7 @@
 			</h1>
 
 			<div class="entry-meta">
-				<?php twentyten_posted_on(); ?>
+				<?php ManatenWp::postedOn(); ?>
 			</div>
 
 			<div class="entry-content">
@@ -24,11 +19,7 @@
 			</div>
 
 		</div>
-
-		<div id="nav-below" class="navigation">
-			<div class="nav-previous"><?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentyten' ) . '</span> %title' ); ?></div>
-			<div class="nav-next"><?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '</span>' ); ?></div>
-		</div>
+		<?php ManatenWp::writePageNavigation(); ?>
 
 		<?php comments_template( '', true ); ?>
 		<?php endwhile; ?>

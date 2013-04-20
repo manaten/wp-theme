@@ -462,52 +462,80 @@ function twentyten_remove_recent_comments_style() {
 }
 add_action( 'widgets_init', 'twentyten_remove_recent_comments_style' );
 
-if ( ! function_exists( 'twentyten_posted_on' ) ) :
-/**
- * Prints HTML with meta information for the current post-date/time and author.
- *
- * @since Twenty Ten 1.0
- */
-function twentyten_posted_on() {
-	printf( __( '<span class="%1$s">Posted on</span> %2$s <span class="meta-sep">by</span> %3$s', 'twentyten' ),
-		'meta-prep meta-prep-author',
-		sprintf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
+class ManatenWp {
+	public static function writeTitle() {
+		global $page, $paged;
+		wp_title( '|', true, 'right' );
+		bloginfo( 'name' );
+		$site_description = get_bloginfo( 'description', 'display' );
+		if ( $site_description && ( is_home() || is_front_page() ) ) {
+			echo " | $site_description";
+		}
+		if ( $paged >= 2 || $page >= 2 ) {
+			echo ' | ' . max( $paged, $page ) . ' ページ目';
+		}
+	}
+
+	public static function postedOn() {
+		echo '<span class="meta-prep meta-prep-author">投稿日:</span>';
+		printf( '<a href="%1$s" title="%2$s" rel="bookmark"><span class="entry-date">%3$s</span></a>',
 			get_permalink(),
 			esc_attr( get_the_time() ),
 			get_the_date()
-		),
-		sprintf( '<span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s">%3$s</a></span>',
-			get_author_posts_url( get_the_author_meta( 'ID' ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'twentyten' ), get_the_author() ) ),
-			get_the_author()
-		)
-	);
-}
-endif;
-
-if ( ! function_exists( 'twentyten_posted_in' ) ) :
-/**
- * Prints HTML with meta information for the current post (category, tags and permalink).
- *
- * @since Twenty Ten 1.0
- */
-function twentyten_posted_in() {
-	// Retrieves tag list of current post, separated by commas.
-	$tag_list = get_the_tag_list( '', ', ' );
-	if ( $tag_list ) {
-		$posted_in = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyten' );
-	} elseif ( is_object_in_taxonomy( get_post_type(), 'category' ) ) {
-		$posted_in = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyten' );
-	} else {
-		$posted_in = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyten' );
+		);
 	}
-	// Prints the string, replacing the placeholders.
-	printf(
-		$posted_in,
-		get_the_category_list( ', ' ),
-		$tag_list,
-		get_permalink(),
-		the_title_attribute( 'echo=0' )
-	);
+
+	public static function postedIn() {
+		// Retrieves tag list of current post, separated by commas.
+		$tag_list = get_the_tag_list( '', ', ' );
+		if ( $tag_list ) {
+			$posted_in = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyten' );
+		} elseif ( is_object_in_taxonomy( get_post_type(), 'category' ) ) {
+			$posted_in = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyten' );
+		} else {
+			$posted_in = __( 'Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>.', 'twentyten' );
+		}
+		// Prints the string, replacing the placeholders.
+		printf(
+			$posted_in,
+			get_the_category_list( ', ' ),
+			$tag_list,
+			get_permalink(),
+			the_title_attribute( 'echo=0' )
+		);
+	}
+
+	public static function writeArchiveNavigation() {
+		global $wp_query;
+		if (  $wp_query->max_num_pages > 1 || is_single()) {
+			?>
+			<div class="navigation">
+				<div class="nav-previous">
+					<?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentyten' ) ); ?>
+				</div>
+				<div class="nav-next">
+					<?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?>
+				</div>
+			</div>
+			<?php
+		}
+	}
+
+	public static function writePageNavigation() {
+		global $wp_query;
+		if (  $wp_query->max_num_pages > 1 || is_single()) {
+			?>
+			<div class="navigation">
+				<div class="nav-previous">
+					<?php previous_post_link( '%link', '<span class="meta-nav">' . _x( '&larr;', 'Previous post link', 'twentyten' ) . '</span> %title' ); ?>
+				</div>
+				<div class="nav-next">
+					<?php next_post_link( '%link', '%title <span class="meta-nav">' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '</span>' ); ?>
+				</div>
+			</div>
+			<?php
+		}
+	}
+
 }
-endif;
+

@@ -1,10 +1,4 @@
-<?php if ( $wp_query->max_num_pages > 1 || is_single()) : ?>
-	<div id="nav-above" class="navigation">
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentyten' ) ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?></div>
-	</div>
-<?php endif; ?>
-
+<?php ManatenWp::writeArchiveNavigation(); ?>
 
 <?php if ( ! have_posts() ) : ?>
 	<div id="post-0" class="post error404 not-found">
@@ -24,7 +18,7 @@
 		</h2>
 
 		<div class="entry-meta">
-			<?php twentyten_posted_on(); ?>
+			<?php ManatenWp::postedOn(); ?>
 		</div>
 
 		<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
@@ -61,10 +55,4 @@
 	<?php comments_template( '', true ); ?>
 <?php endwhile; ?>
 
-
-<?php if (  $wp_query->max_num_pages > 1 || is_single()) : ?>
-	<div id="nav-below" class="navigation">
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'twentyten' ) ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?></div>
-	</div>
-<?php endif; ?>
+<?php ManatenWp::writeArchiveNavigation(); ?>
