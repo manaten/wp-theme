@@ -164,13 +164,13 @@ div#content div.contact {
 	margin-left: 24px;
 	font-size: 80%;
 }
-
 div#content .entry-meta,
 div#content .entry-utility {
 	clear: both;
 	color: #888;
 	font-size: 12px;
 	line-height: 18px;
+	margin-left: 4px;
 }
 div#content .entry-meta a,
 div#content .entry-utility a {
@@ -205,7 +205,9 @@ div#content .page-title {
 	font-size: 21px;
 	font-weight: bold;
 	line-height: 1.3em;
-	border-bottom: 1px solid #410;
+	border-bottom: 1px solid #888;
+	margin-top: 12px;
+	padding-left: 2px;
 }
 div#content .entry-title a:link,
 div#content .entry-title a:visited {
@@ -237,9 +239,10 @@ div#content .widget-container {
 div#content .widget-container h3 {
 	font-weight: bold;
 	font-size: 16px;
+	padding-left: 4px;
 	margin-bottom: 0;
 	color: #410;
-	border-bottom: solid 1px #410;
+	border-bottom: solid 1px #888;
 }
 div#content .widget-container ul {
 	margin-left: 16px;
@@ -251,7 +254,7 @@ div#content .widget-container ul {
 
 /*-------- #content  .entry-content --------*/
 div#content .entry-content {
-	margin: 12px 0 64px 0;
+	margin: 12px 0 80px 0;
 }
 div#content .entry-content h1,
 div#content .entry-content h2,
