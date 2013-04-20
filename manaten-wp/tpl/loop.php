@@ -16,7 +16,7 @@
 		</div>
 
 	</div>
-	<?php ManatenWp::writeNavigation(); ?>
-	<?php comments_template( '', true ); ?>
 <?php endwhile; ?>
 
+<?php ManatenWp::writeNavigation(); ?>
+<?php comments_template( '', true ); ?>

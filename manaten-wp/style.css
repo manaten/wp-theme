@@ -21,23 +21,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	padding: 0;
 	vertical-align: baseline;
 }
-
-body {
-	margin:0; padding:0; border:0; outline:0; vertical-align:baseline;
-	font-family: "sans-serif";
-	font-size: 0.95em;
-	background: #DDE8DB;
-	text-align: center;
-	line-height: 1.6em;
-}
-
-a {
-	color: #447766;
-}
-
-a:hover {
-	color: #33AA99;
-}
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
 	font-weight: normal;
@@ -55,7 +38,6 @@ blockquote:before, blockquote:after {
 del {
 	text-decoration: line-through;
 }
-/* tables still need 'cellspacing="0"' in the markup */
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -63,7 +45,16 @@ table {
 a img {
 	border: none;
 }
+/*-------- reset --------*/
 
+
+
+
+
+body {
+	background: #EEEEEE;
+	text-align: center;
+}
 div#bodyWrapper {
 	margin: 0 auto;
 	width: 1024px;
@@ -129,32 +120,65 @@ div#menu ul li a:hover {
 }
 
 div#content {
+	color: #331100;
+	line-height: 1.6em;
+	font-family: "sans-serif";
+	font-size: 1em;
 	text-align: left;
-	background: #FFF;
+	background: #F4F0F0;
+
 	margin-top: 4px;
 	padding: 16px 48px;
 
 	border-radius: 5px;
 	box-shadow: 0 0 10px #999;
 }
+div#content a:link,
+div#content a:visited {
+	color: #447766;
+}
+div#content a:hover,
+div#content a:hover {
+	color: #33AA99;
+}
 div#contentLeft {
-	width: 600px;
+	width: 680px;
 	min-height: 600px;
 	margin-right: 24px;
 	float: left;
 }
 div#contentRight {
-	width: 300px;
+	width: 220px;
 	min-height: 600px;
 	float: right;
 }
 div#contentFooter {
 	width:100%;
- 	clear: both;
+	clear: both;
 }
-div.topImage {
+div#content div.topImage {
 	text-align: center;
 	margin: 20px;
+}
+div#content div.contact {
+	margin-left: 24px;
+	font-size: 80%;
+}
+
+div#content .entry-meta,
+div#content .entry-utility {
+	clear: both;
+	color: #888;
+	font-size: 12px;
+	line-height: 18px;
+}
+div#content .entry-meta a,
+div#content .entry-utility a {
+	color: #888;
+}
+div#content .entry-meta a:hover,
+div#content .entry-utility a:hover {
+	color: #334bff;
 }
 
 div#footer {
@@ -170,25 +194,215 @@ div#footer {
 	border-radius: 5px;
 	box-shadow: 0 0 10px #999;
 }
-
-h1 {
-	font-size: 120%;
+div#content .page-title {
+	color: #000;
+	font-size: 21px;
 	font-weight: bold;
-	border: solid #3B988D;
-	border-width: 0 0 1px 3px;
-	padding: 2px 4px;
-	margin: 2px;
+	line-height: 1.3em;
+	margin-bottom: 24px;
 }
-h2 {
-	font-size: 100%;
+div#content .entry-title {
+	color: #000;
+	font-size: 21px;
 	font-weight: bold;
-	border: solid #143221;
-	border-width: 0 0 1px 3px;
-	padding: 2px 4px;
-	margin: 2px;
+	line-height: 1.3em;
+	margin-bottom: 0;
+}
+div#content .entry-title a:link,
+div#content .entry-title a:visited {
+	color: #000;
+	text-decoration: none;
+}
+div#content .entry-title a:active,
+div#content .entry-title a:hover {
+	color: #334bff;
+}
+div#content .entry-title .category-name :before {
+	content: "[";
+}
+div#content .entry-title .category-name :after {
+	content: "]";
+}
+div#content .entry-content,
+div#content .entry-summary {
+	clear: both;
+	padding: 12px 0 0 0;
 }
 
-div.contact {
-	margin-left: 24px;
-	font-size: 80%;
+div#content .widget-area ul {
+	list-style: none;
+}
+div#content .widget-container {
+	margin-bottom: 32px;
+}
+div#content .widget-container h3 {
+	font-size: 16px;
+	margin-bottom: 0;
+}
+div#content .widget-container ul {
+	font-size: 12px;
+	list-style: square;
+}
+
+
+
+/*-------- #content .post --------*/
+div#content .post {
+	margin: 12px 0 64px 0;
+}
+div#content h1,
+div#content h2,
+div#content h3,
+div#content h4,
+div#content h5,
+div#content h6 {
+	font-size: 150%;
+	font-weight: bold;
+	color: #000;
+	line-height: 1.5em;
+	margin: 0 0 20px 0;
+	border-bottom: solid 1px;
+}
+div#content strong {
+	font-weight: bold;
+}
+div#content p,
+div#content ul,
+div#content ol,
+div#content dd,
+div#content pre,
+div#content hr {
+	margin-bottom: 32px;
+}
+div#content ul ul,
+div#content ol ol,
+div#content ul ol,
+div#content ol ul {
+	margin-bottom: 0;
+}
+div#content ul {
+	list-style: square;
+	margin: 0 0 18px 1.5em;
+}
+div#content ol {
+	list-style: decimal;
+	margin: 0 0 18px 1.5em;
+}
+div#content ol ol {
+	list-style: upper-alpha;
+}
+div#content ol ol ol {
+	list-style: lower-roman;
+}
+div#content ol ol ol ol {
+	list-style: lower-alpha;
+}
+div#content ul ul,
+div#content ol ol,
+div#content ul ol,
+div#content ol ul {
+	margin-bottom: 0;
+}
+div#content dl {
+	margin: 0 0 24px 0;
+}
+div#content dt {
+	font-weight: bold;
+}
+div#content dd {
+	margin-bottom: 18px;
+}
+
+
+/*--------.navigation --------*/
+div#content .navigation {
+	color: #888;
+	font-size: 12px;
+	line-height: 18px;
+	overflow: hidden;
+}
+div#content .navigation a:link,
+div#content .navigation a:visited {
+	color: #888;
+	text-decoration: none;
+}
+div#content .navigation a:active,
+div#content .navigation a:hover {
+	color: #334bff;
+}
+div#content .nav-previous {
+	float: left;
+	width: 50%;
+}
+div#content .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*-------- Comments form --------*/
+div#content input[type=submit] {
+	color: #333;
+}
+div#content #respond {
+	border-top: 1px solid #e7e7e7;
+	margin: 24px 0;
+	overflow: hidden;
+	position: relative;
+}
+div#content #respond p {
+	margin: 0;
+}
+div#content #respond .comment-notes {
+	margin-bottom: 1em;
+}
+div#content .form-allowed-tags {
+	line-height: 1em;
+}
+div#content .children #respond {
+	margin: 0 48px 0 0;
+}
+div#content h3#reply-title {
+	margin: 18px 0;
+}
+div#content #comments-list #respond {
+	margin: 0 0 18px 0;
+}
+div#content #comments-list ul #respond {
+	margin: 0;
+}
+div#content #cancel-comment-reply-link {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 18px;
+}
+div#content #respond .required {
+	color: #ff4b33;
+	font-weight: bold;
+}
+div#content #respond label {
+	color: #888;
+	font-size: 12px;
+}
+div#content #respond input {
+	margin: 0 0 9px;
+	width: 98%;
+}
+div#content #respond textarea {
+	width: 98%;
+}
+div#content #respond .form-allowed-tags {
+	color: #888;
+	font-size: 12px;
+	line-height: 18px;
+}
+div#content #respond .form-allowed-tags code {
+	font-size: 11px;
+}
+div#content #respond .form-submit {
+	margin: 12px 0;
+}
+div#content #respond .form-submit input {
+	font-size: 14px;
+	width: auto;
 }
