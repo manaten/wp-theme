@@ -1,4 +1,4 @@
-<?php ManatenWp::writeArchiveNavigation(); ?>
+<?php ManatenWp::writeNavigation(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
 	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -45,4 +45,4 @@
 	<?php comments_template( '', true ); ?>
 <?php endwhile; ?>
 
-<?php ManatenWp::writeArchiveNavigation(); ?>
+<?php ManatenWp::writeNavigation(); ?>

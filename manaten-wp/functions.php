@@ -296,9 +296,9 @@ class ManatenWp {
 		);
 	}
 
-	public static function writeArchiveNavigation() {
+	public static function writeNavigation() {
 		global $wp_query;
-		if (  $wp_query->max_num_pages > 1 || is_single()) {
+		if ( $wp_query->max_num_pages > 1 ) {
 			?>
 			<div class="navigation">
 				<div class="nav-previous">
@@ -309,12 +309,7 @@ class ManatenWp {
 				</div>
 			</div>
 			<?php
-		}
-	}
-
-	public static function writePageNavigation() {
-		global $wp_query;
-		if (  $wp_query->max_num_pages > 1 || is_single()) {
+		} else if ( is_single() ) {
 			?>
 			<div class="navigation">
 				<div class="nav-previous">
@@ -327,18 +322,5 @@ class ManatenWp {
 			<?php
 		}
 	}
-
-	public static function writeNotFound() {
-		?>
-		<div id="post-0" class="post error404 not-found">
-			<h1 class="entry-title"><?php _e( 'Not Found', 'twentyten' ); ?></h1>
-			<div class="entry-content">
-				<p><?php _e( 'Apologies, but the page you requested could not be found. Perhaps searching will help.', 'twentyten' ); ?></p>
-				<?php get_search_form(); ?>
-			</div>
-		</div>
-		<?php
-	}
-
 }
 
