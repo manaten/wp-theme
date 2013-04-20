@@ -1,5 +1,5 @@
 /*
-Theme Name: manaten-wp
+Theme Name: snow-green
 Theme URI: http://manaten.net/
 Description: 
 Author: manaten
@@ -254,13 +254,14 @@ div#content .entry-content h3,
 div#content .entry-content h4,
 div#content .entry-content h5,
 div#content .entry-content h6 {
-	font-size: 150%;
+	font-size: 120%;
 	font-weight: bold;
 	color: #000;
 	line-height: 1.5em;
 	margin: 0 0 20px 0;
 	border-left: solid 4px #447766;
 	padding-left: 8px;
+	margin-left: -12px;
 }
 div#content .entry-content strong {
 	font-weight: bold;
