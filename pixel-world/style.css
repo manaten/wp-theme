@@ -32,8 +32,8 @@ div#wrapper { margin: 0 auto; width: 1024px; }
 
 header { position: fixed; top: 0; width: 100%; height: 60px; z-index: 200; margin: 0; box-shadow: 0 0 10px #999; background: #f4f0f0; border-bottom: solid 4px #447766; }
 header div#wrapper div { float: left; }
-header div#wrapper div#logo { margin: 24px 0 0 16px; }
-header div#wrapper div#logo a { width: 152px; height: 16px; display: block; overflow: hidden; background: url("images/images.gif") 0 -64px no-repeat; text-indent: 100%; white-space: nowrap; }
+header div#wrapper div#logo { margin: 20px 0 0 16px; }
+header div#wrapper div#logo a { width: 152px; height: 32px; display: block; overflow: hidden; background: url("images/images.gif") 0 -64px no-repeat; text-indent: 100%; white-space: nowrap; }
 header div#wrapper div#logo a:hover { opacity: 0.5; filter: alpha(opacity=50); }
 header div#wrapper div#menu { margin: 6px 0 0 96px; }
 header div#wrapper div#menu li { float: left; margin-left: 16px; position: relative; }
@@ -50,7 +50,7 @@ header div#wrapper div#menu li a.twitter:hover { width: 48px; height: 48px; disp
 header div#wrapper div#menu li:before { z-index: -1; position: absolute; content: ""; left: 20%; right: 20%; top: 24px; bottom: 0; height: 8px; border-radius: 70px; box-shadow: 0 15px 10px #777; }
 header div#wrapper div#search { position: relative; float: right; margin: 18px 16px 0 0; }
 header div#wrapper div#search input[type=submit] { position: absolute; margin: 4px 0 0 8px; border: none 0; width: 16px; height: 16px; display: block; overflow: hidden; background: url("images/images.gif") -160px -64px no-repeat; text-indent: 100%; white-space: nowrap; }
-header div#wrapper div#search input[type=text] { margin: 0; border: solid 1px #BAA; border-radius: 10px; background: #FFF; padding: 4px 4px 4px 28px; width: 200px; }
+header div#wrapper div#search input[type=text] { margin: 0; border: solid 1px #BAA; border-radius: 14px; background: #FFF; padding: 4px 4px 4px 28px; width: 200px; }
 header div#wrapper div#search input[type=text]:focus { border: solid 1px #ACF; box-shadow: 0 0 10px #BEF; outline: none; }
 
 div#contentLeft { width: 680px; min-height: 600px; margin-right: 24px; float: left; }

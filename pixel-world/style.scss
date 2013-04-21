@@ -103,9 +103,9 @@ header {
 	div#wrapper div {
 		float: left;
 		&#logo {
-			margin: 24px 0 0 16px;
+			margin: 20px 0 0 16px;
 			a {
-				@include sprite( $images-url, 0, 64px, 152px, 16px);
+				@include sprite( $images-url, 0, 64px, 152px, 32px);
 				&:hover { @include opacity(50); }
 			}
 		}
@@ -176,7 +176,7 @@ header {
 			input[type=text] {
 				margin: 0;
 				border: solid 1px #BAA;
-				border-radius: 10px;
+				border-radius: 14px;
 				background: #FFF;
 				padding: 4px 4px 4px 28px;
 				width: 200px;
