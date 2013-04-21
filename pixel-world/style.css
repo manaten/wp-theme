@@ -1,0 +1,108 @@
+/*
+Theme Name: pixel-world
+Theme URI: http://manaten.net/
+Description: 
+Author: manaten
+Version: 1.0
+Text Domain: manaten
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { background: transparent; border: 0; margin: 0; padding: 0; vertical-align: baseline; }
+
+h1, h2, h3, h4, h5, h6 { clear: both; font-weight: normal; }
+
+ol, ul { list-style: none; }
+
+blockquote { quotes: none; }
+
+blockquote:before, blockquote:after { content: ''; content: none; }
+
+del { text-decoration: line-through; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+a img { border: none; }
+
+body { background: #EEEEEE; text-align: center; }
+
+div#wrapper { margin: 0 auto; width: 1024px; }
+
+header { height: 96px; margin: 0 0 32px 0; box-shadow: 0 0 10px #999; background: #f4f0f0; }
+header div#logo { height: 68px; }
+header div#logo a { width: 200px; height: 24px; display: block; overflow: hidden; background: url(images/images.gif)-0-64px no-repeat; text-indent: 100%; white-space: nowrap; position: absolute; margin: 20px 20px; }
+header div#menu { background: #484444; height: 28px; }
+header div#menu ul { margin: 0; padding: 0; }
+header div#menu ul li { list-style: none; float: left; margin: 0; padding: 0; margin-left: 16px; }
+header div#menu ul li a { font-size: 0%; width: 100px; height: 16px; display: block; }
+header div#menu ul li a.top { background: url("images/icons.gif") no-repeat; background-position: 0px 0px; }
+header div#menu ul li a.blog { background: url("images/icons.gif") no-repeat; background-position: 0px -32px; }
+header div#menu ul li a.bbs { background: url("images/icons.gif") no-repeat; background-position: 0px -16px; }
+header div#menu ul li a.twitter { background: url("images/icons.gif") no-repeat; background-position: 0px -48px; }
+header div#menu ul li a.gallery { background: url("images/icons.gif") no-repeat; background-position: 0px -64px; }
+header div#menu ul li a:hover { background-color: #3A645F; border-radius: 3px; }
+
+div#contentLeft { width: 680px; min-height: 600px; margin-right: 24px; float: left; }
+
+div#contentRight { width: 220px; min-height: 600px; float: right; }
+
+div#contentFooter { width: 100%; clear: both; }
+
+div#footer { background: #333; margin-top: 4px; margin-bottom: 4px; padding: 5px; text-align: center; font-size: 80%; color: #FFF; border-radius: 5px; box-shadow: 0 0 10px #999; }
+
+div#content { color: #441111; line-height: 1.6em; font-family: "sans-serif"; font-size: 0.95em; text-align: left; background: #f4f0f0; margin-top: 4px; padding: 16px 48px; border-radius: 5px; box-shadow: 0 0 10px #999; }
+div#content a:link, div#content a:visited { color: #447766; }
+div#content a:hover, div#content a:hover { color: #cc6666; }
+div#content div.topImage { text-align: center; margin: 20px; }
+div#content div.contact { margin-left: 24px; font-size: 80%; }
+div#content .entry-meta, div#content .entry-utility { clear: both; color: #888888; font-size: 12px; line-height: 18px; margin-left: 4px; }
+div#content .entry-meta a:link, div#content .entry-meta a:visited, div#content .entry-utility a:link, div#content .entry-utility a:visited { color: #888888; }
+div#content .entry-meta a:hover, div#content .entry-meta a:hover, div#content .entry-utility a:hover, div#content .entry-utility a:hover { color: #cc6666; }
+div#content .syntaxhighlighter { border: solid 1px #9C9; padding: 2px; border-radius: 8px; }
+div#content .entry-title, div#content .page-title { font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,sans-serif; color: #441111; font-size: 20px; font-weight: bold; line-height: 1.3em; border-bottom: 1px solid #888888; margin-top: 12px; padding-left: 2px; }
+div#content .entry-title a:link, div#content .entry-title a:visited, div#content .page-title a:link, div#content .page-title a:visited { color: #441111; text-decoration: none; }
+div#content .entry-title a:active, div#content .entry-title a:hover, div#content .page-title a:active, div#content .page-title a:hover { color: #cc6666; }
+div#content .entry-title .category-name :before, div#content .page-title .category-name :before { content: "["; }
+div#content .entry-title .category-name :after, div#content .page-title .category-name :after { content: "]"; }
+div#content .entry-content, div#content .entry-summary { clear: both; padding: 12px 0 0 12px; }
+div#content .entry-content { margin: 12px 0 80px 0; }
+div#content .entry-content h1, div#content .entry-content h2, div#content .entry-content h3, div#content .entry-content h4, div#content .entry-content h5, div#content .entry-content h6 { font-size: 120%; font-weight: bold; color: #000; line-height: 1.5em; margin: 0 0 20px 0; border-left: solid 4px #476; padding-left: 8px; margin-left: -12px; }
+div#content .entry-content strong { font-weight: bold; }
+div#content .entry-content p, div#content .entry-content ul, div#content .entry-content ol, div#content .entry-content dd, div#content .entry-content pre, div#content .entry-content hr { margin-bottom: 32px; }
+div#content .entry-content ul ul, div#content .entry-content ol ol, div#content .entry-content ul ol, div#content .entry-content ol ul { margin-bottom: 0; }
+div#content .entry-content ul { list-style: square; margin: 0 0 18px 1.5em; }
+div#content .entry-content ol { list-style: decimal; margin: 0 0 18px 1.5em; }
+div#content .entry-content ol ol { list-style: upper-alpha; }
+div#content .entry-content ol ol ol { list-style: lower-roman; }
+div#content .entry-content ol ol ol ol { list-style: lower-alpha; }
+div#content .entry-content dl { margin: 0 0 24px 0; }
+div#content .entry-content dt { font-weight: bold; }
+div#content .entry-content dd { margin-bottom: 18px; }
+div#content .widget-area ul { list-style: none; }
+div#content .widget-area ul .widget-container { margin-bottom: 32px; }
+div#content .widget-area ul .widget-container ul { margin-top: 4px; margin-left: 24px; font-size: 12px; list-style: square; }
+div#content .widget-area ul .widget_recent_entries h3 { width: 176px; height: 16px; display: block; overflow: hidden; background: url(images/images.gif)-0-0 no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content .widget-area ul .widget_recent_comments h3 { width: 184px; height: 16px; display: block; overflow: hidden; background: url(images/images.gif)-0-16px no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content .widget-area ul .widget_archive h3 { width: 184px; height: 16px; display: block; overflow: hidden; background: url(images/images.gif)-0-32px no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content .widget-area ul .widget_categories h3 { width: 200px; height: 16px; display: block; overflow: hidden; background: url(images/images.gif)-0-48px no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content .navigation { color: #888888; font-size: 12px; line-height: 18px; overflow: hidden; }
+div#content .navigation a:link, div#content .navigation a:visited { color: #888888; text-decoration: none; }
+div#content .navigation a:active, div#content .navigation a:hover { color: #cc6666; }
+div#content .navigation .nav-previous { float: left; width: 50%; }
+div#content .navigation .nav-next { float: right; text-align: right; width: 50%; }
+div#content input[type=submit] { color: #333; }
+div#content #respond { border-top: 1px solid #e7e7e7; margin: 24px 0; overflow: hidden; position: relative; }
+div#content #respond p { margin: 0; }
+div#content #respond .comment-notes { margin-bottom: 1em; }
+div#content #respond .required { color: #ff4b33; font-weight: bold; }
+div#content #respond label { color: #888888; font-size: 12px; }
+div#content #respond input { margin: 0 0 9px; width: 98%; }
+div#content #respond textarea { width: 98%; }
+div#content #respond .form-allowed-tags { color: #888888; font-size: 12px; line-height: 18px; }
+div#content #respond .form-allowed-tags code { font-size: 11px; }
+div#content #respond .form-submit { margin: 12px 0; }
+div#content #respond .form-submit input { font-size: 14px; width: auto; }
+div#content .form-allowed-tags { line-height: 1em; }
+div#content .children #respond { margin: 0 48px 0 0; }
+div#content h3#reply-title { margin: 18px 0; }
+div#content #comments-list #respond { margin: 0 0 18px 0; }
+div#content #comments-list ul #respond { margin: 0; }
+div#content #cancel-comment-reply-link { font-size: 12px; font-weight: normal; line-height: 18px; }
