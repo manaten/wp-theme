@@ -17,10 +17,10 @@
 <body <?php body_class(); ?>>
 	<header>
 		<div id="wrapper">
-			<div id="logo"><a href="<?php bloginfo('url'); ?>">manadot</a></div>
-		</div>
-		<div id="menu">
-			<div id="wrapper">
+			<div id="logo">
+				<a href="<?php bloginfo('url'); ?>">manadot</a>
+			</div>
+			<div id="menu">
 				<ul>
 					<li><a class="top" href="<?php bloginfo('url'); ?>"></a></li>
 					<li><a class="blog" href="<?php bloginfo('url'); ?>/archives"></a></li>
