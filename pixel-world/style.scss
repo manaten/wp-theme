@@ -45,24 +45,23 @@ table {
 a img {
 	border: none;
 }
+/* -------- reset styles --------  */
 
 
-body {
-	background: #EEE;
-	text-align: center;
-	margin-top: 96px;
-}
-
+/* -------- variables --------  */
 $body-width: 1024px;
+
+$text-color: #411; 
 $link-text-color: #476;
+$thin-text-color: #888;
+$thin-link-text-color: #C66;
+
 $content-background-color: #F4F0F0;
+
 $images-url: url('images/images.gif');
 $icons-url:  url('images/icons.gif');
-div#wrapper {
-	margin: 0 auto;
-	width: $body-width;
-}
 
+/* -------- useful mixins -------- */
 @mixin sprite($image, $x, $y, $width, $height) {
 	width:  $width;
 	height: $height;
@@ -76,6 +75,18 @@ div#wrapper {
 @mixin opacity($alpha) {
 	opacity: $alpha / 100;
 	filter: alpha(opacity=$alpha);
+}
+
+/* -------- styles -------- */
+body {
+	background: #EEE;
+	text-align: center;
+	margin-top: 96px;
+}
+
+div#wrapper {
+	margin: 0 auto;
+	width: $body-width;
 }
 
 header {
@@ -103,6 +114,7 @@ header {
 			li {
 				float: left;
 				margin-left: 16px;
+				position: relative;
 				a {
 					&.top {
 						@include sprite( $icons-url, 0, 0, 48px, 48px);
@@ -119,27 +131,45 @@ header {
 					&.twitter {
 						@include sprite( $icons-url, 0, 192px, 48px, 48px);
 					}
-					&:hover {
-						background-color: #CCFFCC;
-						border-radius: 3px;
-					}
+				}
+				&:before {
+					z-index: -1;
+					position: absolute;
+					content: "";
+					
+					left: 20%;
+					right: 20%;
+					top: 24px;
+					bottom: 0;
+					height: 8px;
+
+					border-radius: 70px;
+					box-shadow: 0 15px 10px #777;
 				}
 			}
 		}
 		&#search {
-			margin: 18px 0 0 256px;
-			border: solid 1px #BAA;
-			border-radius: 10px;
-			background: #FFF;
-			padding: 1px 6px 2px 6px;
-			span.searchIcon {
-				float: left;
-				margin: 3px 4px 0 0;
+			position: relative;
+			float: right;
+			margin: 18px 16px 0 0;
+			input[type=submit] {
+				position: absolute;
+				margin: 4px 0 0 8px;
+				border: none 0;
 				@include sprite( $images-url, 160px, 64px, 16px, 16px);
 			}
 			input[type=text] {
-				border: none 0;
+				margin: 0;
+				border: solid 1px #BAA;
+				border-radius: 10px;
 				background: #FFF;
+				padding: 4px 4px 4px 28px;
+				width: 200px;
+				&:focus {
+					border: solid 1px #BEF;
+					box-shadow: 0 0 10px #BEF;
+					outline: none;
+				}
 			}
 		}
 	}
@@ -166,7 +196,7 @@ div#contentFooter {
 }
 
 div#footer {
-	background: #333;
+	background: #433;
 	margin-top: 4px;
 	margin-bottom: 4px;
 	padding: 5px;
@@ -180,10 +210,6 @@ div#footer {
 }
 
 div#content {
-	$text-color: #411; 
-	$thin-text-color: #888;
-	$thin-link-text-color: #C66;
-
 	color: $text-color;
 	line-height: 1.6em;
 	font-family: "sans-serif";

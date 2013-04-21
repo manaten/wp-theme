@@ -30,10 +30,10 @@
 				</ul>
 			</div>
 			<div id="search">
-				<form role="search" method="get" id="searchform" action="http://local.manaten.net/" >
+				<form role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>" >
 					<div>
-						<span class="searchIcon">検索</span>
-						<input type="text" value="" name="s" id="s" />
+						<input type="submit" value="">
+						<input type="text" value="" name="s" id="s" placeholder="検索..." />
 					</div>
 				</form>
 			</div>
@@ -46,10 +46,12 @@
 				get_template_part( 'tpl/404' );
 			} else if ( is_page() ) {
 				get_template_part( 'tpl/page' );
+			} else if (is_search()) {
+				get_template_part( 'tpl/archive' );
 			} else { ?>
 				<div id="contentLeft">
 					<?php
-					if (is_archive() || is_category() || is_search()) {
+					if (is_archive() || is_category()) {
 						get_template_part( 'tpl/archive' );
 					} else {
 						get_template_part( 'tpl/loop' );
