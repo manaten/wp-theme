@@ -48,7 +48,7 @@ a img {
 
 
 body {
-	background: #EEEEEE;
+	background: #EEE;
 	text-align: center;
 	margin-top: 96px;
 }
@@ -127,11 +127,19 @@ header {
 			}
 		}
 		&#search {
-			margin: 20px 0 0 256px;
+			margin: 18px 0 0 256px;
+			border: solid 1px #BAA;
+			border-radius: 10px;
+			background: #FFF;
+			padding: 1px 6px 2px 6px;
 			span.searchIcon {
 				float: left;
-				margin: 2px 4px 0 0;
+				margin: 3px 4px 0 0;
 				@include sprite( $images-url, 160px, 64px, 16px, 16px);
+			}
+			input[type=text] {
+				border: none 0;
+				background: #FFF;
 			}
 		}
 	}
