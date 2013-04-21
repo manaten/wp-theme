@@ -22,12 +22,20 @@
 			</div>
 			<div id="menu">
 				<ul>
-					<li><a class="top" href="<?php bloginfo('url'); ?>"></a></li>
-					<li><a class="blog" href="<?php bloginfo('url'); ?>/archives"></a></li>
-					<li><a class="gallery" href="<?php bloginfo('url'); ?>/gallery"></a></li>
-					<li><a class="bbs" href="http://dot.manaten.net"></a></li>
-					<li><a class="twitter" href="http://twitter.com/manaten"></a></li>
+					<li><a class="top" title="トップページ" href="<?php bloginfo('url'); ?>"></a></li>
+					<li><a class="blog" title="ブログ" href="<?php bloginfo('url'); ?>/archives"></a></li>
+					<li><a class="gallery" title="ギャラリー" href="<?php bloginfo('url'); ?>/gallery"></a></li>
+					<li><a class="bbs" title="ドット絵掲示板" href="http://dot.manaten.net"></a></li>
+					<li><a class="twitter" title="Twitter" href="http://twitter.com/manaten"></a></li>
 				</ul>
+			</div>
+			<div id="search">
+				<form role="search" method="get" id="searchform" action="http://local.manaten.net/" >
+					<div>
+						<span class="searchIcon">検索</span>
+						<input type="text" value="" name="s" id="s" />
+					</div>
+				</form>
 			</div>
 		</div>
 	</header>

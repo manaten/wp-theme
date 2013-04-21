@@ -29,15 +29,18 @@ div#wrapper { margin: 0 auto; width: 1024px; }
 header { position: fixed; top: 0; width: 100%; height: 60px; z-index: 200; margin: 0; box-shadow: 0 0 10px #999; background: #f4f0f0; border-bottom: solid 4px #447766; }
 header div#wrapper div { float: left; }
 header div#wrapper div#logo { margin: 24px 0 0 16px; }
-header div#wrapper div#logo a { width: 152px; height: 16px; display: block; overflow: hidden; background: url(images/images.gif)-0-64px no-repeat; text-indent: 100%; white-space: nowrap; }
+header div#wrapper div#logo a { width: 152px; height: 16px; display: block; overflow: hidden; background: url("images/images.gif") 0 -64px no-repeat; text-indent: 100%; white-space: nowrap; }
+header div#wrapper div#logo a:hover { opacity: 0.5; filter: alpha(opacity=50); }
 header div#wrapper div#menu { margin: 6px 0 0 96px; }
 header div#wrapper div#menu li { float: left; margin-left: 16px; }
-header div#wrapper div#menu li a.top { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif")-0-0 no-repeat; text-indent: 100%; white-space: nowrap; }
-header div#wrapper div#menu li a.blog { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif")-0-48px no-repeat; text-indent: 100%; white-space: nowrap; }
-header div#wrapper div#menu li a.gallery { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif")-0-96px no-repeat; text-indent: 100%; white-space: nowrap; }
-header div#wrapper div#menu li a.bbs { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif")-0-144px no-repeat; text-indent: 100%; white-space: nowrap; }
-header div#wrapper div#menu li a.twitter { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif")-0-192px no-repeat; text-indent: 100%; white-space: nowrap; }
+header div#wrapper div#menu li a.top { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 0 no-repeat; text-indent: 100%; white-space: nowrap; }
+header div#wrapper div#menu li a.blog { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 -48px no-repeat; text-indent: 100%; white-space: nowrap; }
+header div#wrapper div#menu li a.gallery { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 -96px no-repeat; text-indent: 100%; white-space: nowrap; }
+header div#wrapper div#menu li a.bbs { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 -144px no-repeat; text-indent: 100%; white-space: nowrap; }
+header div#wrapper div#menu li a.twitter { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 -192px no-repeat; text-indent: 100%; white-space: nowrap; }
 header div#wrapper div#menu li a:hover { background-color: #CCFFCC; border-radius: 3px; }
+header div#wrapper div#search { margin: 20px 0 0 256px; }
+header div#wrapper div#search span.searchIcon { float: left; margin: 2px 4px 0 0; width: 16px; height: 16px; display: block; overflow: hidden; background: url("images/images.gif") -160px -64px no-repeat; text-indent: 100%; white-space: nowrap; }
 
 div#contentLeft { width: 680px; min-height: 600px; margin-right: 24px; float: left; }
 
@@ -75,13 +78,14 @@ div#content .entry-content ol ol ol ol { list-style: lower-alpha; }
 div#content .entry-content dl { margin: 0 0 24px 0; }
 div#content .entry-content dt { font-weight: bold; }
 div#content .entry-content dd { margin-bottom: 18px; }
+div#content .widget-area { margin-top: 16px; }
 div#content .widget-area ul { list-style: none; }
 div#content .widget-area ul .widget-container { margin-bottom: 32px; }
 div#content .widget-area ul .widget-container ul { margin-top: 8px; margin-left: 24px; font-size: 12px; list-style: square; }
-div#content .widget-area ul .widget_recent_entries h3 { width: 176px; height: 16px; display: block; overflow: hidden; background: url(images/images.gif)-0-0 no-repeat; text-indent: 100%; white-space: nowrap; }
-div#content .widget-area ul .widget_recent_comments h3 { width: 184px; height: 16px; display: block; overflow: hidden; background: url(images/images.gif)-0-16px no-repeat; text-indent: 100%; white-space: nowrap; }
-div#content .widget-area ul .widget_archive h3 { width: 184px; height: 16px; display: block; overflow: hidden; background: url(images/images.gif)-0-32px no-repeat; text-indent: 100%; white-space: nowrap; }
-div#content .widget-area ul .widget_categories h3 { width: 200px; height: 16px; display: block; overflow: hidden; background: url(images/images.gif)-0-48px no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content .widget-area ul .widget_recent_entries h3 { width: 176px; height: 16px; display: block; overflow: hidden; background: url("images/images.gif") 0 0 no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content .widget-area ul .widget_recent_comments h3 { width: 184px; height: 16px; display: block; overflow: hidden; background: url("images/images.gif") 0 -16px no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content .widget-area ul .widget_archive h3 { width: 184px; height: 16px; display: block; overflow: hidden; background: url("images/images.gif") 0 -32px no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content .widget-area ul .widget_categories h3 { width: 200px; height: 16px; display: block; overflow: hidden; background: url("images/images.gif") 0 -48px no-repeat; text-indent: 100%; white-space: nowrap; }
 div#content .navigation { color: #888888; font-size: 12px; line-height: 18px; overflow: hidden; }
 div#content .navigation a:link, div#content .navigation a:visited { color: #888888; text-decoration: none; }
 div#content .navigation a:active, div#content .navigation a:hover { color: #cc6666; }
