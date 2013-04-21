@@ -118,18 +118,33 @@ header {
 				a {
 					&.top {
 						@include sprite( $icons-url, 0, 0, 48px, 48px);
+						&:hover {
+							@include sprite( $icons-url, 48px, 0, 48px, 48px);
+						}
 					}
 					&.blog {
 						@include sprite( $icons-url, 0, 48px, 48px, 48px);
+						&:hover {
+							@include sprite( $icons-url, 48px, 48px, 48px, 48px);
+						}
 					}
 					&.gallery {
 						@include sprite( $icons-url, 0, 96px, 48px, 48px);
+						&:hover {
+							@include sprite( $icons-url, 48px, 96px, 48px, 48px);
+						}
 					}
 					&.bbs {
 						@include sprite( $icons-url, 0, 144px, 48px, 48px);
+						&:hover {
+							@include sprite( $icons-url, 48px, 144px, 48px, 48px);
+						}
 					}
 					&.twitter {
 						@include sprite( $icons-url, 0, 192px, 48px, 48px);
+						&:hover {
+							@include sprite( $icons-url, 48px, 192px, 48px, 48px);
+						}
 					}
 				}
 				&:before {
@@ -166,7 +181,7 @@ header {
 				padding: 4px 4px 4px 28px;
 				width: 200px;
 				&:focus {
-					border: solid 1px #BEF;
+					border: solid 1px #ACF;
 					box-shadow: 0 0 10px #BEF;
 					outline: none;
 				}
