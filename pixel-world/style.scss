@@ -313,10 +313,9 @@ div#content {
 			font-weight: bold;
 			color: #000;
 			line-height: 1.5em;
-			margin: 0 0 20px 0;
+			margin: 48px 0 16px -12px;
 			border-left: solid 4px #476;
 			padding-left: 8px;
-			margin-left: -12px;
 		}
 		strong {
 			font-weight: bold;
@@ -410,7 +409,7 @@ div#content {
 		color: #333;
 	}
 	#respond {
-		border-top: 1px solid #e7e7e7;
+		border-top: 1px dashed #d7d7d7;
 		margin: 24px 0;
 		overflow: hidden;
 		position: relative;
