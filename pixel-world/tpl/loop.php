@@ -1,7 +1,7 @@
 <?php ManatenWp::writeNavigation(); ?>
 
 <?php while ( have_posts() ) : the_post(); ?>
-	<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<h2 class="entry-title">
 			<span class="category-name"><?php echo get_the_category_list(' ') ?></span>
 			<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
@@ -15,7 +15,7 @@
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'twentyten' ) ); ?>
 		</div>
 
-	</div>
+	</article>
 <?php endwhile; ?>
 
 <?php ManatenWp::writeNavigation(); ?>

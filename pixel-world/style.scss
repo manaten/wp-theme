@@ -78,17 +78,19 @@ $icons-url:  url('images/icons.gif');
 }
 
 @mixin icon-shadow() {
-	z-index: -1;
-	position: absolute;
-	content: "";
-	
-	left: 20%;
-	right: 20%;
-	top: 0;
-	height: 8px;
+	&:before {
+		z-index: -1;
+		position: absolute;
+		content: "";
+		
+		left: 20%;
+		right: 20%;
+		top: 0;
+		height: 8px;
 
-	border-radius: 70px;
-	box-shadow: 0 40px 10px #777;
+		border-radius: 70px;
+		box-shadow: 0 40px 10px #777;
+	}
 }
 
 /* -------- styles -------- */
@@ -98,7 +100,7 @@ body {
 	margin-top: 96px;
 }
 
-div#wrapper {
+div.wrapper {
 	margin: 0 auto;
 	width: $body-width;
 }
@@ -114,7 +116,7 @@ header {
 	background: $content-background-color;
 	border-bottom: solid 4px $link-text-color;
 
-	div#wrapper div {
+	div.wrapper div {
 		float: left;
 		&#logo {
 			margin: 20px 0 0 16px;
@@ -130,6 +132,7 @@ header {
 				margin-left: 16px;
 				position: relative;
 				a {
+					@include icon-shadow();
 					&.top {
 						@include sprite( $icons-url, 0, 0, 48px, 48px);
 						&:hover {
@@ -161,9 +164,6 @@ header {
 						}
 					}
 				}
-				&:before {
-					@include icon-shadow();
-				}
 			}
 		}
 		&#search {
@@ -193,8 +193,8 @@ header {
 	}
 }
 
-div.bg-navigation {
-	z-index: -200;
+nav.bg-navigation {
+	z-index: 0;
 	top: 0;
 	margin-top: 64px;
 	position: fixed;
@@ -214,6 +214,7 @@ div.bg-navigation {
 				margin-top: 50%;
 				margin-left: 4px;
 				@include sprite( $icons-url, 0, 240px, 48px, 48px);
+				position: relative;
 			}
 			&:hover {
 				background-color: $hover-bg-color;
@@ -236,6 +237,7 @@ div.bg-navigation {
 				margin-top: 50%;
 				margin-right: 4px;
 				@include sprite( $icons-url, 0, 288px, 48px, 48px);
+				position: relative;
 			}
 			&:hover {
 				background-color: $hover-bg-color;
@@ -280,6 +282,10 @@ div#footer {
 	box-shadow: 0 0 10px #999;
 }
 
+div#main {
+	position: relative;
+	z-index: 2;
+}
 div#content {
 	color: $text-color;
 	line-height: 1.6em;
