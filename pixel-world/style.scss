@@ -97,17 +97,19 @@ $icons-url:  url('images/icons.gif');
 body {
 	background: #EEE;
 	text-align: center;
-	margin-top: 96px;
 }
 
 div.wrapper {
 	margin: 0 auto;
 	width: $body-width;
+	position: relative;
+	z-index: 1;
 }
 
 header {
 	position: fixed;
 	top: 0;
+	left: 0;
 	width: 100%;
 	height: 60px;
 	z-index: 200;
@@ -193,57 +195,59 @@ header {
 	}
 }
 
-nav.bg-navigation {
-	z-index: 0;
-	top: 0;
-	margin-top: 64px;
+$hover-bg-color: #DDDADA;
+.bg-nav-previous {
 	position: fixed;
-	width: 100%;
+	top: 0;
+	left: 0;
+	width: 50%;
 	height: 100%;
-
-	$hover-bg-color: #DDDADA;
-	.nav-previous {
+	float: left;
+	a {
 		float: left;
-		width: 50%;
+		width: 100%;
 		height: 100%;
-		a {
+		span.space {
+			display: block;
+			height: 50%;
+		}
+		span.icon {
 			float: left;
-			width: 100%;
-			height: 100%;
-			span {
-				margin-top: 50%;
-				margin-left: 4px;
-				@include sprite( $icons-url, 0, 240px, 48px, 48px);
-				position: relative;
-			}
-			&:hover {
-				background-color: $hover-bg-color;
-				span {
-					@include sprite( $icons-url, 48px, 240px, 48px, 48px);
-				}
+			margin-left: 4px;
+			@include sprite( $icons-url, 0, 240px, 48px, 48px);
+		}
+		&:hover {
+			background-color: $hover-bg-color;
+			span.icon {
+				@include sprite( $icons-url, 48px, 240px, 48px, 48px);
 			}
 		}
 	}
-	.nav-next {
+}
+.bg-nav-next {
+	position: fixed;
+	top: 0;
+	right: 0;
+	float: right;
+	width: 50%;
+	height: 100%;
+	a {
 		float: right;
-		width: 50%;
+		width: 100%;
 		height: 100%;
-		a {
+		span.space {
+			display: block;
+			height: 50%;
+		}
+		span.icon {
 			float: right;
-			width: 100%;
-			height: 100%;
-			span {
-				float: right;
-				margin-top: 50%;
-				margin-right: 4px;
-				@include sprite( $icons-url, 0, 288px, 48px, 48px);
-				position: relative;
-			}
-			&:hover {
-				background-color: $hover-bg-color;
-				span {
-					@include sprite( $icons-url, 48px, 288px, 48px, 48px);
-				}
+			margin-right: 4px;
+			@include sprite( $icons-url, 0, 288px, 48px, 48px);
+		}
+		&:hover {
+			background-color: $hover-bg-color;
+			span.icon {
+				@include sprite( $icons-url, 48px, 288px, 48px, 48px);
 			}
 		}
 	}
@@ -282,10 +286,6 @@ div#footer {
 	box-shadow: 0 0 10px #999;
 }
 
-div#main {
-	position: relative;
-	z-index: 2;
-}
 div#content {
 	color: $text-color;
 	line-height: 1.6em;
@@ -294,7 +294,7 @@ div#content {
 	text-align: left;
 	background: $content-background-color;
 
-	margin-top: 4px;
+	margin-top: 100px;
 	padding: 16px 48px;
 
 	border-radius: 5px;

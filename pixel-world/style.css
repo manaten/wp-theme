@@ -26,11 +26,11 @@ a img { border: none; }
 /* -------- variables --------  */
 /* -------- useful mixins -------- */
 /* -------- styles -------- */
-body { background: #EEE; text-align: center; margin-top: 96px; }
+body { background: #EEE; text-align: center; }
 
-div.wrapper { margin: 0 auto; width: 1024px; }
+div.wrapper { margin: 0 auto; width: 1024px; position: relative; z-index: 1; }
 
-header { position: fixed; top: 0; width: 100%; height: 60px; z-index: 200; margin: 0; box-shadow: 0 0 10px #999; background: #f4f0f0; border-bottom: solid 4px #447766; }
+header { position: fixed; top: 0; left: 0; width: 100%; height: 60px; z-index: 200; margin: 0; box-shadow: 0 0 10px #999; background: #f4f0f0; border-bottom: solid 4px #447766; }
 header div.wrapper div { float: left; }
 header div.wrapper div#logo { margin: 20px 0 0 16px; }
 header div.wrapper div#logo a { width: 146px; height: 32px; display: block; overflow: hidden; background: url("images/images.gif") 0 -64px no-repeat; text-indent: 100%; white-space: nowrap; }
@@ -53,17 +53,19 @@ header div.wrapper div#search input[type=submit] { position: absolute; margin: 4
 header div.wrapper div#search input[type=text] { margin: 0; border: solid 1px #BAA; border-radius: 14px; background: #FFF; padding: 4px 4px 4px 28px; width: 200px; }
 header div.wrapper div#search input[type=text]:focus { border: solid 1px #ACF; box-shadow: 0 0 10px #BEF; outline: none; }
 
-nav.bg-navigation { z-index: 0; top: 0; margin-top: 64px; position: fixed; width: 100%; height: 100%; }
-nav.bg-navigation .nav-previous { float: left; width: 50%; height: 100%; }
-nav.bg-navigation .nav-previous a { float: left; width: 100%; height: 100%; }
-nav.bg-navigation .nav-previous a span { margin-top: 50%; margin-left: 4px; width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 -240px no-repeat; text-indent: 100%; white-space: nowrap; position: relative; }
-nav.bg-navigation .nav-previous a:hover { background-color: #dddada; }
-nav.bg-navigation .nav-previous a:hover span { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") -48px -240px no-repeat; text-indent: 100%; white-space: nowrap; }
-nav.bg-navigation .nav-next { float: right; width: 50%; height: 100%; }
-nav.bg-navigation .nav-next a { float: right; width: 100%; height: 100%; }
-nav.bg-navigation .nav-next a span { float: right; margin-top: 50%; margin-right: 4px; width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 -288px no-repeat; text-indent: 100%; white-space: nowrap; position: relative; }
-nav.bg-navigation .nav-next a:hover { background-color: #dddada; }
-nav.bg-navigation .nav-next a:hover span { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") -48px -288px no-repeat; text-indent: 100%; white-space: nowrap; }
+.bg-nav-previous { position: fixed; top: 0; left: 0; width: 50%; height: 100%; float: left; }
+.bg-nav-previous a { float: left; width: 100%; height: 100%; }
+.bg-nav-previous a span.space { display: block; height: 50%; }
+.bg-nav-previous a span.icon { float: left; margin-left: 4px; width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 -240px no-repeat; text-indent: 100%; white-space: nowrap; }
+.bg-nav-previous a:hover { background-color: #dddada; }
+.bg-nav-previous a:hover span.icon { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") -48px -240px no-repeat; text-indent: 100%; white-space: nowrap; }
+
+.bg-nav-next { position: fixed; top: 0; right: 0; float: right; width: 50%; height: 100%; }
+.bg-nav-next a { float: right; width: 100%; height: 100%; }
+.bg-nav-next a span.space { display: block; height: 50%; }
+.bg-nav-next a span.icon { float: right; margin-right: 4px; width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 -288px no-repeat; text-indent: 100%; white-space: nowrap; }
+.bg-nav-next a:hover { background-color: #dddada; }
+.bg-nav-next a:hover span.icon { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") -48px -288px no-repeat; text-indent: 100%; white-space: nowrap; }
 
 div#contentLeft { width: 680px; min-height: 600px; margin-right: 24px; float: left; }
 
@@ -73,9 +75,7 @@ div#contentFooter { width: 100%; clear: both; }
 
 div#footer { background: #433; margin-top: 4px; margin-bottom: 4px; padding: 5px; text-align: center; font-size: 80%; color: #FFF; border-radius: 5px; box-shadow: 0 0 10px #999; }
 
-div#main { position: relative; z-index: 2; }
-
-div#content { color: #441111; line-height: 1.6em; font-family: "sans-serif"; font-size: 0.95em; text-align: left; background: #f4f0f0; margin-top: 4px; padding: 16px 48px; border-radius: 5px; box-shadow: 0 0 10px #999; }
+div#content { color: #441111; line-height: 1.6em; font-family: "sans-serif"; font-size: 0.95em; text-align: left; background: #f4f0f0; margin-top: 100px; padding: 16px 48px; border-radius: 5px; box-shadow: 0 0 10px #999; }
 div#content a:link, div#content a:visited { color: #447766; }
 div#content a:hover, div#content a:hover { color: #cc6666; }
 div#content div.topImage { text-align: center; margin: 20px; }
