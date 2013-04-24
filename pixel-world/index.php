@@ -43,12 +43,15 @@
 		</div>
 	</header>
 
-	<div class="bg-nav-previous">
-		<?php is_single() ? previous_post_link('%link', '<span class="space"></span><span class="icon">&larr;</span>') : next_posts_link('<span class="space"></span><span class="icon">&larr;</span>');  ?>
-	</div>
-	<div class="bg-nav-next">
-		<?php is_single() ? next_post_link('%link', '<span class="space"></span><span class="icon">&rarr;</span>') : previous_posts_link('<span class="space"></span><span class="icon">&rarr;</span>'); ?>
-	</div>
+	<nav class="bg-nav">
+		<div class="bg-nav-previous">
+			<?php is_single() ? previous_post_link('%link', '<span class="space"></span><span class="icon">&larr;</span>') : next_posts_link('<span class="space"></span><span class="icon">&larr;</span>');  ?>
+		</div>
+		<div class="bg-nav-next">
+			<?php is_single() ? next_post_link('%link', '<span class="space"></span><span class="icon">&rarr;</span>') : previous_posts_link('<span class="space"></span><span class="icon">&rarr;</span>'); ?>
+		</div>
+	</nav>
+
 	<div class="wrapper">
 		<div id="content">
 			<?php if ( is_404() || !have_posts() ) {
