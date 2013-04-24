@@ -105,12 +105,12 @@ header {
 		&#logo {
 			margin: 20px 0 0 16px;
 			a {
-				@include sprite( $images-url, 0, 64px, 152px, 32px);
+				@include sprite( $images-url, 0, 64px, 146px, 32px);
 				&:hover { @include opacity(50); }
 			}
 		}
 		&#menu {
-			margin: 6px 0 0 96px;
+			margin: 6px 0 0 102px;
 			li {
 				float: left;
 				margin-left: 16px;
@@ -154,12 +154,11 @@ header {
 					
 					left: 20%;
 					right: 20%;
-					top: 24px;
-					bottom: 0;
+					top: 0;
 					height: 8px;
 
 					border-radius: 70px;
-					box-shadow: 0 15px 10px #777;
+					box-shadow: 0 40px 10px #777;
 				}
 			}
 		}
