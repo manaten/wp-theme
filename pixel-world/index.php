@@ -40,6 +40,15 @@
 		</div>
 	</header>
 
+	<div class="bg-navigation">
+		<div class="nav-previous">
+			<?php is_single() ? previous_post_link('%link', '<span>&larr;</span>') : next_posts_link('<span>&larr;</span>');  ?>
+		</div>
+		<div class="nav-next">
+			<?php is_single() ? next_post_link('%link', '<span>&rarr;</span>') : previous_posts_link('<span>&rarr;</span>'); ?>
+		</div>
+	</div>
+
 	<div id="wrapper">
 		<div id="content">
 			<?php if ( is_404() || !have_posts() ) {
