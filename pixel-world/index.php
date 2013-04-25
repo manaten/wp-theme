@@ -32,6 +32,8 @@
 					<li><a class="twitter" title="Twitter" href="http://twitter.com/manaten">Twitter</a></li>
 				</ul>
 			</div>
+			
+			<a class="rss" title="rss" href="http://manaten.net/feed">RSS</a>
 			<div id="search">
 				<form role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>" >
 					<div>

@@ -118,80 +118,86 @@ header {
 	background: $content-background-color;
 	border-bottom: solid 4px $link-text-color;
 
-	div.wrapper div {
+	div#logo {
 		float: left;
-		&#logo {
-			margin: 20px 0 0 16px;
-			a {
-				@include sprite( $images-url, 0, 64px, 146px, 32px);
-				&:hover { @include opacity(50); }
-			}
+		margin: 20px 0 0 16px;
+		a {
+			@include sprite( $images-url, 0, 64px, 146px, 32px);
+			&:hover { @include opacity(50); }
 		}
-		&#menu {
-			margin: 6px 0 0 102px;
-			li {
-				float: left;
-				margin-left: 16px;
-				position: relative;
-				a {
-					@include icon-shadow();
-					&.top {
-						@include sprite( $icons-url, 0, 0, 48px, 48px);
-						&:hover {
-							@include sprite( $icons-url, 48px, 0, 48px, 48px);
-						}
-					}
-					&.blog {
-						@include sprite( $icons-url, 0, 48px, 48px, 48px);
-						&:hover {
-							@include sprite( $icons-url, 48px, 48px, 48px, 48px);
-						}
-					}
-					&.gallery {
-						@include sprite( $icons-url, 0, 96px, 48px, 48px);
-						&:hover {
-							@include sprite( $icons-url, 48px, 96px, 48px, 48px);
-						}
-					}
-					&.bbs {
-						@include sprite( $icons-url, 0, 144px, 48px, 48px);
-						&:hover {
-							@include sprite( $icons-url, 48px, 144px, 48px, 48px);
-						}
-					}
-					&.twitter {
-						@include sprite( $icons-url, 0, 192px, 48px, 48px);
-						&:hover {
-							@include sprite( $icons-url, 48px, 192px, 48px, 48px);
-						}
-					}
-				}
-			}
-		}
-		&#search {
+	}
+	div#menu {
+		float: left;
+		margin: 6px 0 0 102px;
+		li {
+			float: left;
+			margin-left: 16px;
 			position: relative;
-			float: right;
-			margin: 18px 16px 0 0;
-			input[type=submit] {
-				position: absolute;
-				margin: 4px 0 0 8px;
-				border: none 0;
-				@include sprite( $images-url, 160px, 64px, 16px, 16px);
-			}
-			input[type=text] {
-				margin: 0;
-				border: solid 1px #BAA;
-				border-radius: 14px;
-				background: #FFF;
-				padding: 4px 4px 4px 28px;
-				width: 200px;
-				&:focus {
-					border: solid 1px #ACF;
-					box-shadow: 0 0 10px #BEF;
-					outline: none;
+			a {
+				@include icon-shadow();
+				&.top {
+					@include sprite( $icons-url, 0, 0, 48px, 48px);
+					&:hover {
+						@include sprite( $icons-url, 48px, 0, 48px, 48px);
+					}
+				}
+				&.blog {
+					@include sprite( $icons-url, 0, 48px, 48px, 48px);
+					&:hover {
+						@include sprite( $icons-url, 48px, 48px, 48px, 48px);
+					}
+				}
+				&.gallery {
+					@include sprite( $icons-url, 0, 96px, 48px, 48px);
+					&:hover {
+						@include sprite( $icons-url, 48px, 96px, 48px, 48px);
+					}
+				}
+				&.bbs {
+					@include sprite( $icons-url, 0, 144px, 48px, 48px);
+					&:hover {
+						@include sprite( $icons-url, 48px, 144px, 48px, 48px);
+					}
+				}
+				&.twitter {
+					@include sprite( $icons-url, 0, 192px, 48px, 48px);
+					&:hover {
+						@include sprite( $icons-url, 48px, 192px, 48px, 48px);
+					}
 				}
 			}
 		}
+	}
+	div#search {
+		position: relative;
+		float: right;
+		margin: 18px 8px 0 0;
+		input[type=submit] {
+			position: absolute;
+			margin: 4px 0 0 8px;
+			border: none 0;
+			@include sprite( $images-url, 160px, 64px, 16px, 16px);
+		}
+		input[type=text] {
+			margin: 0;
+			border: solid 1px #BAA;
+			border-radius: 14px;
+			background: #FFF;
+			padding: 4px 4px 4px 28px;
+			width: 200px;
+			&:focus {
+				border: solid 1px #ACF;
+				box-shadow: 0 0 10px #BEF;
+				outline: none;
+			}
+		}
+	}
+
+	a.rss {
+		float: right;
+		margin: 22px 8px 0 0;
+		@include sprite( $images-url, 160px, 80px, 16px, 16px);
+		&:hover { @include opacity(70); }
 	}
 }
 
