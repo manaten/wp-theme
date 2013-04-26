@@ -95,7 +95,7 @@ $icons-url:  url('images/icons.gif');
 
 /* -------- styles -------- */
 body {
-	background: #EEE;
+	background: #EAEAEC;
 	text-align: center;
 }
 
@@ -301,7 +301,8 @@ div#content {
 	text-align: left;
 	background: $content-background-color;
 
-	padding: 76px 48px 16px 48px;
+	margin-top: 80px;
+	padding: 16px 48px;
 
 	border-radius: 5px;
 	box-shadow: 0 0 10px #999;
