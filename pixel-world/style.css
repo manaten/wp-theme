@@ -135,3 +135,13 @@ div#content h3#reply-title { margin: 18px 0; }
 div#content #comments-list #respond { margin: 0 0 18px 0; }
 div#content #comments-list ul #respond { margin: 0; }
 div#content #cancel-comment-reply-link { font-size: 12px; font-weight: normal; line-height: 18px; }
+
+.pixelTip { color: #EEE; font-size: 11px; background-color: rgba(0, 0, 0, 0.8); border-radius: 6px; padding: 4px; }
+.pixelTip span { margin: 0 2px; }
+.pixelTip span.width:before { content: "w:"; }
+.pixelTip span.width:after { content: "px"; }
+.pixelTip span.height:before { content: "h:"; }
+.pixelTip span.height:after { content: "px"; }
+.pixelTip span.size:after { content: "byte"; }
+.pixelTip span.depth:after { content: "bit"; }
+.pixelTip td { width: 10px; height: 9px; border: solid 1px #EEE; }
