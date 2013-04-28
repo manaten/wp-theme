@@ -583,6 +583,9 @@ div.pixelTip {
 		}
 	}
 	div.container {
+		clear: both;
+		margin: 0 auto;
+		width: 100%;
 		img {
 			image-rendering: -moz-crisp-edges;
 			image-rendering: -o-crisp-edges;
