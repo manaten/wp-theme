@@ -542,12 +542,14 @@ div#content {
 	}
 }
 
-.pixelTip {
+div.pixelTip {
+	z-index: 10;
 	color: #EEE;
 	font-size: 11px;
-	background-color: rgba(0, 0, 0, 0.8);
-	border-radius: 6px;
+	background-color: rgba(0,0,0,0.5);
 	padding: 4px;
+	border-radius: 6px;
+	box-shadow: 0 0 10px #777;
 	span {
 		margin: 0 2px;
 	}
@@ -565,9 +567,37 @@ div#content {
 	span.depth {
 		&:after  { content: "bit"; }
 	}
-	td {
-		width: 10px;
-		height: 9px;
-		border: solid 1px #EEE;
+	div.controll {
+		width: 100%;
+		text-align: left;
+		button {
+			cursor: pointer;
+			margin: 2px;
+			border: 0;
+			padding: 0;
+			float: left;
+			&.zoomIn { @include sprite($images-url, 176px, 64px, 16px, 16px); }
+			&.zoomOut { @include sprite($images-url, 192px, 64px, 16px, 16px); }
+			&.bgColor { @include sprite($images-url, 176px, 80px, 16px, 16px); }
+			&:hover { @include opacity(70); }
+		}
+	}
+	div.container {
+		img {
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -o-crisp-edges;
+			image-rendering: -webkit-optimize-contrast;
+			-ms-interpolation-mode: nearest-neighbor;
+			padding: 4px;
+			border-radius: 4px;
+		}
+	}
+	table.palette {
+		margin: 0 auto;
+		td {
+			width: 10px;
+			height: 9px;
+			border: solid 1px #EEE;
+		}
 	}
 }

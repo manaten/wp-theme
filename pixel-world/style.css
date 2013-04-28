@@ -136,12 +136,20 @@ div#content #comments-list #respond { margin: 0 0 18px 0; }
 div#content #comments-list ul #respond { margin: 0; }
 div#content #cancel-comment-reply-link { font-size: 12px; font-weight: normal; line-height: 18px; }
 
-.pixelTip { color: #EEE; font-size: 11px; background-color: rgba(0, 0, 0, 0.8); border-radius: 6px; padding: 4px; }
-.pixelTip span { margin: 0 2px; }
-.pixelTip span.width:before { content: "w:"; }
-.pixelTip span.width:after { content: "px"; }
-.pixelTip span.height:before { content: "h:"; }
-.pixelTip span.height:after { content: "px"; }
-.pixelTip span.size:after { content: "byte"; }
-.pixelTip span.depth:after { content: "bit"; }
-.pixelTip td { width: 10px; height: 9px; border: solid 1px #EEE; }
+div.pixelTip { z-index: 10; color: #EEE; font-size: 11px; background-color: rgba(0, 0, 0, 0.5); padding: 4px; border-radius: 6px; box-shadow: 0 0 10px #777; }
+div.pixelTip span { margin: 0 2px; }
+div.pixelTip span.width:before { content: "w:"; }
+div.pixelTip span.width:after { content: "px"; }
+div.pixelTip span.height:before { content: "h:"; }
+div.pixelTip span.height:after { content: "px"; }
+div.pixelTip span.size:after { content: "byte"; }
+div.pixelTip span.depth:after { content: "bit"; }
+div.pixelTip div.controll { width: 100%; text-align: left; }
+div.pixelTip div.controll button { cursor: pointer; margin: 2px; border: 0; padding: 0; float: left; }
+div.pixelTip div.controll button.zoomIn { width: 16px; height: 16px; display: block; overflow: hidden; background: url("images/images.gif") -176px -64px no-repeat; text-indent: 100%; white-space: nowrap; }
+div.pixelTip div.controll button.zoomOut { width: 16px; height: 16px; display: block; overflow: hidden; background: url("images/images.gif") -192px -64px no-repeat; text-indent: 100%; white-space: nowrap; }
+div.pixelTip div.controll button.bgColor { width: 16px; height: 16px; display: block; overflow: hidden; background: url("images/images.gif") -176px -80px no-repeat; text-indent: 100%; white-space: nowrap; }
+div.pixelTip div.controll button:hover { opacity: 0.7; filter: alpha(opacity=70); }
+div.pixelTip div.container img { image-rendering: -moz-crisp-edges; image-rendering: -o-crisp-edges; image-rendering: -webkit-optimize-contrast; -ms-interpolation-mode: nearest-neighbor; padding: 4px; border-radius: 4px; }
+div.pixelTip table.palette { margin: 0 auto; }
+div.pixelTip table.palette td { width: 10px; height: 9px; border: solid 1px #EEE; }
