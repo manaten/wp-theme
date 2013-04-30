@@ -92,7 +92,11 @@ div#content .entry-title .category-name :before, div#content .page-title .catego
 div#content .entry-title .category-name :after, div#content .page-title .category-name :after { content: "]"; }
 div#content .entry-content, div#content .entry-summary { clear: both; padding: 12px 0 0 12px; }
 div#content .entry-content { margin: 12px 0 80px 0; }
-div#content .entry-content h1, div#content .entry-content h2, div#content .entry-content h3, div#content .entry-content h4, div#content .entry-content h5, div#content .entry-content h6 { font-size: 120%; font-weight: bold; color: #000; line-height: 1.5em; margin: 48px 0 16px -12px; border-left: solid 4px #476; padding-left: 8px; }
+div#content .entry-content blockquote { border: solid 1px #666; background-color: #EEE; border-radius: 5px; padding: 10px; margin: 20px; }
+div#content .entry-content blockquote p { margin: 0; }
+div#content .entry-content h1 { font-size: 120%; font-weight: bold; color: #000; line-height: 1.5em; margin: 48px 0 16px -12px; border-left: solid 4px #476; padding-left: 8px; }
+div#content .entry-content h2 { font-size: 110%; font-weight: bold; color: #000; line-height: 1.5em; margin: 24px 0 16px -8px; border-left: solid 4px #7BA; padding-left: 8px; }
+div#content .entry-content h3, div#content .entry-content h4, div#content .entry-content h5, div#content .entry-content h6 { font-size: 100%; font-weight: bold; color: #000; line-height: 1.5em; margin: 24px 0 16px -12px; padding-left: 8px; }
 div#content .entry-content strong { font-weight: bold; }
 div#content .entry-content p, div#content .entry-content ul, div#content .entry-content ol, div#content .entry-content dd, div#content .entry-content pre, div#content .entry-content hr { margin-bottom: 32px; }
 div#content .entry-content ul ul, div#content .entry-content ol ol, div#content .entry-content ul ol, div#content .entry-content ol ul { margin-bottom: 0; }
