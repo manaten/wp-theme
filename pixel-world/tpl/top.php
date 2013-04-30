@@ -1,6 +1,46 @@
 <div id="contentLeft" style="width:550px">
 	<?php the_content(); ?>
 
+	<div id="menu">
+		<ul>
+			<li><a class="top" title="トップページ" href="http://local.manaten.net">
+				<span class="icon">トップページ</span>
+				<div>
+					<h2>トップページ</h2>
+					このページです。
+				</div>
+			</a></li>
+			<li><a class="blog" title="ブログ" href="http://local.manaten.net/archives">
+				<span class="icon">ブログ</span>
+				<div>
+					<h2>ブログ</h2>
+					プログラミング･ドット絵に関することを書き綴っていきます。
+				</div>
+			</a></li>
+			<li><a class="gallery" title="ギャラリー" href="http://local.manaten.net/gallery">
+				<span class="icon">ギャラリー</span>
+				<div>
+					<h2>ギャラリー</h2>
+					今までに打ったドット絵を展示してあります。
+				</div>
+			</a></li>
+			<li><a class="bbs" title="ドット絵掲示板" href="http://dot.manaten.net">
+				<span class="icon">ドット絵掲示板</span>
+				<div>
+					<h2>ドット絵掲示板</h2>
+					ドット絵をアップロードできる掲示板です。
+				</div>
+			</a></li>
+			<li><a class="twitter" title="Twitter" href="http://twitter.com/manaten">
+				<span class="icon">Twitter</span>
+				<div>
+					<h2>Twitter</h2>
+					どうでもいいことをつぶやいています。
+				</div>
+			</a></li>
+		</ul>
+	</div>
+
 	<h1>更新情報</h1>
 	<div class="new-article">
 		<ul>
@@ -15,7 +55,6 @@
 			<?php endwhile; wp_reset_query(); ?>
 		</ul>
 	</div>
-
 
 	<h2>連絡先</h2>
 	<div class="contact">

@@ -78,7 +78,7 @@ div#footer { background: #433; margin-top: 4px; margin-bottom: 4px; padding: 5px
 
 div#content { color: #441111; line-height: 1.6em; font-family: "sans-serif"; font-size: 0.95em; text-align: left; background: #f4f0f0; margin-top: 80px; padding: 16px 48px; border-radius: 5px; box-shadow: 0 0 10px #999; }
 div#content a:link, div#content a:visited { color: #447766; }
-div#content a:hover, div#content a:hover { color: #cc6666; }
+div#content a:hover, div#content a:active { color: #cc6666; }
 div#content div.topImage { text-align: center; margin: 20px; }
 div#content div.contact { margin-left: 24px; font-size: 80%; }
 div#content div.new-article { height: 96px; overflow: auto; border: solid 1px #999; border-radius: 5px; background-color: #FFFFFF; }
@@ -87,6 +87,25 @@ div#content div.new-article ul li { font-size: 13px; clear: both; }
 div#content div.new-article ul li div.date { float: left; width: 100px; }
 div#content div.new-article ul li div.title { float: left; width: 400px; }
 div#content div.new-article ul li div.title.new:before { color: #C33; content: "new"; }
+div#content div#menu { margin: 0 auto; }
+div#content div#menu ul { width: 516px; height: 204px; margin: 0; list-style: none; }
+div#content div#menu ul li { float: left; position: relative; }
+div#content div#menu ul li a { display: block; width: 250px; height: 64px; float: left; font-size: 12px; margin: 2px; }
+div#content div#menu ul li a:link, div#content div#menu ul li a:visited { color: #888888; text-decoration: none; }
+div#content div#menu ul li a:hover, div#content div#menu ul li a:active { color: #555; background-color: #CCC; border-radius: 5px; text-decoration: none; }
+div#content div#menu ul li a h2 { font-size: 13px; border: none; margin: 0; padding: 0; }
+div#content div#menu ul li a div { width: 200px; float: left; }
+div#content div#menu ul li a span.icon { float: left; }
+div#content div#menu ul li a.top span.icon { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 0 no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content div#menu ul li a.top:hover span.icon { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") -48px 0 no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content div#menu ul li a.blog span.icon { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 -48px no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content div#menu ul li a.blog:hover span.icon { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") -48px -48px no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content div#menu ul li a.gallery span.icon { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 -96px no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content div#menu ul li a.gallery:hover span.icon { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") -48px -96px no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content div#menu ul li a.bbs span.icon { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 -144px no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content div#menu ul li a.bbs:hover span.icon { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") -48px -144px no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content div#menu ul li a.twitter span.icon { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") 0 -192px no-repeat; text-indent: 100%; white-space: nowrap; }
+div#content div#menu ul li a.twitter:hover span.icon { width: 48px; height: 48px; display: block; overflow: hidden; background: url("images/icons.gif") -48px -192px no-repeat; text-indent: 100%; white-space: nowrap; }
 div#content article { margin-bottom: 80px; }
 div#content .entry-meta, div#content .entry-utility { clear: both; color: #888888; font-size: 12px; line-height: 18px; margin-left: 4px; }
 div#content .entry-meta a:link, div#content .entry-meta a:visited, div#content .entry-utility a:link, div#content .entry-utility a:visited { color: #888888; }

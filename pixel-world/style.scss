@@ -311,7 +311,7 @@ div#content {
 		&:link, &:visited {
 			color: $link-text-color;
 		}
-		&:hover, &:hover {
+		&:hover, &:active {
 			color: $thin-link-text-color;
 		}
 	}
@@ -351,6 +351,94 @@ div#content {
 			}
 		}
 	}
+	div#menu {
+		margin: 0 auto;
+		ul {
+			width: 516px;
+			height: 204px;
+			margin: 0;
+			list-style: none;
+			li {
+				float: left;
+				position: relative;
+				a {
+					display: block;
+					width: 250px;
+					height: 64px;
+					float: left;
+					font-size: 12px;
+					margin: 2px;
+
+					&:link, &:visited {
+						color: $thin-text-color;
+						text-decoration: none;
+					}
+					&:hover, &:active {
+						color: #555;
+						background-color: #CCC;
+						border-radius: 5px;
+						text-decoration: none;
+					}
+
+					h2 {
+						font-size: 13px;
+						border: none;
+						margin: 0;
+						padding: 0;
+					}
+
+					div {
+						width: 200px;
+						float: left;
+					}
+					span.icon {
+						float: left;
+					}
+					&.top {
+						span.icon {
+							@include sprite( $icons-url, 0, 0, 48px, 48px);
+						}
+						&:hover span.icon {
+							@include sprite( $icons-url, 48px, 0, 48px, 48px);
+						}
+					}
+					&.blog {
+						span.icon {
+							@include sprite( $icons-url, 0, 48px, 48px, 48px);
+						}
+						&:hover span.icon {
+							@include sprite( $icons-url, 48px, 48px, 48px, 48px);
+						}
+					}
+					&.gallery {
+						span.icon {
+							@include sprite( $icons-url, 0, 96px, 48px, 48px);
+						}
+						&:hover span.icon {
+							@include sprite( $icons-url, 48px, 96px, 48px, 48px);
+						}
+					}
+					&.bbs {
+						span.icon {
+							@include sprite( $icons-url, 0, 144px, 48px, 48px);
+						}
+						&:hover span.icon {
+							@include sprite( $icons-url, 48px, 144px, 48px, 48px);
+						}
+					}
+					&.twitter {
+						span.icon {
+							@include sprite( $icons-url, 0, 192px, 48px, 48px);
+						}
+						&:hover span.icon {
+							@include sprite( $icons-url, 48px, 192px, 48px, 48px);
+						}
+					}
+				}
+			}
+		}
+	}
+	
 
 	article {
 		margin-bottom: 80px;
