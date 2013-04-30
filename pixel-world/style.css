@@ -81,6 +81,13 @@ div#content a:link, div#content a:visited { color: #447766; }
 div#content a:hover, div#content a:hover { color: #cc6666; }
 div#content div.topImage { text-align: center; margin: 20px; }
 div#content div.contact { margin-left: 24px; font-size: 80%; }
+div#content div.new-article { height: 96px; overflow: auto; border: solid 1px #999; border-radius: 5px; background-color: #FFFFFF; }
+div#content div.new-article ul { list-style: none; margin-left: 16px; }
+div#content div.new-article ul li { font-size: 13px; clear: both; }
+div#content div.new-article ul li div.date { float: left; width: 100px; }
+div#content div.new-article ul li div.title { float: left; width: 400px; }
+div#content div.new-article ul li div.title.new:before { color: #C33; content: "new"; }
+div#content article { margin-bottom: 80px; }
 div#content .entry-meta, div#content .entry-utility { clear: both; color: #888888; font-size: 12px; line-height: 18px; margin-left: 4px; }
 div#content .entry-meta a:link, div#content .entry-meta a:visited, div#content .entry-utility a:link, div#content .entry-utility a:visited { color: #888888; }
 div#content .entry-meta a:hover, div#content .entry-meta a:hover, div#content .entry-utility a:hover, div#content .entry-utility a:hover { color: #cc6666; }
@@ -91,11 +98,11 @@ div#content .entry-title a:active, div#content .entry-title a:hover, div#content
 div#content .entry-title .category-name :before, div#content .page-title .category-name :before { content: "["; }
 div#content .entry-title .category-name :after, div#content .page-title .category-name :after { content: "]"; }
 div#content .entry-content, div#content .entry-summary { clear: both; padding: 12px 0 0 12px; }
-div#content .entry-content { margin: 12px 0 80px 0; }
-div#content .entry-content blockquote { border: solid 1px #666; background-color: #EEE; border-radius: 5px; padding: 10px; margin: 20px; }
+div#content .entry-content { margin: 12px 0 16px 0; }
+div#content .entry-content blockquote { border: solid 1px #999; background-color: #EEE; border-radius: 5px; padding: 10px; margin: 20px; }
 div#content .entry-content blockquote p { margin: 0; }
-div#content .entry-content h1 { font-size: 120%; font-weight: bold; color: #000; line-height: 1.5em; margin: 48px 0 16px -12px; border-left: solid 4px #476; padding-left: 8px; }
-div#content .entry-content h2 { font-size: 110%; font-weight: bold; color: #000; line-height: 1.5em; margin: 24px 0 16px -8px; border-left: solid 4px #7BA; padding-left: 8px; }
+div#content .entry-content h1 { font-size: 120%; font-weight: bold; color: #000; line-height: 1.5em; margin: 24px 0 16px -12px; border-left: solid 4px #476; padding-left: 8px; }
+div#content .entry-content h2 { font-size: 110%; font-weight: bold; color: #000; line-height: 1.5em; margin: 24px 0 16px -8px; border-left: solid 4px #9BA; padding-left: 8px; }
 div#content .entry-content h3, div#content .entry-content h4, div#content .entry-content h5, div#content .entry-content h6 { font-size: 100%; font-weight: bold; color: #000; line-height: 1.5em; margin: 24px 0 16px -12px; padding-left: 8px; }
 div#content .entry-content strong { font-weight: bold; }
 div#content .entry-content p, div#content .entry-content ul, div#content .entry-content ol, div#content .entry-content dd, div#content .entry-content pre, div#content .entry-content hr { margin-bottom: 32px; }

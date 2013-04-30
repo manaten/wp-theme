@@ -324,6 +324,37 @@ div#content {
 		margin-left: 24px;
 		font-size: 80%;
 	}
+	div.new-article {
+		height: 96px;
+		overflow: auto;
+		border: solid 1px #999;
+		border-radius: 5px;
+		background-color: #FFFFFF;
+		ul {
+			list-style: none;
+			margin-left: 16px;
+			li {
+				font-size: 13px;
+				div.date {
+					float: left;
+					width: 100px;
+				}
+				div.title {
+					&.new:before {
+						color: #C33;
+						content: "new";
+					}
+					float: left;
+					width: 400px;
+				}
+				clear: both;
+			}
+		}
+	}
+
+	article {
+		margin-bottom: 80px;
+	}
 
 	.entry-meta,
 	.entry-utility {
@@ -376,9 +407,9 @@ div#content {
 	}
 
 	.entry-content {
-		margin: 12px 0 80px 0;
+		margin: 12px 0 16px 0;
 		blockquote {
-			border: solid 1px #666;
+			border: solid 1px #999;
 			background-color: #EEE;
 			border-radius: 5px;
 			padding: 10px;
@@ -392,7 +423,7 @@ div#content {
 			font-weight: bold;
 			color: #000;
 			line-height: 1.5em;
-			margin: 48px 0 16px -12px;
+			margin: 24px 0 16px -12px;
 			border-left: solid 4px #476;
 			padding-left: 8px;
 		}
@@ -402,7 +433,7 @@ div#content {
 			color: #000;
 			line-height: 1.5em;
 			margin: 24px 0 16px -8px;
-			border-left: solid 4px #7BA;
+			border-left: solid 4px #9BA;
 			padding-left: 8px;
 		}
 		h3, h4, h5, h6 {
