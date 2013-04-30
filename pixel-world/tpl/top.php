@@ -3,21 +3,21 @@
 
 	<div id="menu">
 		<ul>
-			<li><a class="top" title="トップページ" href="http://local.manaten.net">
+			<li><a class="top" title="トップページ" href="<?php bloginfo('url'); ?>">
 				<span class="icon">トップページ</span>
 				<div>
 					<h2>トップページ</h2>
 					このページです。
 				</div>
 			</a></li>
-			<li><a class="blog" title="ブログ" href="http://local.manaten.net/archives">
+			<li><a class="blog" title="ブログ" href="<?php bloginfo('url'); ?>/archives">
 				<span class="icon">ブログ</span>
 				<div>
 					<h2>ブログ</h2>
 					プログラミング･ドット絵に関することを書き綴っていきます。
 				</div>
 			</a></li>
-			<li><a class="gallery" title="ギャラリー" href="http://local.manaten.net/gallery">
+			<li><a class="gallery" title="ギャラリー" href="<?php bloginfo('url'); ?>/gallery">
 				<span class="icon">ギャラリー</span>
 				<div>
 					<h2>ギャラリー</h2>
