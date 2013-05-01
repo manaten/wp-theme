@@ -48,7 +48,7 @@
 			while ( have_posts() ) : the_post(); ?>
 			<li>
 				<div class="date"><?php the_time('Y年n月j日'); ?></div>
-				<div class="title<?php if ( 5 > date('d') - get_the_time('d') ) echo ' new'; ?>">
+				<div class="title<?php if ( 5 * 24 * 3600 > time() - get_the_time('U') ) echo ' new'; ?>">
 					<a href="<?php the_permalink(); ?>"><?php the_title();?></a>
 				</div>
 			</li>
