@@ -1,27 +1,48 @@
 <div id="contentLeft" style="width:550px">
 	<div id="topImage">
-		<div class="layer1" data-z="-6"></div>
-		<div class="layer2" data-z="-4"></div>
-		<div class="layer3" data-z="-2"></div>
-		<div class="layer4" data-z="-1"></div>
-		<div class="layer5" data-z="1"></div>
-		<div class="layer6" data-z="3"></div>
-		<div class="layer7" data-z="5"></div>
-		<div class="layer8" data-z="8"></div>
+		<div class="bg"         data-z="-600"></div>
+		<div class="picture1"   data-z="-570"></div>
+		<div class="picture2"   data-z="-530"></div>
+		<div class="chair1"     data-z="-500"></div>
+		<div class="chair2"     data-z="-480"></div>
+		<div class="chair3"     data-z="-450"></div>
+		<div class="table1"     data-z="-400"></div>
+		<div class="table2"     data-z="-350"></div>
+		<div class="dish1"      data-z="-300"></div>
+		<div class="spoon1"     data-z="-250"></div>
+		<div class="coffee1"    data-z="-200"></div>
+		<div class="parfait"    data-z="-150"></div>
+		<div class="blackboard" data-z="-100"></div>
+		<div class="flower"     data-z="-50"></div>
+		<div class="waitress"   data-z="100"></div>
+		<div class="dish2"      data-z="200"></div>
+		<div class="cake"       data-z="300"></div>
+		<div class="spoon2"     data-z="350"></div>
+		<div class="soda"       data-z="400"></div>
+		<div class="dish3"      data-z="420"></div>
+		<div class="milk"       data-z="460"></div>
+		<div class="coffee2"    data-z="500"></div>
 	</div>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script type='text/javascript'>
 	$(function() {
-		var layers = $('#topImage').children().map(function(_, layer) {
-			return { $:$(layer), factor:100/$(layer).data("z") };
-		});
 		var baseX = $('#topImage').offset().left + 200;
 		var baseY = $('#topImage').offset().top  + 150;
+		var layers = $('#topImage').children().map(function(_, layer) {
+			return {
+				$: $(layer),
+				factor:10000/$(layer).data("z"),
+				baseX: $(layer).position().left,
+				baseY: $(layer).position().top
+			};
+		});
 		$(document.body).mousemove(function(ev) {
-			var dx = ev.pageX - baseX;
-			var dy = ev.pageY - baseY;
 			$.each(layers, function(_, layer) {
-				layer.$.css({ left: (dx/layer.factor) +"px", top: (dy/layer.factor) +"px" });
+				var dx = ev.pageX - baseX;
+				var dy = ev.pageY - baseY;
+				layer.$.css({
+					left: layer.baseX + (dx/layer.factor) +"px",
+					top:  layer.baseY + (dy/layer.factor) +"px" });
 			});
 		});
 	});
