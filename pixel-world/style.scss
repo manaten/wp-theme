@@ -316,9 +316,47 @@ div#content {
 		}
 	}
 
-	div.topImage {
-		text-align: center;
-		margin: 20px;
+	div#topImage {
+		position: relative;
+		margin: 0 auto;
+		width: 400px;
+		height: 300px;
+		div {
+			$topImage: url('images/top.gif');
+			position: absolute;
+			&.layer1 {
+				@include sprite( $topImage, 0px, 0px, 400px, 300px);
+				z-index: 1;
+			}
+			&.layer2 {
+				@include sprite( $topImage, 400px, 0px, 400px, 300px);
+				z-index: 2;
+			}
+			&.layer3 {
+				@include sprite( $topImage, 800px, 0px, 400px, 300px);
+				z-index: 3;
+			}
+			&.layer4 {
+				@include sprite( $topImage, 1200px, 0px, 400px, 300px);
+				z-index: 4;
+			}
+			&.layer5 {
+				@include sprite( $topImage, 0px, 300px, 400px, 300px);
+				z-index: 5;
+			}
+			&.layer6 {
+				@include sprite( $topImage, 400px, 300px, 400px, 300px);
+				z-index: 6;
+			}
+			&.layer7 {
+				@include sprite( $topImage, 800px, 300px, 400px, 300px);
+				z-index: 7;
+			}
+			&.layer8 {
+				@include sprite( $topImage, 1200px, 300px, 400px, 300px);
+				z-index: 8;
+			}
+		}
 	}
 	div.contact {
 		margin-left: 24px;

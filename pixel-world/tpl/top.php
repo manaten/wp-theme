@@ -1,5 +1,31 @@
 <div id="contentLeft" style="width:550px">
-	<?php the_content(); ?>
+	<div id="topImage">
+		<div class="layer1" data-z="-6"></div>
+		<div class="layer2" data-z="-4"></div>
+		<div class="layer3" data-z="-2"></div>
+		<div class="layer4" data-z="-1"></div>
+		<div class="layer5" data-z="1"></div>
+		<div class="layer6" data-z="3"></div>
+		<div class="layer7" data-z="5"></div>
+		<div class="layer8" data-z="8"></div>
+	</div>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+	<script type='text/javascript'>
+	$(function() {
+		var layers = $('#topImage').children().map(function(_, layer) {
+			return { $:$(layer), factor:100/$(layer).data("z") };
+		});
+		var baseX = $('#topImage').offset().left + 200;
+		var baseY = $('#topImage').offset().top  + 150;
+		$(document.body).mousemove(function(ev) {
+			var dx = ev.pageX - baseX;
+			var dy = ev.pageY - baseY;
+			$.each(layers, function(_, layer) {
+				layer.$.css({ left: (dx/layer.factor) +"px", top: (dy/layer.factor) +"px" });
+			});
+		});
+	});
+	</script>
 
 	<div id="menu">
 		<ul>
