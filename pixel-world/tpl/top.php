@@ -11,6 +11,7 @@
 		<div class="dish1"      data-z="-300"></div>
 		<div class="spoon1"     data-z="-250"></div>
 		<div class="coffee1"    data-z="-200"></div>
+		<div class="steam1"     data-z="-200"></div>
 		<div class="parfait"    data-z="-150"></div>
 		<div class="blackboard" data-z="-100"></div>
 		<div class="flower"     data-z="-50"></div>
@@ -22,6 +23,7 @@
 		<div class="dish3"      data-z="420"></div>
 		<div class="milk"       data-z="460"></div>
 		<div class="coffee2"    data-z="500"></div>
+		<div class="steam2"     data-z="500"></div>
 	</div>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 	<script type='text/javascript'>

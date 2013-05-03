@@ -382,6 +382,12 @@ div#content {
 				@include sprite( $topImage, 480px, 500px, 60px, 40px);
 				z-index: 11;
 			}
+			&.steam1 {
+				left: -80px; top: 60px;
+				@include opacity(70);
+				@include sprite(url('images/steam.gif'), 0, 200px, 120px, 100px);
+				z-index: 12;
+			}
 			&.parfait {
 				left: 280px; top: 100px;
 				@include sprite( $topImage, 520px, 0px, 60px, 80px);
@@ -435,6 +441,12 @@ div#content {
 			&.coffee2 {
 				left: 260px; top: 180px;
 				@include sprite( $topImage, 360px, 480px, 120px, 80px);
+				z-index: 22;
+			}
+			&.steam2 {
+				left: 280px; top: 60px;
+				@include opacity(70);
+				@include sprite(url('images/steam.gif'), 0, 0, 200px, 200px);
 				z-index: 22;
 			}
 		}
