@@ -425,7 +425,7 @@ div#content {
 			}
 			&.soda {
 				left: 20px; top: 180px;
-				@include sprite( $topImage, 280px, 360px, 80px, 120px);
+				@include sprite( url('images/steam.gif'), 120px, 180px, 80px, 120px);
 				z-index: 19;
 			}
 			&.dish3 {
@@ -446,7 +446,7 @@ div#content {
 			&.steam2 {
 				left: 280px; top: 60px;
 				@include opacity(70);
-				@include sprite(url('images/steam.gif'), 0, 0, 200px, 200px);
+				@include sprite(url('images/steam.gif'), 0, 0, 200px, 160px);
 				z-index: 22;
 			}
 		}
