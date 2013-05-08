@@ -94,6 +94,9 @@ $icons-url:  url('images/icons.gif');
 }
 
 /* -------- styles -------- */
+html {
+	overflow-y: scroll;
+}
 body {
 	background: #EAEAEC;
 	text-align: center;
@@ -451,6 +454,11 @@ div#content {
 			}
 		}
 	}
+	div#topImageNote {
+		text-align: right;
+		font-size: 0.6em;
+	}
+
 	div.contact {
 		margin-left: 24px;
 		font-size: 80%;

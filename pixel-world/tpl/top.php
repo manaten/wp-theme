@@ -49,6 +49,9 @@
 		});
 	});
 	</script>
+	<div id="topImageNote">
+		top image: <a href="http://manaten.net/archives/427">ドット絵でパララクス効果</a>
+	</div>
 
 	<div id="menu">
 		<ul>
