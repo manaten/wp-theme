@@ -876,6 +876,7 @@ div.pixelTip {
 			&.zoomIn { @include sprite($images-url, 176px, 64px, 16px, 16px); }
 			&.zoomOut { @include sprite($images-url, 192px, 64px, 16px, 16px); }
 			&.bgColor { @include sprite($images-url, 176px, 80px, 16px, 16px); }
+			&.flip { @include sprite($images-url, 192px, 80px, 16px, 16px); }
 			&:hover { @include opacity(70); }
 		}
 	}
@@ -906,5 +907,13 @@ div.pixelTip {
 		padding: 2px;
 		margin: 0 auto;
 		border-left: 16px solid #000;
+	}
+	img.flip {
+		-webkit-transform: scaleX(-1);
+		-o-transform: scaleX(-1);
+		-moz-transform: scaleX(-1);
+		transform: scaleX(-1);
+		filter: FlipH;
+		-ms-filter: "FlipH";
 	}
 }
