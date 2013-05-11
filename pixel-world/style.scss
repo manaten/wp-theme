@@ -411,6 +411,14 @@ div#content {
 				@include sprite( $topImage, 0px, 300px, 280px, 300px);
 				z-index: 15;
 			}
+			&.waitress_b {
+				left: 180px; top: 76px;
+				@include sprite( url('images/steam.gif'), 200px, 220px, 40px, 40px);
+				z-index: 16;
+				&.anim {
+					@include sprite( url('images/steam.gif'), 200px, 260px, 40px, 40px);
+				}
+			}
 			&.dish2 {
 				left: 20px; top: 40px;
 				@include sprite( $topImage, 280px, 300px, 80px, 60px);

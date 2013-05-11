@@ -16,6 +16,7 @@
 		<div class="blackboard" data-z="-100"></div>
 		<div class="flower"     data-z="-50"></div>
 		<div class="waitress"   data-z="100"></div>
+		<div class="waitress_b" data-z="100"></div>
 		<div class="dish2"      data-z="200"></div>
 		<div class="cake"       data-z="300"></div>
 		<div class="spoon2"     data-z="350"></div>
@@ -46,6 +47,11 @@
 					left: layer.baseX + (dx/layer.factor) +"px",
 					top:  layer.baseY + (dy/layer.factor) +"px" });
 			});
+		});
+		$('.waitress_b').dblclick(function() {
+			var $that = $(this);
+			$that.addClass('anim');
+			setTimeout(function() { $that.removeClass('anim'); }, 960);
 		});
 	});
 	</script>
