@@ -179,7 +179,7 @@ header {
 			position: absolute;
 			margin: 4px 0 0 8px;
 			border: none 0;
-			@include sprite( $images-url, 160px, 64px, 16px, 16px);
+			@include sprite( $images-url, 192px, 0px, 16px, 16px);
 		}
 		input[type=text] {
 			margin: 0;
@@ -199,7 +199,7 @@ header {
 	a.rss {
 		float: right;
 		margin: 22px 8px 0 0;
-		@include sprite( $images-url, 160px, 80px, 16px, 16px);
+		@include sprite( $images-url, 192px, 16px, 16px, 16px);
 		&:hover { @include opacity(70); }
 	}
 }
@@ -868,10 +868,12 @@ div.pixelTip {
 			border: 0;
 			padding: 0;
 			float: left;
-			&.zoomIn { @include sprite($images-url, 176px, 64px, 16px, 16px); }
-			&.zoomOut { @include sprite($images-url, 192px, 64px, 16px, 16px); }
-			&.bgColor { @include sprite($images-url, 176px, 80px, 16px, 16px); }
-			&.flip { @include sprite($images-url, 192px, 80px, 16px, 16px); }
+			&.zoomIn { @include sprite($images-url, 160px, 64px, 16px, 16px); }
+			&.zoomOut { @include sprite($images-url, 176px, 64px, 16px, 16px); }
+			&.bgColor { @include sprite($images-url, 192px, 64px, 16px, 16px); }
+			&.flipX { @include sprite($images-url, 160px, 80px, 16px, 16px); }
+			&.flipY { @include sprite($images-url, 176px, 80px, 16px, 16px); }
+			&.rotate { @include sprite($images-url, 192px, 80px, 16px, 16px); }
 			&:hover { @include opacity(70); }
 		}
 	}
@@ -902,13 +904,5 @@ div.pixelTip {
 		padding: 2px;
 		margin: 0 auto;
 		border-left: 16px solid #000;
-	}
-	img.flip {
-		-webkit-transform: scaleX(-1);
-		-o-transform: scaleX(-1);
-		-moz-transform: scaleX(-1);
-		transform: scaleX(-1);
-		filter: FlipH;
-		-ms-filter: "FlipH";
 	}
 }
