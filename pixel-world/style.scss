@@ -858,6 +858,9 @@ div.pixelTip {
 	span.size {
 		&:after  { content: "byte"; }
 	}
+	span.colorNum {
+		&:after  { content: "色"; }
+	}
 	span.depth {
 		&:after  { content: "bit"; }
 	}
