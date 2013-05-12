@@ -879,11 +879,9 @@ div.pixelTip {
 	}
 	div.container {
 		clear: both;
-		margin: auto auto;
-		
-     vertical-align:middle;
+		margin: 0 auto;
+		position: relative;
 		img {
-			vertical-align: middle;
 			image-rendering: -moz-crisp-edges;
 			image-rendering: -o-crisp-edges;
 			image-rendering: -webkit-optimize-contrast;
