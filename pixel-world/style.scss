@@ -879,15 +879,15 @@ div.pixelTip {
 	}
 	div.container {
 		clear: both;
-		margin: 0 auto;
-		width: 100%;
+		margin: auto auto;
+		
+     vertical-align:middle;
 		img {
+			vertical-align: middle;
 			image-rendering: -moz-crisp-edges;
 			image-rendering: -o-crisp-edges;
 			image-rendering: -webkit-optimize-contrast;
 			-ms-interpolation-mode: nearest-neighbor;
-			padding: 4px;
-			border-radius: 4px;
 		}
 	}
 

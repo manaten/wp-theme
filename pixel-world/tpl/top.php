@@ -34,18 +34,29 @@
 		var layers = $('#topImage').children().map(function(_, layer) {
 			return {
 				$: $(layer),
-				factor:10000/$(layer).data("z"),
+				factor:$(layer).data("z")/10000,
 				baseX: $(layer).position().left,
 				baseY: $(layer).position().top
 			};
 		});
-		$(document.body).mousemove(function(ev) {
+		var isSmartphone = navigator.userAgent.search(/(iPhone|iPad|Android)/) !== -1;
+		!isSmartphone && $(document.body).mousemove(function(ev) {
+			var dx = ev.pageX - baseX;
+			var dy = ev.pageY - baseY;
 			$.each(layers, function(_, layer) {
-				var dx = ev.pageX - baseX;
-				var dy = ev.pageY - baseY;
 				layer.$.css({
-					left: layer.baseX + (dx/layer.factor) +"px",
-					top:  layer.baseY + (dy/layer.factor) +"px" });
+					left: layer.baseX + (dx*layer.factor) +"px",
+					top:  layer.baseY + (dy*layer.factor) +"px" });
+			});
+		});
+		isSmartphone && $(window).scroll(function(ev) {
+			var dx = baseX/2 - $(document).scrollLeft();
+			var dy = baseY/2 - $(document).scrollTop();
+			console.log(dx, dy);
+			$.each(layers, function(_, layer) {
+				layer.$.css({
+					left: layer.baseX + (dx*layer.factor*3) +"px",
+					top:  layer.baseY + (dy*layer.factor*3) +"px" });
 			});
 		});
 	});
