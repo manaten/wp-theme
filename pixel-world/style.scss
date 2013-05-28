@@ -1,7 +1,7 @@
 /*
 Theme Name: pixel-world
 Theme URI: http://manaten.net/
-Description: 
+Description:
 Author: manaten
 Version: 1.0
 Text Domain: manaten
@@ -51,7 +51,7 @@ a img {
 /* -------- variables --------  */
 $body-width: 1024px;
 
-$text-color: #411; 
+$text-color: #411;
 $link-text-color: #476;
 $thin-text-color: #888;
 $thin-link-text-color: #C66;
@@ -82,7 +82,7 @@ $icons-url:  url('images/icons.gif');
 		z-index: -1;
 		position: absolute;
 		content: "";
-		
+
 		left: 20%;
 		right: 20%;
 		top: 0;
@@ -104,7 +104,8 @@ body {
 
 div.wrapper {
 	margin: 0 auto;
-	width: $body-width;
+	max-width: $body-width;
+	width: 95%;
 	position: relative;
 	z-index: 1;
 }
@@ -265,14 +266,15 @@ nav.bg-nav {
 }
 
 div#contentLeft {
-	width: 680px;
+	width: 100%;
+	max-width: 680px;
 	min-height: 600px;
 	margin-right: 24px;
 	float: left;
 }
 
 div#contentRight {
-	width: 220px;
+	max-width: 220px;
 	min-height: 600px;
 	float: right;
 }
@@ -477,7 +479,7 @@ div#content {
 				font-size: 13px;
 				div.date {
 					float: left;
-					width: 100px;
+					width: 20%;
 				}
 				div.title {
 					&.new:before {
@@ -485,7 +487,7 @@ div#content {
 						content: "new";
 					}
 					float: left;
-					width: 380px;
+					width: 80%;
 				}
 				clear: both;
 			}
@@ -578,7 +580,7 @@ div#content {
 			}
 		}
 	}
-	
+
 
 	article {
 		margin-bottom: 80px;
