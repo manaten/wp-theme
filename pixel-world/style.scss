@@ -203,17 +203,17 @@ header {
 			}
 		}
 	}
-	@media screen and (max-width: 850px) {
-		div#search {
-			display: none;
-		}
-	}
 
 	a.rss {
 		float: right;
 		margin: 22px 8px 0 0;
 		@include sprite( $images-url, 192px, 16px, 16px, 16px);
 		&:hover { @include opacity(70); }
+	}
+	@media screen and (max-width: 850px) {
+		div#search, a.rss {
+			display: none;
+		}
 	}
 }
 
