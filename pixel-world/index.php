@@ -2,6 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
+	<meta name="viewport" content="width=device-width; initial-scale=1.0">
 	<title><?php ManatenWp::writeTitle(); ?></title>
 	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?20130513" />
