@@ -307,7 +307,7 @@ div#content {
 	background: $content-background-color;
 
 	margin-top: 80px;
-	padding: 16px 48px;
+	padding: 16px 4.5%;
 
 	border-radius: 5px;
 	box-shadow: 0 0 10px #999;
@@ -319,6 +319,10 @@ div#content {
 		&:hover, &:active {
 			color: $thin-link-text-color;
 		}
+	}
+	img {
+		max-width: 100%;
+		height: auto;
 	}
 
 	div#topImage {
