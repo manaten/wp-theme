@@ -1,4 +1,4 @@
-<div id="contentLeft" style="width:550px">
+<div id="contentLeft">
 	<?php the_content(); ?>
 	<div id="topImage">
 		<div class="bg"         data-z="-600"></div>
@@ -127,7 +127,7 @@
 
 </div>
 
-<div id="contentRight" style="width:300px">
+<div id="contentRight">
 	<a class="twitter-timeline"	href="https://twitter.com/manaten"	data-widget-id="290505626906394624">@manaten からのツイート</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>

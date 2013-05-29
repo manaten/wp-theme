@@ -126,6 +126,7 @@ header {
 		float: left;
 		margin: 20px 0 0 16px;
 		a {
+
 			@include sprite( $images-url, 0, 64px, 146px, 32px);
 			&:hover { @include opacity(50); }
 		}
@@ -138,7 +139,7 @@ header {
 	div#menu {
 		float: left;
 		width: 320px;
-		margin: 6px auto 0 auto;
+		margin: 6px 0 0 5%;
 		li {
 			float: left;
 			margin-left: 16px;
@@ -280,7 +281,7 @@ div#contentLeft {
 	width: 100%;
 	max-width: 680px;
 	min-height: 600px;
-	margin-right: 24px;
+	margin-right: -220px;
 	float: left;
 }
 
@@ -483,11 +484,11 @@ div#content {
 	}
 
 	div.contact {
-		margin-left: 24px;
+		margin-left: 5%;
 		font-size: 80%;
 	}
 	div.new-article {
-		margin-left: 24px;
+		margin-left: 5%;
 		height: 96px;
 		overflow: auto;
 		border: solid 1px #999;
@@ -517,7 +518,8 @@ div#content {
 	div#menu {
 		margin: 0 auto;
 		ul {
-			width: 516px;
+			width: 100%;
+			max-width: 516px;
 			height: 204px;
 			margin: 0;
 			list-style: none;
