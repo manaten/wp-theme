@@ -130,9 +130,15 @@ header {
 			&:hover { @include opacity(50); }
 		}
 	}
+	@media screen and (max-width: 550px) {
+		div#logo {
+			display: none;
+		}
+	}
 	div#menu {
 		float: left;
-		margin: 6px 0 0 102px;
+		width: 320px;
+		margin: 6px auto 0 auto;
 		li {
 			float: left;
 			margin-left: 16px;
@@ -194,6 +200,11 @@ header {
 				box-shadow: 0 0 10px #BEF;
 				outline: none;
 			}
+		}
+	}
+	@media screen and (max-width: 850px) {
+		div#search {
+			display: none;
 		}
 	}
 
@@ -274,9 +285,15 @@ div#contentLeft {
 }
 
 div#contentRight {
-	max-width: 220px;
+	width: 220px;
 	min-height: 600px;
 	float: right;
+}
+
+@media screen and (max-width: 1100px) {
+	div#contentRight {
+		display: none;
+	}
 }
 
 div#contentFooter {

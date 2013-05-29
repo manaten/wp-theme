@@ -2,7 +2,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width; initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title><?php ManatenWp::writeTitle(); ?></title>
 	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?20130513" />
@@ -33,7 +33,7 @@
 					<li><a class="twitter" title="Twitter" href="http://twitter.com/manaten">Twitter</a></li>
 				</ul>
 			</div>
-			
+
 			<a class="rss" title="rss" href="http://manaten.net/feed">RSS</a>
 			<div id="search">
 				<form role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>" >
