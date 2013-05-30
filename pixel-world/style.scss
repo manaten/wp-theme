@@ -352,7 +352,7 @@ div#content {
 	div#topImage {
 		position: relative;
 		margin: 0 auto;
-		width: 400px;
+		width: 1px;
 		max-width: 100%;
 		height: 300px;
 		div {
@@ -362,123 +362,123 @@ div#content {
 			$topImage: url('images/top.gif');
 			position: absolute;
 			&.bg {
-				left: 20px; top: 0px;
+				left: -180px; top: 0px;
 				@include sprite( $topImage, 0px, 0px, 360px, 300px);
 				z-index: 1;
 			}
 			&.picture1 {
-				left: 40px; top: 20px;
+				left: -160px; top: 20px;
 				@include sprite( $topImage, 360px, 0px, 80px, 80px);
 				z-index: 2;
 			}
 			&.picture2 {
-				left: 260px; top: 20px;
+				left: 60px; top: 20px;
 				@include sprite( $topImage, 360px, 80px, 80px, 60px);
 				z-index: 3;
 			}
 			&.chair1 {
-				left: 80px; top: 120px;
+				left: -120px; top: 120px;
 				@include sprite( $topImage, 360px, 140px, 60px, 100px);
 				z-index: 4;
 			}
 			&.chair2 {
-				left: 180px; top: 120px;
+				left: -20px; top: 120px;
 				@include sprite( $topImage, 420px, 140px, 60px, 80px);
 				z-index: 5;
 			}
 			&.chair3 {
-				left: 280px; top: 120px;
+				left: 80px; top: 120px;
 				@include sprite( $topImage, 440px, 0px, 80px, 100px);
 				z-index: 6;
 			}
 			&.table1 {
-				left: 20px; top: 160px;
+				left: -180px; top: 160px;
 				@include sprite( $topImage, 480px, 340px, 80px, 80px);
 				z-index: 7;
 			}
 			&.table2 {
-				left: 220px; top: 160px;
+				left: 20px; top: 160px;
 				@include sprite( $topImage, 420px, 220px, 100px, 80px);
 				z-index: 8;
 			}
 			&.dish1 {
-				left: 20px; top: 140px;
+				left: -180px; top: 140px;
 				@include sprite( $topImage, 480px, 300px, 60px, 40px);
 				z-index: 9;
 			}
 			&.spoon1 {
-				left: 40px; top: 140px;
+				left: -160px; top: 140px;
 				@include sprite( $topImage, 480px, 540px, 40px, 40px);
 				z-index: 10;
 			}
 			&.coffee1 {
-				left: 0px; top: 120px;
+				left: -200px; top: 120px;
 				@include sprite( $topImage, 480px, 500px, 60px, 40px);
 				z-index: 11;
 			}
 			&.steam1 {
-				left: -80px; top: 60px;
+				left: -280px; top: 60px;
 				@include opacity(70);
 				@include sprite(url('images/steam.gif'), 0, 200px, 120px, 100px);
 				z-index: 12;
 			}
 			&.parfait {
-				left: 280px; top: 100px;
+				left: 80px; top: 100px;
 				@include sprite( $topImage, 520px, 0px, 60px, 80px);
 				z-index: 12;
 			}
 			&.blackboard {
-				left: 300px; top: 160px;
+				left: 100px; top: 160px;
 				@include sprite( $topImage, 500px, 80px, 100px, 140px);
 				z-index: 13;
 			}
 			&.flower {
-				left: 340px; top: 40px;
+				left: 140px; top: 40px;
 				@include sprite( $topImage, 480px, 420px, 60px, 80px);
 				z-index: 14;
 			}
 			&.waitress {
-				left: 40px; top: 0px;
+				left: -160px; top: 0px;
 				@include sprite( $topImage, 0px, 300px, 280px, 300px);
 				z-index: 15;
 			}
 			&.dish2 {
-				left: 20px; top: 40px;
+				left: -180px; top: 40px;
 				@include sprite( $topImage, 280px, 300px, 80px, 60px);
 				z-index: 16;
 			}
 			&.cake {
-				left: 20px; top: 20px;
+				left: -180px; top: 20px;
 				@include sprite( $topImage, 280px, 520px, 60px, 80px);
 				z-index: 17;
 			}
 			&.spoon2 {
-				left: 280px; top: 20px;
+				left: 80px; top: 20px;
 				@include sprite( $topImage, 360px, 380px, 80px, 60px);
 				z-index: 18;
 			}
 			&.soda {
-				left: 20px; top: 180px;
+				left: -180px; top: 180px;
 				@include sprite( url('images/steam.gif'), 120px, 180px, 80px, 120px);
 				z-index: 19;
 			}
 			&.dish3 {
-				left: 240px; top: 200px;
+				left: 40px; top: 200px;
 				@include sprite( $topImage, 360px, 300px, 100px, 80px);
 				z-index: 20;
 			}
 			&.milk {
-				left: 240px; top: 160px;
+				left: 40px; top: 160px;
 				@include sprite( $topImage, 280px, 480px, 60px, 40px);
 				z-index: 21;
 			}
 			&.coffee2 {
-				left: 260px; top: 180px;
+				left: 60px; top: 180px;
 				@include sprite( $topImage, 360px, 480px, 120px, 80px);
 				z-index: 22;
 			}
 			&.steam2 {
-				left: 280px; top: 60px;
+				left: 80px; top: 60px;
 				@include opacity(70);
 				@include sprite(url('images/steam.gif'), 0, 0, 200px, 160px);
 				z-index: 22;
