@@ -105,8 +105,8 @@ body {
 
 div.wrapper {
 	margin: 0 auto;
-	max-width: $body-width;
-	width: 95%;
+	width: $body-width;
+	max-width: 95%;
 	position: relative;
 	z-index: 1;
 }
@@ -353,6 +353,7 @@ div#content {
 		position: relative;
 		margin: 0 auto;
 		width: 400px;
+		max-width: 100%;
 		height: 300px;
 		div {
 			margin: 0;
