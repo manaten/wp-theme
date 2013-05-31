@@ -323,6 +323,7 @@ div#footer {
 }
 
 div#content {
+	overflow: hidden;
 	color: $text-color;
 	line-height: 1.6em;
 	font-family: "sans-serif";
