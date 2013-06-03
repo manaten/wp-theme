@@ -64,17 +64,19 @@
 			} else if (is_search()) {
 				get_template_part( 'tpl/archive' );
 			} else { ?>
-				<div id="contentLeft">
-					<?php
-					if (is_archive() || is_category()) {
-						get_template_part( 'tpl/archive' );
-					} else {
-						get_template_part( 'tpl/loop' );
-					}
-					?>
-				</div>
 				<div id="contentRight">
 					<?php get_template_part( 'tpl/sidebar' ); ?>
+				</div>
+				<div id="contentLeft">
+					<div id="contentLeftInner">
+						<?php
+						if (is_archive() || is_category()) {
+							get_template_part( 'tpl/archive' );
+						} else {
+							get_template_part( 'tpl/loop' );
+						}
+						?>
+					</div>
 				</div>
 				<div id="contentFooter"></div>
 			<?php } ?>
