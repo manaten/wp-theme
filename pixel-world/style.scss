@@ -125,7 +125,6 @@ header {
 	}
 	div#menu {
 		float: left;
-		width: 320px;
 		margin: 6px 0 0 5%;
 		li {
 			float: left;
@@ -865,55 +864,29 @@ div#content {
 @media screen and (max-width: 560px) {
 	header {
 		position: fixed;
-		height: 40px;
+		height: 48px;
 		background: $content-background-color;
 		border-bottom: solid 2px $link-text-color;
 
 		div#logo {
-			margin: 10px 0 0 1%;
+			margin: 14px 0 0 0;
 			a {
 				@include sprite( $images-url, 0, 96px, 96px, 24px);
 				&:hover { @include opacity(50); }
 			}
 		}
 		div#menu {
-			margin: 2px 0 0 5%;
-			width: 200px;
+			margin: 0;
+			width: 150px;
 			li {
-				margin-left: 4%;
+				margin-left: 2px;
 				a {
 					&:before {
-						box-shadow: 0 24px 10px #777;
+						box-shadow: 0 30px 10px #777;
 					}
-					&.top {
-						@include sprite( $icons-url, 96px, 0, 32px, 32px);
-						&:hover {
-							@include sprite( $icons-url, 128px, 0, 32px, 32px);
-						}
-					}
-					&.blog {
-						@include sprite( $icons-url, 96px, 32px, 32px, 32px);
-						&:hover {
-							@include sprite( $icons-url, 128px, 32px, 32px, 32px);
-						}
-					}
-					&.gallery {
-						@include sprite( $icons-url, 96px, 64px, 32px, 32px);
-						&:hover {
-							@include sprite( $icons-url, 128px, 64px, 32px, 32px);
-						}
-					}
-					&.bbs {
-						@include sprite( $icons-url, 96px, 96px, 32px, 32px);
-						&:hover {
-							@include sprite( $icons-url, 128px, 96px, 32px, 32px);
-						}
-					}
+					&.top,
 					&.twitter {
-						@include sprite( $icons-url, 96px, 128px, 32px, 32px);
-						&:hover {
-							@include sprite( $icons-url, 128px, 128px, 32px, 32px);
-						}
+						display: none;
 					}
 				}
 			}
@@ -921,7 +894,7 @@ div#content {
 	}
 
 	div#content {
-		margin-top: 50px;
+		margin-top: 60px;
 	}
 }
 
