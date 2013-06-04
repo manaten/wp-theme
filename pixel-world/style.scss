@@ -123,11 +123,6 @@ header {
 			&:hover { @include opacity(50); }
 		}
 	}
-	@media screen and (max-width: 560px) {
-		div#logo {
-			display: none;
-		}
-	}
 	div#menu {
 		float: left;
 		width: 320px;
@@ -166,11 +161,6 @@ header {
 					@include sprite( $icons-url, 0, 192px, 48px, 48px);
 					&:hover {
 						@include sprite( $icons-url, 48px, 192px, 48px, 48px);
-					}
-				}
-				@media screen and (max-width: 360px) {
-					&.twitter {
-						display: none;
 					}
 				}
 			}
@@ -869,6 +859,27 @@ div#content {
 		font-size: 12px;
 		font-weight: normal;
 		line-height: 18px;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	header {
+		position: fixed;
+		height: 30px;
+		background: $content-background-color;
+		border-bottom: solid 2px $link-text-color;
+
+		div#logo {
+			margin: 8px 0 0 1%;
+			a {
+				@include sprite( $images-url, 0, 96px, 96px, 16px);
+				&:hover { @include opacity(50); }
+			}
+		}
+	}
+
+	div#content {
+		margin-top: 40px;
 	}
 }
 
