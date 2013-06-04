@@ -877,10 +877,45 @@ div#content {
 			}
 		}
 		div#menu {
-			margin: 0 0 0 1%;
-			width: 240px;
+			margin: 2px 0 0 5%;
+			width: 200px;
 			li {
-				margin-left: 0;
+				margin-left: 4%;
+				a {
+					&:before {
+						box-shadow: 0 24px 10px #777;
+					}
+					&.top {
+						@include sprite( $icons-url, 96px, 0, 32px, 32px);
+						&:hover {
+							@include sprite( $icons-url, 128px, 0, 32px, 32px);
+						}
+					}
+					&.blog {
+						@include sprite( $icons-url, 96px, 32px, 32px, 32px);
+						&:hover {
+							@include sprite( $icons-url, 128px, 32px, 32px, 32px);
+						}
+					}
+					&.gallery {
+						@include sprite( $icons-url, 96px, 64px, 32px, 32px);
+						&:hover {
+							@include sprite( $icons-url, 128px, 64px, 32px, 32px);
+						}
+					}
+					&.bbs {
+						@include sprite( $icons-url, 96px, 96px, 32px, 32px);
+						&:hover {
+							@include sprite( $icons-url, 128px, 96px, 32px, 32px);
+						}
+					}
+					&.twitter {
+						@include sprite( $icons-url, 96px, 128px, 32px, 32px);
+						&:hover {
+							@include sprite( $icons-url, 128px, 128px, 32px, 32px);
+						}
+					}
+				}
 			}
 		}
 	}
