@@ -865,21 +865,28 @@ div#content {
 @media screen and (max-width: 560px) {
 	header {
 		position: fixed;
-		height: 30px;
+		height: 40px;
 		background: $content-background-color;
 		border-bottom: solid 2px $link-text-color;
 
 		div#logo {
-			margin: 8px 0 0 1%;
+			margin: 10px 0 0 1%;
 			a {
-				@include sprite( $images-url, 0, 96px, 96px, 16px);
+				@include sprite( $images-url, 0, 96px, 96px, 24px);
 				&:hover { @include opacity(50); }
+			}
+		}
+		div#menu {
+			margin: 0 0 0 1%;
+			width: 240px;
+			li {
+				margin-left: 0;
 			}
 		}
 	}
 
 	div#content {
-		margin-top: 40px;
+		margin-top: 50px;
 	}
 }
 
