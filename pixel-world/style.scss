@@ -819,9 +819,20 @@ div#content {
 		input {
 			margin: 0 0 9px;
 			width: 98%;
+			border: solid 1px #666;
+			background-color: #EEE;
+			margin: 2px;
+			padding: 2px;
+			&:hover {
+				background-color: #FFF;
+			}
 		}
 		textarea {
-			width: 98%;
+			width: 96%;
+			margin: 1%;
+			padding: 1%;
+			border: solid 1px #666;
+			background-color: #FFF;
 		}
 		.form-allowed-tags {
 			color: $thin-text-color;
