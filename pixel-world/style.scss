@@ -60,7 +60,7 @@ $icons-url:  url('images/icons.gif');
 	display: block;
 	overflow: hidden;
 	background: $image $x*-1 $y*-1 no-repeat;
-	text-indent: 100%;
+	text-indent: 1000%;
 	white-space: nowrap;
 }
 
@@ -863,31 +863,25 @@ div#content {
 
 @media screen and (max-width: 560px) {
 	header {
-		position: fixed;
 		height: 48px;
-		background: $content-background-color;
 		border-bottom: solid 2px $link-text-color;
-
 		div#logo {
 			margin: 14px 0 0 0;
-			width: 35%;
+			width: 25%;
 			a {
+				margin-left: 2%;
 				@include sprite( $images-url, 0, 96px, 96px, 24px);
 				&:hover { @include opacity(50); }
 			}
 		}
 		div#menu {
 			margin: 0;
-			width: 65%;
+			width: 75%;
 			li {
-				margin-left: 5%;
+				margin-left: 4%;
 				a {
 					&:before {
 						box-shadow: 0 30px 10px #777;
-					}
-					&.top,
-					&.twitter {
-						display: none;
 					}
 				}
 			}
@@ -896,6 +890,36 @@ div#content {
 
 	div#content {
 		margin-top: 60px;
+	}
+}
+@media screen and (max-width: 425px) {
+	header {
+		div#logo {
+			width: 30%;
+		}
+		div#menu {
+			width: 70%;
+			li {
+				a.top {
+					display: none;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 345px) {
+	header {
+		div#logo {
+			width: 35%;
+		}
+		div#menu {
+			width: 65%;
+			li {
+				a.twitter {
+					display: none;
+				}
+			}
+		}
 	}
 }
 
