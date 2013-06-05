@@ -870,6 +870,7 @@ div#content {
 
 		div#logo {
 			margin: 14px 0 0 0;
+			width: 35%;
 			a {
 				@include sprite( $images-url, 0, 96px, 96px, 24px);
 				&:hover { @include opacity(50); }
@@ -877,9 +878,9 @@ div#content {
 		}
 		div#menu {
 			margin: 0;
-			width: 150px;
+			width: 65%;
 			li {
-				margin-left: 2px;
+				margin-left: 5%;
 				a {
 					&:before {
 						box-shadow: 0 30px 10px #777;
