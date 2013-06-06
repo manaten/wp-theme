@@ -116,16 +116,18 @@ header {
 
 	div#logo {
 		float: left;
-		margin: 20px 0 0 16px;
+		margin-top: 20px;
+		width: 25%;
 		a {
-
+			margin-left: 8%;
 			@include sprite( $images-url, 0, 64px, 146px, 32px);
 			&:hover { @include opacity(50); }
 		}
 	}
 	div#menu {
 		float: left;
-		margin: 6px 0 0 5%;
+		margin-top: 6px;
+		width: 40%;
 		li {
 			float: left;
 			margin-left: 16px;
@@ -196,9 +198,12 @@ header {
 		@include sprite( $images-url, 192px, 16px, 16px, 16px);
 		&:hover { @include opacity(70); }
 	}
-	@media screen and (max-width: 850px) {
+	@media screen and (max-width: 900px) {
 		div#search, a.rss {
 			display: none;
+		}
+		div#menu {
+			width: 75%;
 		}
 	}
 }
@@ -861,12 +866,12 @@ div#content {
 	}
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 600px) {
 	header {
 		height: 48px;
 		border-bottom: solid 2px $link-text-color;
 		div#logo {
-			margin: 14px 0 0 0;
+			margin-top: 14px;
 			width: 25%;
 			a {
 				margin-left: 2%;
@@ -875,7 +880,7 @@ div#content {
 			}
 		}
 		div#menu {
-			margin: 0;
+			margin-top: 0;
 			width: 75%;
 			li {
 				margin-left: 4%;
