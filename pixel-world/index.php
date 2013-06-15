@@ -64,9 +64,6 @@
 			} else if (is_search()) {
 				get_template_part( 'tpl/archive' );
 			} else { ?>
-				<div id="contentRight">
-					<?php get_template_part( 'tpl/sidebar' ); ?>
-				</div>
 				<div id="contentLeft">
 					<div id="contentLeftInner">
 						<?php
@@ -77,6 +74,9 @@
 						}
 						?>
 					</div>
+				</div>
+				<div id="contentRight">
+					<?php get_template_part( 'tpl/sidebar' ); ?>
 				</div>
 				<div id="contentFooter"></div>
 			<?php } ?>
