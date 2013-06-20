@@ -91,7 +91,8 @@ html {
 	overflow-y: scroll;
 }
 body {
-	background: #EAEAEC;
+	background: #EAEAEC; // for IE8
+	background: radial-gradient(#FFFFFF, #CACACC);
 }
 
 div.wrapper {
@@ -112,6 +113,7 @@ header {
 	margin: 0;
 	box-shadow: 0 0 10px #999;
 	background: $content-background-color;
+	background: linear-gradient(#FFFFFF, $content-background-color);
 	border-bottom: solid 4px $link-text-color;
 
 	div#logo {
@@ -234,7 +236,7 @@ nav.bg-nav {
 				@include sprite( $icons-url, 0, 240px, 48px, 48px);
 			}
 			&:hover {
-				background-color: $hover-bg-color;
+				background-color: rgba(255, 255, 255, 0.2);
 				span.icon {
 					@include sprite( $icons-url, 48px, 240px, 48px, 48px);
 				}
