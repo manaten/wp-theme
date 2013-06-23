@@ -324,8 +324,8 @@ div#content {
 	overflow: hidden;
 	color: $text-color;
 	line-height: 1.6em;
-	font-family: "sans-serif";
-	font-size: 0.95em;
+		font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,sans-serif;
+	font-size: 0.90em;
 	text-align: left;
 	background: $content-background-color;
 
@@ -815,7 +815,7 @@ div#content {
 			font-size: 12px;
 		}
 		input {
-			margin: 0 0 9px;
+			margin: 0 2% 9px;
 			width: 98%;
 			border: solid 1px #666;
 			background-color: #EEE;

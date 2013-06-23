@@ -52,12 +52,9 @@
 					});
 				});
 				isSmartphone && $(window).scroll(function(ev) {
-					var dx = baseX/2 - $(document).scrollLeft();
 					var dy = baseY/2 - $(document).scrollTop();
-					console.log(dx, dy);
 					$.each(layers, function(_, layer) {
 						layer.$.css({
-							left: layer.baseX + (dx*layer.factor*3) +"px",
 							top:  layer.baseY + (dy*layer.factor*3) +"px" });
 					});
 				});
