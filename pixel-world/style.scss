@@ -92,6 +92,7 @@ html {
 }
 body {
 	background: #EAEAEC; // for IE8
+	background: -webkit-radial-gradient(top, #FFFFFF, #E4E0E0);
 	background: radial-gradient(#FFFFFF, #CACACC);
 }
 
@@ -113,6 +114,7 @@ header {
 	margin: 0;
 	box-shadow: 0 0 10px #999;
 	background: $content-background-color;
+	background: -webkit-linear-gradient(top, #FFFFFF, #E4E0E0);
 	background: linear-gradient(#FFFFFF, #E4E0E0);
 	border-bottom: solid 4px $link-text-color;
 
