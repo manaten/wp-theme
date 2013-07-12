@@ -22,6 +22,18 @@
 			</ul>
 		</li>
 	<?php endif; ?>
+		<li>
+			<script language="javascript" type="text/javascript" src="http://b.hatena.ne.jp/js/widget.js" charset="utf-8"></script>
+			<script language="javascript" type="text/javascript">
+			Hatena.BookmarkWidget.url   = "http://manaten.net";
+			Hatena.BookmarkWidget.title = "はてなブックマーク";
+			Hatena.BookmarkWidget.sort  = "count";
+			Hatena.BookmarkWidget.width = 0;
+			Hatena.BookmarkWidget.num   = 7;
+			Hatena.BookmarkWidget.theme = "hatenadiary";
+			Hatena.BookmarkWidget.load();
+			</script>
+		</li>
 	</ul>
 </div>
 

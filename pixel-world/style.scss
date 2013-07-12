@@ -105,6 +105,8 @@ body {
 	background: #EAEAEC; // for IE8
 	background: -webkit-radial-gradient(top, #FFFFFF, #E4E0E0);
 	background: radial-gradient(#FFFFFF, #CACACC);
+	background-attachment: fixed;
+	background-position: top left;
 }
 
 div.wrapper {
@@ -755,15 +757,6 @@ div#content {
 		margin-top: 16px;
 		 ul {
 			list-style: none;
-			.widget-container {
-				margin-bottom: 32px;
-				ul {
-					margin-top: 8px;
-					margin-left: 24px;
-					font-size: 12px;
-					list-style: square;
-				}
-			}
 			.widget_recent_entries h3 {
 				@include sprite( $images-url, 0, 0, 176px, 16px);
 			}
@@ -775,6 +768,22 @@ div#content {
 			}
 			.widget_categories h3 {
 				@include sprite( $images-url, 0, 48px, 200px, 16px);
+			}
+			div.hatena-moduletitle a {
+				@include sprite( $images-url, 0, 128px, 200px, 16px);
+			}
+			li.widget-container, div.hatena-modulebody {
+				margin-bottom: 32px;
+				ul {
+					margin-top: 8px;
+					margin-left: 24px;
+					font-size: 12px;
+					list-style: square;
+				}
+				span.hatena-bookmark-count a {
+					font-size: 80%;
+					color: $thin-link-text-color;
+				}
 			}
 		}
 	}
