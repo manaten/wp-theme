@@ -9,4 +9,3 @@ my wordpress themes for [http://manaten.net](http://manaten.net)
  * snowman header theme.
 * pixel-world
  * animation pixel icon theme. 
-
