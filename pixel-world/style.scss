@@ -356,9 +356,12 @@ div#content {
 			color: $thin-link-text-color;
 		}
 	}
-	img, iframe {
+	img {
 		max-width: 100%;
 		height: auto;
+	}
+	iframe {
+		max-width: 100%;
 	}
 
 	div#topImage {
@@ -648,7 +651,7 @@ div#content {
 	.syntaxhighlighter {
 		border: solid 1px #9C9;
 		padding: 2px;
-		border-radius: 8px;
+		font: 14px Consolas,"Liberation Mono",Courier,monospace !important;
 	}
 	.entry-title,
 	.page-title {
