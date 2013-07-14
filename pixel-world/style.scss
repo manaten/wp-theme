@@ -311,7 +311,7 @@ div#contentMainOuter {
 
 
 div#sidebar {
-	padding-top: 8px;
+	padding-top: 16px;
 	padding-right: 24px;
 	padding-left: 16px;
 	width: 200px;
@@ -772,6 +772,9 @@ div#content {
 		margin-top: 16px;
 		 ul {
 			list-style: none;
+			h3 {
+				margin-left: 4px;
+			}
 			.widget_recent_entries h3 {
 				@include sprite( $images-url, 0, 0, 176px, 16px);
 			}
@@ -785,6 +788,7 @@ div#content {
 				@include sprite( $images-url, 0, 48px, 200px, 16px);
 			}
 			div.hatena-moduletitle a {
+				margin-left: 4px;
 				@include sprite( $images-url, 0, 128px, 200px, 16px);
 			}
 			li.widget-container, div.hatena-modulebody {
