@@ -58,11 +58,15 @@
 	<div class="wrapper">
 		<div id="content" class="clearfix">
 			<?php if ( is_404() || !have_posts() ) {
-				get_template_part( 'tpl/404' );
+				?><div id="contentMain"><?php
+					get_template_part( 'tpl/404' );
+				?></div><?php
 			} else if ( is_page() ) {
 				get_template_part( 'tpl/page' );
 			} else if (is_search()) {
-				get_template_part( 'tpl/archive' );
+				?><div id="contentMain"><?php
+					get_template_part( 'tpl/archive' );
+				?></div><?php
 			} else { ?>
 				<div id="contentMainOuter">
 					<div id="contentMain">

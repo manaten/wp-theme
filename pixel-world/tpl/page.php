@@ -4,9 +4,9 @@
     if(is_page("top")) {
         get_template_part( 'tpl/top' );
     } else {
-    ?><div class="entry-content"><?php
+    ?><div id="contentMain"><div class="entry-content"><?php
         the_content();
-    ?></div><?php
+    ?></div></div><?php
     }
 ?>
 </div>

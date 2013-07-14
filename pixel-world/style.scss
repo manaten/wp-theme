@@ -291,6 +291,13 @@ nav.bg-nav {
 	}
 }
 
+div#contentMain {
+	background-color: $content-background-color;
+	padding: 16px 4.5%;
+	padding-bottom: 10016px;
+	margin-bottom: -10000px;
+}
+
 div#contentMainOuter {
 	width: 100%;
 	margin-right: -240px;
@@ -298,11 +305,16 @@ div#contentMainOuter {
 
 	div#contentMain {
 		margin-right: 240px;
+		box-shadow: 5px 0 5px 0 #999;
 	}
 }
 
+
 div#sidebar {
-	width: 220px;
+	padding-top: 8px;
+	padding-right: 24px;
+	padding-left: 16px;
+	width: 200px;
 	float: right;
 }
 
@@ -333,18 +345,15 @@ div#footer {
 }
 
 div#content {
-	min-height: 600px;
-
 	overflow: hidden;
 	color: $text-color;
 	line-height: 1.6em;
 	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,sans-serif;
 	font-size: 0.90em;
 	text-align: left;
-	background: $content-background-color;
+	background-color: #EEE9E9;
 
 	margin-top: 80px;
-	padding: 16px 4.5%;
 
 	border-radius: 5px;
 	box-shadow: 0 0 10px #999;
