@@ -20,7 +20,7 @@
 <body <?php body_class(); ?>>
 
 	<header>
-		<div class="wrapper">
+		<div class="wrapper" class="clearfix">
 			<div id="logo">
 				<a href="<?php bloginfo('url'); ?>">manadot</a>
 			</div>
@@ -56,7 +56,7 @@
 	</nav>
 
 	<div class="wrapper">
-		<div id="content">
+		<div id="content" class="clearfix">
 			<?php if ( is_404() || !have_posts() ) {
 				get_template_part( 'tpl/404' );
 			} else if ( is_page() ) {
@@ -64,8 +64,8 @@
 			} else if (is_search()) {
 				get_template_part( 'tpl/archive' );
 			} else { ?>
-				<div id="contentLeft">
-					<div id="contentLeftInner">
+				<div id="contentMainOuter">
+					<div id="contentMain">
 						<?php
 						if (is_archive() || is_category()) {
 							get_template_part( 'tpl/archive' );
@@ -75,10 +75,9 @@
 						?>
 					</div>
 				</div>
-				<div id="contentRight">
+				<div id="sidebar">
 					<?php get_template_part( 'tpl/sidebar' ); ?>
 				</div>
-				<div id="contentFooter"></div>
 			<?php } ?>
 		</div>
 	</div>
