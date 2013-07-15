@@ -774,6 +774,7 @@ div#content {
 			list-style: none;
 			h3 {
 				margin-left: 4px;
+				margin-bottom: 8px;
 			}
 			.widget_recent_entries h3 {
 				@include sprite( $images-url, 0, 0, 176px, 16px);
@@ -789,12 +790,12 @@ div#content {
 			}
 			div.hatena-moduletitle a {
 				margin-left: 4px;
+				margin-bottom: 8px;
 				@include sprite( $images-url, 0, 128px, 200px, 16px);
 			}
 			li.widget-container, div.hatena-modulebody {
 				margin-bottom: 32px;
 				ul {
-					margin-top: 8px;
 					margin-left: 24px;
 					font-size: 12px;
 					list-style: square;
