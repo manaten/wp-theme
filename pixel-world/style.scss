@@ -799,6 +799,9 @@ div#content {
 					margin-left: 24px;
 					font-size: 12px;
 					list-style: square;
+					ul {
+						margin-left: 16px;
+					}
 				}
 				span.hatena-bookmark-count a {
 					font-weight: bold;
