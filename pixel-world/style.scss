@@ -663,6 +663,9 @@ div#content {
 		padding: 2px;
 		font: 14px Consolas,"Liberation Mono",Courier,monospace !important;
 		border-radius: 5px;
+		table caption {
+			padding: 0.1em 0px 0.2em 1em !important;
+		}
 	}
 	.entry-title,
 	.page-title {
