@@ -1,5 +1,5 @@
 <?php while ( have_posts() ) : the_post(); ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div>
 <?php
     if(is_page("top")) {
         get_template_part( 'tpl/top' );
