@@ -51,11 +51,13 @@
 							top:  layer.baseY + (dy*layer.factor) +"px" });
 					});
 				});
-				isSmartphone && $(window).scroll(function(ev) {
-					var dy = baseY/2 - $(document).scrollTop();
+				isSmartphone && window.addEventListener("devicemotion", function(ev){
+					var dy = baseY/2 - ev.accelerationIncludingGravity.x*50;
+					var dx = baseY/2 - ev.accelerationIncludingGravity.y*50;
 					$.each(layers, function(_, layer) {
 						layer.$.css({
-							top:  layer.baseY + (dy*layer.factor*3) +"px" });
+							left: layer.baseX + (dx*layer.factor) +"px",
+							top:  layer.baseY + (dy*layer.factor) +"px" });
 					});
 				});
 			});
