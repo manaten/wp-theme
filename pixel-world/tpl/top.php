@@ -53,7 +53,7 @@
 				});
 				isSmartphone && window.addEventListener("devicemotion", function(ev){
 					var dy = baseY/2 + ev.accelerationIncludingGravity.y*100;
-					var dx = baseY/2 + ev.accelerationIncludingGravity.x*100;
+					var dx = baseX/2 - ev.accelerationIncludingGravity.x*100;
 					$.each(layers, function(_, layer) {
 						layer.$.css({
 							left: layer.baseX + (dx*layer.factor) +"px",
