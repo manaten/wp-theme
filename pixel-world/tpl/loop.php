@@ -24,8 +24,10 @@
 
 <?php ManatenWp::writeNavigation(); ?>
 
+<?php if (is_single()) { ?>
 <div>
     <!-- X:S ZenBackWidget --><script type="text/javascript">document.write(unescape("%3Cscript")+" src='http://widget.zenback.jp/?base_uri=http%3A//manaten.net&nsid=116628623594658123%3A%3A116628661444065709&rand="+Math.ceil((new Date()*1)*Math.random())+"' type='text/javascript'"+unescape("%3E%3C/script%3E"));</script><!-- X:E ZenBackWidget -->
 </div>
+<?php } ?>
 
 <?php comments_template( '', true ); ?>
