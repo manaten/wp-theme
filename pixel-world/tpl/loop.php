@@ -9,10 +9,6 @@
 
 		<div class="entry-meta">
 			<?php ManatenWp::postedOn(); ?>
-			<?php if (is_single()) { ?>
-			<a href="https://twitter.com/share" class="twitter-share-button" data-via="manaten" data-lang="ja">ツイート</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-			<?php } ?>
 		</div>
 
 		<div class="entry-content">
@@ -22,12 +18,12 @@
 	</article>
 <?php endwhile; ?>
 
-<?php ManatenWp::writeNavigation(); ?>
-
 <?php if (is_single()) { ?>
 <div>
     <!-- X:S ZenBackWidget --><script type="text/javascript">document.write(unescape("%3Cscript")+" src='http://widget.zenback.jp/?base_uri=http%3A//manaten.net&nsid=116628623594658123%3A%3A116628661444065709&rand="+Math.ceil((new Date()*1)*Math.random())+"' type='text/javascript'"+unescape("%3E%3C/script%3E"));</script><!-- X:E ZenBackWidget -->
 </div>
 <?php } ?>
 
-<?php comments_template( '', true ); ?>
+<?php ManatenWp::writeNavigation(); ?>
+
+<?php // comments_template( '', true ); ?>
