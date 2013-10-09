@@ -1,0 +1,1041 @@
+/*
+Theme Name: pixel-world
+Theme URI: http://manaten.net/
+Description:
+Author: manaten
+Version: 1.0
+Text Domain: manaten
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video  {
+	background: transparent;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	font-weight: normal;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote {
+	quotes: none;
+}
+blockquote:before, blockquote:after {
+	content: '';
+	content: none;
+}
+del {
+	text-decoration: line-through;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a img {
+	border: none;
+}
+/* -------- reset styles --------  */
+
+
+/* -------- variables --------  */
+$body-width: 1024px;
+
+$text-color: #411;
+$link-text-color: #476;
+$thin-text-color: #888;
+$thin-link-text-color: #C66;
+
+$content-background-color: #F4F0F0;
+
+$images-url: url('images/images.gif');
+$icons-url:  url('images/icons.gif');
+
+/* -------- useful mixins -------- */
+@mixin sprite($image, $x, $y, $width, $height) {
+	width:  $width;
+	height: $height;
+	display: block;
+	overflow: hidden;
+	background: $image $x*-1 $y*-1 no-repeat;
+	text-indent: 1000%;
+	white-space: nowrap;
+}
+
+@mixin opacity($alpha) {
+	opacity: $alpha / 100;
+	filter: alpha(opacity=$alpha);
+}
+
+@mixin icon-shadow() {
+	&:before {
+		z-index: -1;
+		position: absolute;
+		content: "";
+
+		left: 20%;
+		right: 20%;
+		top: 0;
+		height: 8px;
+
+		border-radius: 70px;
+		box-shadow: 0 40px 10px #777;
+	}
+}
+
+/* -------- styles -------- */
+html {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+body {
+	background: #EAEAEC; // for IE8
+	background: -webkit-radial-gradient(top, #FFFFFF, #E4E0E0);
+	background: radial-gradient(#FFFFFF, #CACACC);
+	background-attachment: fixed;
+	background-position: top left;
+}
+
+div.wrapper {
+	margin: 0 auto;
+	width: $body-width;
+	max-width: 95%;
+	position: relative;
+	z-index: 1;
+}
+
+.clearfix:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	z-index: 200;
+	margin: 0;
+	box-shadow: 0 0 10px #999;
+	background: $content-background-color;
+	background: -webkit-linear-gradient(top, #FFFFFF, #E4E0E0);
+	background: linear-gradient(#FFFFFF, #E4E0E0);
+	border-bottom: solid 4px $link-text-color;
+
+	div#logo {
+		float: left;
+		margin-top: 20px;
+		width: 25%;
+		a {
+			margin-left: 8%;
+			@include sprite( $images-url, 0, 64px, 146px, 32px);
+			&:hover { @include opacity(50); }
+		}
+	}
+	div#menu {
+		float: left;
+		margin-top: 6px;
+		width: 40%;
+		li {
+			float: left;
+			margin-left: 16px;
+			position: relative;
+			a {
+				@include icon-shadow();
+				&.top {
+					@include sprite( $icons-url, 0, 0, 48px, 48px);
+					&:hover {
+						@include sprite( $icons-url, 48px, 0, 48px, 48px);
+					}
+				}
+				&.blog {
+					@include sprite( $icons-url, 0, 48px, 48px, 48px);
+					&:hover {
+						@include sprite( $icons-url, 48px, 48px, 48px, 48px);
+					}
+				}
+				&.gallery {
+					@include sprite( $icons-url, 0, 96px, 48px, 48px);
+					&:hover {
+						@include sprite( $icons-url, 48px, 96px, 48px, 48px);
+					}
+				}
+				&.bbs {
+					@include sprite( $icons-url, 0, 144px, 48px, 48px);
+					&:hover {
+						@include sprite( $icons-url, 48px, 144px, 48px, 48px);
+					}
+				}
+				&.twitter {
+					@include sprite( $icons-url, 0, 192px, 48px, 48px);
+					&:hover {
+						@include sprite( $icons-url, 48px, 192px, 48px, 48px);
+					}
+				}
+			}
+		}
+	}
+	div#search {
+		position: relative;
+		float: right;
+		margin: 18px 8px 0 0;
+		input[type=submit] {
+			position: absolute;
+			margin: 4px 0 0 8px;
+			border: none 0;
+			@include sprite( $images-url, 192px, 0px, 16px, 16px);
+		}
+		input[type=text] {
+			margin: 0;
+			border: solid 1px #BAA;
+			border-radius: 14px;
+			background: #FFF;
+			padding: 4px 4px 4px 28px;
+			width: 200px;
+			&:focus {
+				border: solid 1px #ACF;
+				box-shadow: 0 0 10px #BEF;
+				outline: none;
+			}
+		}
+	}
+
+	a.rss {
+		float: right;
+		margin: 22px 8px 0 0;
+		@include sprite( $images-url, 192px, 16px, 16px, 16px);
+		&:hover { @include opacity(70); }
+	}
+	@media screen and (max-width: 900px) {
+		div#search, a.rss {
+			display: none;
+		}
+		div#menu {
+			width: 75%;
+		}
+	}
+}
+
+nav.bg-nav {
+	$hover-bg-color: #DDDADA;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	.bg-nav-previous {
+		float: left;
+		width: 50%;
+		height: 100%;
+		a {
+			float: left;
+			width: 100%;
+			height: 100%;
+			span.space {
+				display: block;
+				height: 50%;
+			}
+			span.icon {
+				float: left;
+				margin-left: 4px;
+				@include sprite( $icons-url, 0, 240px, 48px, 48px);
+			}
+			&:hover {
+				background-color: rgba(255, 255, 255, 0.2);
+				span.icon {
+					@include sprite( $icons-url, 48px, 240px, 48px, 48px);
+				}
+			}
+		}
+	}
+	.bg-nav-next {
+		float: right;
+		width: 50%;
+		height: 100%;
+		a {
+			float: right;
+			width: 100%;
+			height: 100%;
+			span.space {
+				display: block;
+				height: 50%;
+			}
+			span.icon {
+				float: right;
+				margin-right: 4px;
+				@include sprite( $icons-url, 0, 288px, 48px, 48px);
+			}
+			&:hover {
+				background-color: $hover-bg-color;
+				span.icon {
+					@include sprite( $icons-url, 48px, 288px, 48px, 48px);
+				}
+			}
+		}
+	}
+}
+
+div#contentMain {
+	background-color: $content-background-color;
+	padding: 16px 4.5%;
+	padding-bottom: 10016px;
+	margin-bottom: -10000px;
+}
+
+div#contentMainOuter {
+	width: 100%;
+	margin-right: -260px;
+	float: left;
+
+	div#contentMain {
+		margin-right: 260px;
+		box-shadow: 0 0 10px #999;
+	}
+}
+
+
+div#sidebar {
+	padding-top: 16px;
+	padding-right: 32px;
+	padding-left: 16px;
+	width: 212px;
+	float: right;
+}
+
+@media screen and (max-width: 800px) {
+	div#sidebar {
+		display: none;
+	}
+	div#contentMainOuter {
+		margin-right: 0;
+		div#contentMain {
+			margin-right: 0;
+		}
+	}
+}
+
+div#footer {
+	background: #433;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	padding: 5px;
+	text-align: center;
+
+	font-size: 70%;
+	color: #FFF;
+
+	border-radius: 5px;
+	box-shadow: 0 0 10px #999;
+}
+
+div#content {
+	overflow: hidden;
+	color: $text-color;
+	line-height: 1.6em;
+	font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,sans-serif;
+	font-size: 0.90em;
+	text-align: left;
+	background-color: #EEE9E9;
+
+	margin-top: 80px;
+
+	border-radius: 5px;
+	box-shadow: 0 0 10px #999;
+
+	a {
+		&:link, &:visited {
+			color: $link-text-color;
+		}
+		&:hover, &:active {
+			color: $thin-link-text-color;
+		}
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	iframe {
+		max-width: 100%;
+	}
+
+	div#topImage {
+		position: relative;
+		margin: 0 auto;
+		width: 1px;
+		max-width: 100%;
+		height: 300px;
+		div {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			$topImage: url('images/top.gif');
+			position: absolute;
+			&.bg {
+				left: -180px; top: 0px;
+				@include sprite( $topImage, 0px, 0px, 360px, 300px);
+				z-index: 1;
+			}
+			&.picture1 {
+				left: -160px; top: 20px;
+				@include sprite( $topImage, 360px, 0px, 80px, 80px);
+				z-index: 2;
+			}
+			&.picture2 {
+				left: 60px; top: 20px;
+				@include sprite( $topImage, 360px, 80px, 80px, 60px);
+				z-index: 3;
+			}
+			&.chair1 {
+				left: -120px; top: 120px;
+				@include sprite( $topImage, 360px, 140px, 60px, 100px);
+				z-index: 4;
+			}
+			&.chair2 {
+				left: -20px; top: 120px;
+				@include sprite( $topImage, 420px, 140px, 60px, 80px);
+				z-index: 5;
+			}
+			&.chair3 {
+				left: 80px; top: 120px;
+				@include sprite( $topImage, 440px, 0px, 80px, 100px);
+				z-index: 6;
+			}
+			&.table1 {
+				left: -180px; top: 160px;
+				@include sprite( $topImage, 480px, 340px, 80px, 80px);
+				z-index: 7;
+			}
+			&.table2 {
+				left: 20px; top: 160px;
+				@include sprite( $topImage, 420px, 220px, 100px, 80px);
+				z-index: 8;
+			}
+			&.dish1 {
+				left: -180px; top: 140px;
+				@include sprite( $topImage, 480px, 300px, 60px, 40px);
+				z-index: 9;
+			}
+			&.spoon1 {
+				left: -160px; top: 140px;
+				@include sprite( $topImage, 480px, 540px, 40px, 40px);
+				z-index: 10;
+			}
+			&.coffee1 {
+				left: -200px; top: 120px;
+				@include sprite( $topImage, 480px, 500px, 60px, 40px);
+				z-index: 11;
+			}
+			&.steam1 {
+				left: -280px; top: 60px;
+				@include opacity(70);
+				@include sprite(url('images/steam.gif'), 0, 200px, 120px, 100px);
+				z-index: 12;
+			}
+			&.parfait {
+				left: 80px; top: 100px;
+				@include sprite( $topImage, 520px, 0px, 60px, 80px);
+				z-index: 12;
+			}
+			&.blackboard {
+				left: 100px; top: 160px;
+				@include sprite( $topImage, 500px, 80px, 100px, 140px);
+				z-index: 13;
+			}
+			&.flower {
+				left: 140px; top: 40px;
+				@include sprite( $topImage, 480px, 420px, 60px, 80px);
+				z-index: 14;
+			}
+			&.waitress {
+				left: -160px; top: 0px;
+				@include sprite( $topImage, 0px, 300px, 280px, 300px);
+				z-index: 15;
+			}
+			&.dish2 {
+				left: -180px; top: 40px;
+				@include sprite( $topImage, 280px, 300px, 80px, 60px);
+				z-index: 16;
+			}
+			&.cake {
+				left: -180px; top: 20px;
+				@include sprite( $topImage, 280px, 520px, 60px, 80px);
+				z-index: 17;
+			}
+			&.spoon2 {
+				left: 80px; top: 20px;
+				@include sprite( $topImage, 360px, 380px, 80px, 60px);
+				z-index: 18;
+			}
+			&.soda {
+				left: -180px; top: 180px;
+				@include sprite( url('images/steam.gif'), 120px, 180px, 80px, 120px);
+				z-index: 19;
+			}
+			&.dish3 {
+				left: 40px; top: 200px;
+				@include sprite( $topImage, 360px, 300px, 100px, 80px);
+				z-index: 20;
+			}
+			&.milk {
+				left: 40px; top: 160px;
+				@include sprite( $topImage, 280px, 480px, 60px, 40px);
+				z-index: 21;
+			}
+			&.coffee2 {
+				left: 60px; top: 180px;
+				@include sprite( $topImage, 360px, 480px, 120px, 80px);
+				z-index: 22;
+			}
+			&.steam2 {
+				left: 80px; top: 60px;
+				@include opacity(70);
+				@include sprite(url('images/steam.gif'), 0, 0, 200px, 160px);
+				z-index: 22;
+			}
+		}
+	}
+	div#topImageNote {
+		text-align: right;
+		font-size: 0.6em;
+	}
+
+	div.contact {
+		margin-left: 5%;
+		font-size: 80%;
+	}
+	div.new-article {
+		margin-left: 5%;
+		height: 96px;
+		overflow: auto;
+		border: solid 1px #999;
+		border-radius: 5px;
+		background-color: #FFFFFF;
+		ul {
+			list-style: none;
+			margin-left: 16px;
+			li {
+				font-size: 13px;
+				div.date {
+					float: left;
+					width: 20%;
+				}
+				div.title {
+					&.new:before {
+						color: #C33;
+						content: "new";
+					}
+					float: left;
+					width: 80%;
+				}
+				clear: both;
+			}
+		}
+	}
+	div#menu {
+		margin: 0 auto;
+		ul {
+			width: 516px;
+			max-width: 100%;
+			height: 204px;
+			margin: 0;
+			list-style: none;
+			li {
+				float: left;
+				position: relative;
+				a {
+					display: block;
+					width: 250px;
+					height: 64px;
+					float: left;
+					font-size: 12px;
+					margin: 2px;
+
+					&:link, &:visited {
+						color: $thin-text-color;
+						text-decoration: none;
+					}
+					&:hover, &:active {
+						color: #555;
+						background-color: #CCC;
+						border-radius: 5px;
+						text-decoration: none;
+					}
+
+					h2 {
+						font-size: 13px;
+						border: none;
+						margin: 0;
+						padding: 0;
+					}
+
+					div {
+						width: 200px;
+						float: left;
+					}
+					span.icon {
+						float: left;
+					}
+					&.top {
+						span.icon {
+							@include sprite( $icons-url, 0, 0, 48px, 48px);
+						}
+						&:hover span.icon {
+							@include sprite( $icons-url, 48px, 0, 48px, 48px);
+						}
+					}
+					&.blog {
+						span.icon {
+							@include sprite( $icons-url, 0, 48px, 48px, 48px);
+						}
+						&:hover span.icon {
+							@include sprite( $icons-url, 48px, 48px, 48px, 48px);
+						}
+					}
+					&.gallery {
+						span.icon {
+							@include sprite( $icons-url, 0, 96px, 48px, 48px);
+						}
+						&:hover span.icon {
+							@include sprite( $icons-url, 48px, 96px, 48px, 48px);
+						}
+					}
+					&.bbs {
+						span.icon {
+							@include sprite( $icons-url, 0, 144px, 48px, 48px);
+						}
+						&:hover span.icon {
+							@include sprite( $icons-url, 48px, 144px, 48px, 48px);
+						}
+					}
+					&.twitter {
+						span.icon {
+							@include sprite( $icons-url, 0, 192px, 48px, 48px);
+						}
+						&:hover span.icon {
+							@include sprite( $icons-url, 48px, 192px, 48px, 48px);
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	article {
+		margin-bottom: 80px;
+	}
+
+	.entry-meta,
+	.entry-utility {
+		clear: both;
+		color: $thin-text-color;
+		font-size: 12px;
+		line-height: 18px;
+		margin-left: 4px;
+
+		a {
+			&:link, &:visited {
+				color: $thin-text-color;
+			}
+			&:hover, &:hover {
+				color: $thin-link-text-color;
+			}
+		}
+	}
+	.syntaxhighlighter {
+		border: solid 1px #999;
+		padding: 2px;
+		font: 14px Consolas,"Liberation Mono",Courier,monospace !important;
+		border-radius: 5px;
+		table caption {
+			padding: 0.1em 0px 0.2em 1em !important;
+		}
+	}
+	.entry-title,
+	.page-title {
+		font-family: "ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,sans-serif;
+		color: $text-color;
+		font-size: 20px;
+		font-weight: bold;
+		line-height: 1.3em;
+		border-bottom: 1px solid $thin-text-color;
+		margin-top: 12px;
+		padding-left: 2px;
+		a:link, a:visited {
+			color: $text-color;
+			text-decoration: none;
+		}
+		a:active, a:hover {
+			color: $thin-link-text-color;
+		}
+		.category-name {
+			:before { content: "["; }
+			:after  { content: "]"; }
+		}
+	}
+	.entry-content,
+	.entry-summary {
+		clear: both;
+		padding: 12px 2% 0;
+	}
+
+	.entry-content {
+		margin: 12px 0 16px 0;
+		blockquote {
+			color: #213;
+			border: solid 1px #999;
+			background-color: #EEE;
+			border-radius: 5px;
+			padding: 10px;
+			margin: 20px;
+			p {
+				margin: 0;
+			}
+		}
+		h1 {
+			font-size: 120%;
+			font-weight: bold;
+			color: #000;
+			line-height: 1.5em;
+			margin: 64px 0 16px -12px;
+			border-left: solid 4px #476;
+			padding-left: 8px;
+		}
+		h2 {
+			font-size: 110%;
+			font-weight: bold;
+			color: #000;
+			line-height: 1.5em;
+			margin: 24px 0 16px -8px;
+			border-left: solid 4px #9BA;
+			padding-left: 8px;
+		}
+		h3, h4, h5, h6 {
+			font-size: 100%;
+			font-weight: bold;
+			color: #000;
+			line-height: 1.5em;
+			margin: 24px 0 16px -12px;
+			padding-left: 8px;
+		}
+		strong {
+			font-weight: bold;
+		}
+		p, ul, ol, dd, pre, hr {
+			margin-bottom: 32px;
+		}
+		ul ul, ol ol, ul ol, ol ul {
+			margin-bottom: 0;
+		}
+		ul {
+			list-style: square;
+			margin: 0 0 18px 1.5em;
+		}
+		ol {
+			list-style: decimal;
+			margin: 0 0 18px 1.5em;
+		}
+		ol ol {
+			list-style: upper-alpha;
+		}
+		ol ol ol {
+			list-style: lower-roman;
+		}
+		ol ol ol ol {
+			list-style: lower-alpha;
+		}
+		dl {
+			margin: 0 0 24px 0;
+		}
+		dt {
+			font-weight: bold;
+		}
+		dd {
+			margin-bottom: 18px;
+		}
+	}
+
+	.widget-area {
+		margin-top: 16px;
+		 ul {
+			list-style: none;
+			h3 {
+				margin-left: 4px;
+				margin-bottom: 8px;
+			}
+			.widget_recent_entries h3 {
+				@include sprite( $images-url, 0, 0, 176px, 16px);
+			}
+			.widget_recent_comments h3 {
+				@include sprite( $images-url, 0, 16px, 184px, 16px);
+			}
+			.widget_archive h3 {
+				@include sprite( $images-url, 0, 32px, 184px, 16px);
+			}
+			.widget_categories h3 {
+				@include sprite( $images-url, 0, 48px, 200px, 16px);
+			}
+			div.hatena-moduletitle a {
+				margin-left: 4px;
+				margin-bottom: 8px;
+				@include sprite( $images-url, 0, 128px, 200px, 16px);
+			}
+			li.widget-container, div.hatena-modulebody {
+				margin-bottom: 32px;
+				ul {
+					margin-left: 24px;
+					font-size: 12px;
+					list-style: square;
+					ul {
+						margin-left: 16px;
+					}
+				}
+				span.hatena-bookmark-count a {
+					font-weight: bold;
+					font-size: 80%;
+					color: $thin-link-text-color;
+				}
+			}
+		}
+	}
+
+	.navigation {
+		color: $thin-text-color;
+		font-size: 12px;
+		line-height: 18px;
+		overflow: hidden;
+		a:link, a:visited {
+			color: $thin-text-color;
+			text-decoration: none;
+		}
+		a:active, a:hover {
+			color: $thin-link-text-color;
+		}
+		.nav-previous {
+			float: left;
+			width: 50%;
+		}
+		.nav-next {
+			float: right;
+			text-align: right;
+			width: 50%;
+		}
+	}
+
+	#respond {
+		border-top: 1px dashed #d7d7d7;
+		margin: 24px 0;
+		overflow: hidden;
+		position: relative;
+
+		p {
+			margin: 0;
+		}
+		.comment-notes {
+			margin-bottom: 1em;
+		}
+		.required {
+			color: #ff4b33;
+			font-weight: bold;
+		}
+		label {
+			color: $thin-text-color;
+			font-size: 12px;
+			display: block;
+		}
+		textarea {
+			width: 96%;
+		}
+		.form-allowed-tags {
+			color: $thin-text-color;
+			font-size: 12px;
+			line-height: 18px;
+		}
+		.form-allowed-tags code {
+			font-size: 11px;
+		}
+		.form-submit {
+			margin: 12px 0;
+		}
+		.form-submit input {
+			font-size: 14px;
+			width: auto;
+		}
+	}
+	.form-allowed-tags {
+		line-height: 1em;
+	}
+	.children #respond {
+		margin: 0 48px 0 0;
+	}
+	h3#reply-title {
+		margin: 18px 0;
+	}
+	#comments-list #respond {
+		margin: 0 0 18px 0;
+	}
+	#comments-list ul #respond {
+		margin: 0;
+	}
+	#cancel-comment-reply-link {
+		font-size: 12px;
+		font-weight: normal;
+		line-height: 18px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		height: 48px;
+		border-bottom: solid 2px $link-text-color;
+		div#logo {
+			margin-top: 14px;
+			width: 25%;
+			a {
+				margin-left: 2%;
+				@include sprite( $images-url, 0, 96px, 96px, 24px);
+				&:hover { @include opacity(50); }
+			}
+		}
+		div#menu {
+			margin-top: 0;
+			width: 75%;
+			li {
+				margin-left: 4%;
+				a {
+					&:before {
+						box-shadow: 0 30px 10px #777;
+					}
+				}
+			}
+		}
+	}
+
+	div#content {
+		margin-top: 60px;
+	}
+}
+@media screen and (max-width: 450px) {
+	header {
+		div#logo {
+			width: 30%;
+		}
+		div#menu {
+			width: 70%;
+			li {
+				a.top {
+					display: none;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 375px) {
+	header {
+		div#logo {
+			width: 35%;
+		}
+		div#menu {
+			width: 65%;
+			li {
+				a.twitter {
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+div.pixelTip {
+	text-align: center;
+	z-index: 10;
+	color: #EEE;
+	font-size: 11px;
+	background-color: rgba(0,0,0,0.5);
+	padding: 4px;
+	border-radius: 6px;
+	box-shadow: 0 0 10px #777;
+	span {
+		margin: 0 2px;
+	}
+	span.width {
+		&:before { content: "w:"; }
+		&:after  { content: "px"; }
+	}
+	span.height {
+		&:before { content: "h:"; }
+		&:after  { content: "px"; }
+	}
+	span.size {
+		&:after  { content: "byte"; }
+	}
+	span.colorNum {
+		&:after  { content: "色"; }
+	}
+	span.depth {
+		&:after  { content: "bit"; }
+	}
+	div.controll {
+		margin-bottom: 1px;
+		width: 100%;
+		height: 16px;
+		text-align: left;
+		vertical-align: middle;
+		button {
+			cursor: pointer;
+			margin: 0 2px;
+			border: 0;
+			padding: 0;
+			float: left;
+			&.zoomIn { @include sprite($images-url, 160px, 64px, 16px, 16px); }
+			&.zoomOut { @include sprite($images-url, 176px, 64px, 16px, 16px); }
+			&.bgColor { @include sprite($images-url, 192px, 64px, 16px, 16px); }
+			&.flipX { @include sprite($images-url, 160px, 80px, 16px, 16px); }
+			&.flipY { @include sprite($images-url, 176px, 80px, 16px, 16px); }
+			&.rotate { @include sprite($images-url, 192px, 80px, 16px, 16px); }
+			&:hover { @include opacity(70); }
+		}
+	}
+	div.container {
+		clear: both;
+		margin: 0 auto;
+		position: relative;
+		img {
+			image-rendering: -moz-crisp-edges;
+			image-rendering: -o-crisp-edges;
+			image-rendering: -webkit-optimize-contrast;
+			-ms-interpolation-mode: nearest-neighbor;
+		}
+	}
+
+	table.palette {
+		margin: 0 auto;
+		td {
+			width: 10px;
+			height: 9px;
+			border: solid 1px #EEE;
+		}
+	}
+	div.color {
+		width: 50px;
+		padding: 2px;
+		margin: 0 auto;
+		border-left: 16px solid #000;
+	}
+}
