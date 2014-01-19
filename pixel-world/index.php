@@ -39,10 +39,10 @@
 
 			<a class="rss" title="rss" href="http://manaten.net/feed">RSS</a>
 			<div id="search">
-				<form role="search" method="get" id="searchform" action="<?php bloginfo('url'); ?>" >
+				<form role="search" method="get" id="searchform" action="http://manaten.hatenablog.com/search" >
 					<div>
 						<input type="submit" value="">
-						<input type="text" value="" name="s" id="s" placeholder="検索..." />
+						<input type="text" value="" name="q" id="q" placeholder="検索..." />
 					</div>
 				</form>
 			</div>
