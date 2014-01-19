@@ -7,6 +7,9 @@
 	<link rel="icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
 	<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?20130714" />
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
+	<link rel="alternate" type="application/atom+xml" title="Atom" href="http://blog.manaten.net/feed"/>
+	<link rel="alternate" type="application/rss+xml" title="RSS2.0" href="http://blog.manaten.net/rss"/>
 	<!--[if lt IE 9]>
 	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->

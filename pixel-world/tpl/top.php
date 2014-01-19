@@ -105,21 +105,7 @@
 					</a></li>
 				</ul>
 			</div>
-
-			<h1>更新情報</h1>
-			<div class="new-article">
-				<ul>
-					<?php query_posts('posts_per_page=10');
-					while ( have_posts() ) : the_post(); ?>
-					<li>
-						<div class="date"><?php the_time('Y年n月j日'); ?></div>
-						<div class="title<?php if ( 5 * 24 * 3600 > time() - get_the_time('U') ) echo ' new'; ?>">
-							<a href="<?php the_permalink(); ?>"><?php the_title();?></a>
-						</div>
-					</li>
-					<?php endwhile; wp_reset_query(); ?>
-				</ul>
-			</div>
+		</div>
 
 			<h2>連絡先</h2>
 			<div class="contact">
