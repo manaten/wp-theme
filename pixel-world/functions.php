@@ -223,7 +223,11 @@ function twentyten_remove_recent_comments_style() {
 }
 add_action( 'widgets_init', 'twentyten_remove_recent_comments_style' );
 
-
+function allow_upload_psd( $mimes ) {
+    $mimes['woff'] = 'application/x-font-woff';
+    return $mimes;
+}
+add_filter( 'upload_mimes', 'allow_upload_psd' );
 
 class ManatenWp {
 	public static function setUp() {
@@ -255,7 +259,7 @@ class ManatenWp {
 			return sprintf( '検索結果: %s', get_search_query() );
 		}
 		return '';
-	} 
+	}
 
 	public static function writeTitle() {
 		global $page, $paged;
