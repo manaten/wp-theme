@@ -226,6 +226,8 @@ add_action( 'widgets_init', 'twentyten_remove_recent_comments_style' );
 function allow_upload_psd( $mimes ) {
     $mimes['woff'] = 'application/x-font-woff';
     $mimes['svg'] = 'image/svg-xml';
+    $mimes['ttf'] = 'font/ttf';
+    $mimes['eot'] = 'application/x-font-opentype';
     return $mimes;
 }
 add_filter( 'upload_mimes', 'allow_upload_psd' );
