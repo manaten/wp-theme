@@ -1,0 +1,14 @@
+{
+  "name": "pixel-tip",
+  "version": "0.0.0",
+  "devDependencies": {
+    "coffeeify": "*",
+    "grunt": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-csscomb": "*",
+    "grunt-uncss": "~0.3.3"
+  }
+}

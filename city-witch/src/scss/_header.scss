@@ -1,0 +1,223 @@
+
+
+/* -------- useful mixins -------- */
+@mixin sprite($x, $y, $width, $height) {
+  width:  $width;
+  height: $height;
+  display: block;
+  overflow: hidden;
+  background-position: $x*-1 $y*-1;
+  text-indent: 1000%;
+  white-space: nowrap;
+}
+
+@mixin icon-shadow() {
+  &:before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+
+    left: 20%;
+    right: 20%;
+    top: 0;
+    height: 8px;
+
+    @include border-radius(70px);
+    @include box-shadow(0 40px 10px #777);
+  }
+}
+
+div.wrapper {
+  margin: 0 auto;
+  width: $body-width;
+  max-width: 95%;
+  position: relative;
+  z-index: 1;
+}
+
+.clearfix:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+header#manaHeader div#logo a, header#manaHeader div#search input, header#manaHeader a.rss {
+  background: inline-image("images.gif") no-repeat;
+}
+
+header#manaHeader div#menu li a {
+  background: inline-image("icons.gif") no-repeat;
+  transition-duration: 0s;
+}
+
+header#manaHeader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 200;
+  margin: 0;
+  @include box-shadow(0 0 10px #999);
+  background: $content-background-color;
+  background: -webkit-linear-gradient(top, #FFFFFF, #E4E0E0);
+  background: linear-gradient(#FFFFFF, #E4E0E0);
+  border-bottom: solid 4px $link-text-color;
+
+  div#logo {
+    float: left;
+    margin-top: 20px;
+    width: 25%;
+    a {
+      margin-left: 8%;
+      @include sprite(0, 64px, 146px, 32px);
+      &:hover { @include opacity(0.5); }
+    }
+  }
+  div#menu {
+    float: left;
+    margin-top: 6px;
+    width: 40%;
+    li {
+      float: left;
+      margin-left: 16px;
+      position: relative;
+      a {
+        @include icon-shadow();
+        &.top {
+          @include sprite(0, 0, 48px, 48px);
+          &:hover {
+            @include sprite(48px, 0, 48px, 48px);
+          }
+        }
+        &.blog {
+          @include sprite(0, 48px, 48px, 48px);
+          &:hover {
+            @include sprite(48px, 48px, 48px, 48px);
+          }
+        }
+        &.gallery {
+          @include sprite(0, 96px, 48px, 48px);
+          &:hover {
+            @include sprite(48px, 96px, 48px, 48px);
+          }
+        }
+        &.bbs {
+          @include sprite(0, 144px, 48px, 48px);
+          &:hover {
+            @include sprite(48px, 144px, 48px, 48px);
+          }
+        }
+        &.twitter {
+          @include sprite(0, 192px, 48px, 48px);
+          &:hover {
+            @include sprite(48px, 192px, 48px, 48px);
+          }
+        }
+      }
+    }
+  }
+  div#search {
+    position: relative;
+    float: right;
+    margin: 18px 8px 0 0;
+    input[type=submit] {
+      position: absolute;
+      margin: 4px 0 0 8px;
+      border: none 0;
+      @include sprite(192px, 0px, 16px, 16px);
+    }
+    input[type=text] {
+      font-size: 12px;
+      margin: 0;
+      border: solid 1px #BAA;
+      border-radius: 14px;
+      background: #FFF;
+      padding: 4px 4px 4px 28px;
+      width: 200px;
+      &:focus {
+        border: solid 1px #ACF;
+        @include box-shadow(0 0 10px #BEF);
+        outline: none;
+      }
+    }
+  }
+
+  a.rss {
+    float: right;
+    margin: 22px 8px 0 0;
+    @include sprite(192px, 16px, 16px, 16px);
+    &:hover { @include opacity(0.7); }
+  }
+  @media screen and (max-width: 900px) {
+    div#search, a.rss {
+      display: none;
+    }
+    div#menu {
+      width: 75%;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header#manaHeader {
+    height: 48px;
+    border-bottom: solid 2px $link-text-color;
+    div#logo {
+      margin-top: 14px;
+      width: 25%;
+      a {
+        margin-left: 2%;
+        @include sprite(0, 96px, 96px, 24px);
+        &:hover { @include opacity(0.5); }
+      }
+    }
+    div#menu {
+      margin-top: 0;
+      width: 75%;
+      li {
+        margin-left: 4%;
+        a {
+          &:before {
+            @include box-shadow(0 30px 10px #777);
+          }
+        }
+      }
+    }
+  }
+
+  div#content {
+    margin-top: 60px;
+  }
+}
+@media screen and (max-width: 450px) {
+  header#manaHeader {
+    div#logo {
+      width: 30%;
+    }
+    div#menu {
+      width: 70%;
+      li {
+        a.top {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  header#manaHeader {
+    div#logo {
+      width: 35%;
+    }
+    div#menu {
+      width: 65%;
+      li {
+        a.twitter {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
