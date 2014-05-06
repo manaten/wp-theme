@@ -89,6 +89,18 @@ a.keyword {
     }
   }
 }
+@media (max-width: 400px) {
+  body {
+    background-position: 0px 122px;
+  }
+  #blog-title {
+    margin: 0 0 40px 0;
+    #blog-title-inner {
+      height: 96px;
+    }
+  }
+}
+
 
 ul.header-menu {
   @extend .list-inline;
