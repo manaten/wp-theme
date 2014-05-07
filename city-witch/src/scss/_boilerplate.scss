@@ -157,7 +157,7 @@ h1.entry-title {
   border-bottom: 1px solid $main-border-color;
   @extend .icons;
   padding-left: 28px;
-  background-position: 0px -144px;
+  background-position: 0px -160px;
   a {
     color: $gray;
   }
@@ -178,12 +178,16 @@ h1.entry-title {
   margin-top: 10px;
 
   a {
+    @extend .icons;
+    padding: 1px 4px 1px 16px;
+    background-position: 0px -144px;
+    height: 16px;
+
     font-size: 90%;
     text-decoration: none;
     @include border-radius(3px);
     background-color: $brand-primary;
     color: $gray-lighter;
-    padding: 1px 4px;
     &:hover { @include opacity(0.5); }
   }
   &.no-categories {
