@@ -37,8 +37,8 @@ a.keyword {
   @extend .col-md-3;
 }
 
-.images {
-  background-image: inline-image("images.gif");
+.icons {
+  background-image: inline-image("icons.gif");
   background-repeat: no-repeat;
 }
 
@@ -60,7 +60,7 @@ a.keyword {
     a {
       color: $brand-primary;
     }
-    @extend .images;
+    @extend .icons;
     padding-left: 48px;
     background-position: left top;
   }
@@ -109,7 +109,7 @@ ul.header-menu {
   font-family: '8x8_bold';
   font-size: 13px;
   li {
-    @extend .images;
+    @extend .icons;
     padding-left: 16px;
     height: 16px;
   }
@@ -154,7 +154,7 @@ ul.header-menu {
   font-size: 160%;
 }
 h1.entry-title {
-  @extend .images;
+  @extend .icons;
   padding-left: 28px;
   background-position: 0px -144px;
   a {
@@ -364,7 +364,7 @@ h1.entry-title {
   margin-bottom: 60px;
 }
 .hatena-module-title {
-  @extend .images;
+  @extend .icons;
   padding-left: 20px;
   height: 16px;
   background-position: 0px -128px;
