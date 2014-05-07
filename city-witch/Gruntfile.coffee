@@ -28,7 +28,7 @@ module.exports = (grunt)->
     uncss:
      dist:
       options:
-        ignore: [/entry-content/, /page-archive/, /page-about/]
+        ignore: [/entry-content/, /page-archive/, /page-about/, /#zenback/]
         stylesheets: ['../style.css']
       files:
         'style.css': ['html/hatena.html']
