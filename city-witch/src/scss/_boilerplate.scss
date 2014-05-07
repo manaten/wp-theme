@@ -154,6 +154,7 @@ ul.header-menu {
   font-size: 160%;
 }
 h1.entry-title {
+  border-bottom: 1px solid $main-border-color;
   @extend .icons;
   padding-left: 28px;
   background-position: 0px -144px;
