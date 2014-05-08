@@ -157,7 +157,7 @@ h1.entry-title {
   border-bottom: 1px solid $main-border-color;
   @extend .icons;
   padding-left: 28px;
-  background-position: 0px -160px;
+  background-position: 0px -224px;
   a {
     color: $gray;
   }
@@ -180,7 +180,7 @@ h1.entry-title {
   a {
     @extend .icons;
     padding: 1px 4px 1px 16px;
-    background-position: 0px -144px;
+    background-position: 0px -208px;
     height: 16px;
 
     font-size: 90%;
@@ -385,8 +385,23 @@ h1.entry-title {
     }
   }
 }
+
+.hatena-module-html {
+  .hatena-module-title {
+    background-position: 0px -160px;
+  }
+}
+.hatena-module-recent-entries {
+  .hatena-module-title {
+    background-position: 0px -176px;
+  }
+}
+
 /* Profile module */
 .hatena-module-profile {
+  .hatena-module-title {
+    background-position: 0px -144px;
+  }
   .profile-icon {
     float: left;
     margin: 0 10px 10px 0;
@@ -422,6 +437,9 @@ h1.entry-title {
 }
 
 .hatena-module-category {
+  .hatena-module-title {
+    background-position: 0px -192px;
+  }
   ul.hatena-urllist {
     list-style: none;
     margin: 0 0 0 0;
