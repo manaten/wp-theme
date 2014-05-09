@@ -26,7 +26,7 @@
   <div id="container-inner">
     <header id="blog-title">
       <div id="blog-title-inner" >
-        <h1 id="title"><a href="http://blog.manaten.net/">MANA-DOT</a></h1>
+        <h1 id="title"><a href="http://manaten.net/">MANA-DOT</a></h1>
 
         <h2 id="blog-description">PIXEL ART, PROGRAMING, ETC.</h2>
 
