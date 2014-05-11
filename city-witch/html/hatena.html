@@ -47,8 +47,7 @@
         <li class="bbs"><a href="http://dot.manaten.net">DOT BBS</a></li>
       </ul>
 
-<!--
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
   <script>
   jQuery(function($) {
     var sum = 0;
@@ -68,9 +67,21 @@
       category.$a.css('font-size', score+'%');
       category.$a.text(category.$a.text().replace(/^[\s\n]*(.*)[\s\n]*\(\d+\)[^)]*$/, '$1'));
     });
+
+    $('#box2-inner').css({position: 'relative'});
+    var offsetTop = $('#box2-inner').offset().top;
+    $(window).on('load scroll resize', function() {
+      if ($(document.body).width() > 992) {
+        var scroll = $(window).scrollTop();
+        var scrollHeight = $(document.body).height() - $(window).height();
+        var boxScrollHeight = scrollHeight - ($('#box2-inner').height() + offsetTop - $(window).height());
+        $('#box2-inner').css({ top: scroll * boxScrollHeight / scrollHeight});
+      } else {
+        $('#box2-inner').css({ top: 0 });
+      }
+    });
   });
   </script>
--->
 </div>
 
 
