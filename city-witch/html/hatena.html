@@ -68,16 +68,17 @@
       category.$a.text(category.$a.text().replace(/^[\s\n]*(.*)[\s\n]*\(\d+\)[^)]*$/, '$1'));
     });
 
-    $('#box2-inner').css({position: 'relative'});
-    var offsetTop = $('#box2-inner').offset().top;
+    var $target = $('#box2');
+    $target.css({position: 'relative'});
+    var offsetTop = $target.offset().top;
     $(window).on('load scroll resize', function() {
       if ($(document.body).width() > 992) {
         var scroll = $(window).scrollTop();
         var scrollHeight = $(document.body).height() - $(window).height();
-        var boxScrollHeight = scrollHeight - ($('#box2-inner').height() + offsetTop - $(window).height());
-        $('#box2-inner').css({ top: scroll * boxScrollHeight / scrollHeight});
+        var boxScrollHeight = $target.parent().height() - $target.height();
+        $target.css({ top: scroll * boxScrollHeight / scrollHeight});
       } else {
-        $('#box2-inner').css({ top: 0 });
+        $target.css({ top: 0 });
       }
     });
   });
