@@ -47,7 +47,8 @@
         <li class="bbs"><a href="http://dot.manaten.net">DOT BBS</a></li>
       </ul>
 
-<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+<!-- 何故かGoogleのjqueryを読み込むとuncssがおかしな挙動をする。しょうがないので動作確認次以外はコメントアウトする -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>
   jQuery(function($) {
     var sum = 0;
@@ -72,7 +73,7 @@
     $target.css({position: 'relative'});
     var offsetTop = $target.offset().top;
     $(window).on('load scroll resize', function() {
-      if ($(document.body).width() > 992) {
+      if ($target.css('float') === 'left') {
         var scroll = $(window).scrollTop();
         var scrollHeight = $(document.body).height() - $(window).height();
         var boxScrollHeight = $target.parent().height() - $target.height();
