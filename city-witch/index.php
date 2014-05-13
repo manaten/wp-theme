@@ -37,6 +37,8 @@
         <li class="blog"><a href="http://blog.manaten.net">BLOG</a></li>
         <li class="gallery"><a href="http://manaten.net/gallery">GALLERY</a></li>
         <li class="bbs"><a href="http://dot.manaten.net">DOT BBS</a></li>
+        <li class="rss"><a href="http://blog.manaten.net/feed">RSS</a></li>
+        <li class="twitter"><a href="http://www.twitter.com/manaten" target="_blank">TWITTER</a></li>
       </ul>
 
   <nav class="bg-nav">

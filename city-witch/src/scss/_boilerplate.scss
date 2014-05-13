@@ -108,22 +108,41 @@ ul.header-menu {
   padding: 8px;
   font-family: '8x8_bold';
   font-size: 13px;
-  li {
+  li a {
     @extend .icons;
     padding-left: 16px;
     height: 16px;
+    display: block;
   }
-  li.home {
+  li.home a {
     background-position: 0px -64px;
   }
-  li.blog {
+  li.blog a {
     background-position: 0px -80px;
   }
-  li.gallery {
+  li.gallery a {
     background-position: 0px -96px;
   }
-  li.bbs {
+  li.bbs a {
     background-position: 0px -112px;
+  }
+  li.twitter, li.rss {
+    float: right;
+    a {
+      width: 16px;
+      overflow: hidden;
+      text-indent: 1000%;
+      white-space: nowrap;
+    }
+    a:hover {
+      @include opacity(0.7);
+    }
+  }
+  li.twitter a {
+    background-position: 0px -224px;
+  }
+  li.rss a {
+    background-position: 0px -240px;
   }
 }
 
@@ -157,7 +176,7 @@ h1.entry-title {
   border-bottom: 1px solid $main-border-color;
   @extend .icons;
   padding-left: 28px;
-  background-position: 0px -224px;
+  background-position: 0px -256px;
   a {
     color: $gray;
   }
@@ -188,7 +207,9 @@ h1.entry-title {
     @include border-radius(3px);
     background-color: $brand-primary;
     color: $gray-lighter;
-    &:hover { @include opacity(0.5); }
+    &:hover {
+      @include opacity(0.5);
+    }
   }
   &.no-categories {
     margin: 0;
