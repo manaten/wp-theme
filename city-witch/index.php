@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <title><?php ManatenWp::writeTitle(); ?></title>
   <link rel="icon" href="<?php bloginfo('template_directory'); ?>/favicon.ico" />
-  <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
+  <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>?20140514" />
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
   <link rel="alternate" type="application/atom+xml" title="Hatena Blog Atom" href="http://blog.manaten.net/feed"/>
