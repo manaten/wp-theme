@@ -149,16 +149,12 @@ ul.header-menu {
   ul.header-menu {
     padding: 0;
     font-size: 11px;
-    li {
-      padding-left: 2px;
-      padding-right: 2px;
-    }
     li a {
       padding-left: 16px;
       height: 16px;
       display: block;
     }
-    li.twitter a, li.rss a {
+    li.home, li.twitter, li.rss {
       display: none;
     }
   }
