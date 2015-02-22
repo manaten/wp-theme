@@ -1,0 +1,775 @@
+ <!DOCTYPE html>
+ <html>
+ <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/fb#">
+
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=7; IE=9; IE=10" />
+  <meta name="viewport" content="width=device-width"/ >
+  <title>まなドット</title>
+  <link rel="stylesheet" type="text/css" href="./../style.css">
+
+</head>
+
+<body class="page-index  enable-top-editarea ">
+  <div id="header-container">
+   <div id="sp-suggest" style="display: none;"><a id="sp-suggest-link" href="#">スマートフォン用の表示で見る</a></div>
+ </div>
+
+ <div class="select_star_button_container" style="display: none;">
+  <img src="http://hatenablog.com/images/theme/hatena-star-quote-box.png" title="引用スターをつける" class="select_star_button" />
+  <img src="http://hatenablog.com/images/theme/hatena-star-quote-star.png" title="引用スターをつける" class="select_star_button select_star_star">
+</div>
+
+<div class="message-box" id="select-star-message-box" style="display: none;">
+  スターをつけました
+</div>
+
+<div id="globalheader-container">
+  <iframe id="globalheader" height="37" frameborder="0" allowTransparency="true"></iframe>
+</div>
+
+<div id="container">
+  <div id="container-inner">
+    <header id="blog-title" data-brand="hatenablog">
+      <div id="blog-title-inner" >
+        <h1 id="title"><a href="http://blog.manaten.net/">MANA-DOT</a></h1>
+
+        <h2 id="blog-description">PIXEL ART, PROGRAMING, ETC.</h2>
+
+      </div>
+    </header>
+
+
+    <div id="top-editarea">
+      <ul class="header-menu">
+        <li class="home"><a href="http://manaten.net">HOME</a></li>
+        <li class="blog"><a href="http://blog.manaten.net">BLOG</a></li>
+        <li class="gallery"><a href="http://manaten.net/gallery">GALLERY</a></li>
+        <li class="bbs"><a href="http://dot.manaten.net">DOT BBS</a></li>
+        <li class="rss"><a href="http://blog.manaten.net/feed">RSS</a></li>
+        <li class="twitter"><a href="http://www.twitter.com/manaten" target="_blank">TWITTER</a></li>
+      </ul>
+
+<!-- 何故かGoogleのjqueryを読み込むとuncssがおかしな挙動をする。しょうがないので動作確認次以外はコメントアウトする -->
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
+  <script>
+  jQuery(function($) {
+    var sum = 0;
+    var categories = $('.hatena-module-category li a').map(function(_, a) {
+      var count = +$(a).text().replace(/^[\s\S]*\((\d+)\)[^)]*$/, '$1');
+      sum += count;
+      return { count: count, $a: $(a) };
+    });
+    var mean = sum / categories.length;
+    var deviation = 0;
+    $.each(categories, function(_, category) {
+      deviation += Math.pow(category.count - mean, 2);
+    });
+    deviation = Math.sqrt(deviation) / categories.length;
+    $.each(categories, function(_, category) {
+      var score = Math.min(Math.max(Math.floor((category.count - mean) / deviation*100), 85), 180);
+      category.$a.css('font-size', score+'%');
+      category.$a.text(category.$a.text().replace(/^[\s\n]*(.*)[\s\n]*\(\d+\)[^)]*$/, '$1'));
+    });
+
+    var $target = $('#box2');
+    $target.css({position: 'relative'});
+    var offsetTop = $target.offset().top;
+    $(window).on('load scroll resize', function() {
+      if ($target.css('float') === 'left') {
+        var scroll = $(window).scrollTop();
+        var scrollHeight = $(document.body).height() - $(window).height();
+        var boxScrollHeight = $target.parent().height() - $target.height();
+        $target.css({ top: scroll * boxScrollHeight / scrollHeight});
+      } else {
+        $target.css({ top: 0 });
+      }
+    });
+  });
+  </script>
+</div>
+
+
+
+<div id="top-box">
+    <div class="breadcrumb">
+      <div itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+        <a href="http://manaten.hatenablog.jp/">トップ</a>
+        &gt;
+        <span itemprop="child" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+          カテゴリ1
+        </span>
+      </div>
+    </div>
+</div>
+
+
+<div id="content" class="hfeed">
+  <div id="content-inner">
+    <div id="wrapper">
+
+      <div id="main">
+        <div id="main-inner">
+
+
+          <!-- google_ad_section_start -->
+          <!-- rakuten_ad_target_begin -->
+
+
+          <article data-comments-expanded="true" class="entry hentry js-entry-article date-first autopagerize_page_element chars-800 words-100 mode-markdown entry-odd" id="entry-12921228815723298304" data-keyword-campaign="" data-uuid="12921228815723298304">
+            <div class="entry-inner">
+              <header class="entry-header">
+                <div class="date first">
+                  <a href="http://manaten.hatenablog.jp/entries/2014/05/05" rel="nofollow">
+                    <time pubdate="" datetime="2014-05-05T05:03:40Z" title="2014-05-05T05:03:40Z">
+                      <span class="date-year">2014</span><span class="hyphen">-</span><span class="date-month">05</span><span class="hyphen">-</span><span class="date-day">05</span>
+                    </time>
+                  </a>
+                </div>
+                <h1 class="entry-title">
+                  <a href="http://manaten.hatenablog.jp/entry/2014/05/05/140340" class="entry-title-link bookmark">マークダウンテスト</a>
+                </h1>
+
+                <div class="categories ">
+
+                  <a href="http://manaten.hatenablog.jp/category/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA1">カテゴリ1</a>
+
+                  <a href="http://manaten.hatenablog.jp/category/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA2">カテゴリ2</a>
+
+                </div>
+                <div class="entry-header-menu"><a href="javascript:void">編集</a></div>
+
+              </header>
+              <div class="entry-content">
+
+
+                <p>これは段落です。2つの文があります。<a class="keyword" href="">キーワード</a></p>
+
+                <p>これは別の段落です。ここにも2つの文があります。</p>
+
+                <p><em>強調</em> もしくは <em>強調</em>（斜体として表現されることが多い）</p>
+
+                <p><strong>強い強調</strong> もしくは <strong>強い強調</strong>（太字として表現されることが多い）</p>
+
+                <pre><code>1行目
+2行目
+3行目</code></pre>
+
+                <ul>
+                  <li>順序無しリストのアイテム
+
+                    <ul>
+                      <li>サブアイテムは4つのスペースでインデントする</li>
+                    </ul>
+                  </li>
+                  <li>順序無しリストの別のアイテム</li>
+                </ul>
+
+
+
+
+
+                <ol>
+                  <li>順序付きリストのアイテム</li>
+                  <li>順序付きリストの別のアイテム</li>
+                </ol>
+
+
+                <h1>レベル1の見出し</h1>
+
+                <h2>レベル2の見出し</h2>
+
+                <h3>レベル3の見出し</h3>
+
+                <h4>レベル4の見出し</h4>
+
+                <h5>レベル5の見出し</h5>
+
+                <h6>レベル6の見出し</h6>
+
+                <blockquote><p>"このテキストは、HTMLのblockquote要素に囲まれます。
+                  blockquote要素はreflowableです。テキストを好きなように
+                  改行することができます。改行したとしても、変換後はひとつの
+                  blockquote要素として扱われます。"</p></blockquote>
+
+                  <p><a href="%E3%83%AA%E3%83%B3%E3%82%AF%E3%81%AE%E3%82%A2%E3%83%89%E3%83%AC%E3%82%B9" title="リンクのタイトル">リンクのテキスト</a></p>
+
+                  <hr>
+
+                  <table>
+                    <thead>
+                      <tr>
+                        <th style="text-align:left;"> Left align </th>
+                        <th style="text-align:right;"> Right align </th>
+                        <th style="text-align:center;"> Center align </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="text-align:left;"> This       </td>
+                        <td style="text-align:right;">        This </td>
+                        <td style="text-align:center;">     This     </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;"> column     </td>
+                        <td style="text-align:right;">      column </td>
+                        <td style="text-align:center;">    column    </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;"> will       </td>
+                        <td style="text-align:right;">        will </td>
+                        <td style="text-align:center;">     will     </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;"> be         </td>
+                        <td style="text-align:right;">          be </td>
+                        <td style="text-align:center;">      be      </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;"> left       </td>
+                        <td style="text-align:right;">       right </td>
+                        <td style="text-align:center;">    center    </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;"> aligned    </td>
+                        <td style="text-align:right;">     aligned </td>
+                        <td style="text-align:center;">   aligned    </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+
+                  <p><img src="http://manaten.net/wp-content/uploads/2013/04/articuno_anim_.gif" alt="image"></p>
+
+                  <pre class="code lang-javascript" data-lang="javascript" data-unlink=""><span class="synComment">// function</span>
+<span class="synIdentifier">function</span>(hoge) <span class="synIdentifier">{</span>
+  <span class="synStatement">if</span> (hoge) <span class="synIdentifier">{</span>
+    <span class="synStatement">return</span> <span class="synConstant">'huga'</span>;
+  <span class="synIdentifier">}</span>
+  <span class="synStatement">return</span> 1234;
+<span class="synIdentifier">}</span>
+                  </pre>
+
+
+
+                </div>
+                <footer class="entry-footer">
+                  <p class="entry-footer-section">
+                    <span class="author vcard"><span class="fn" data-load-nickname="1" data-user-name="manaten">manaten</span></span>
+                    <span class="entry-footer-time"><a href="http://manaten.hatenablog.jp/entry/2014/05/05/140340"><time data-relative="" datetime="2014-05-05T05:03:40Z" title="2014-05-05T05:03:40Z" pubdate="" class="updated">3時間前</time></a></span>
+                  </p>
+                  <div class="hatena-star-container">
+                    <span class="hatena-star-comment-container"><img class="hatena-star-comment-button" style="cursor: pointer; margin: 0px 3px; padding: 0px; border: medium none; vertical-align: middle; display: inline;" title="Comments" alt="Comments" tabindex="0" src="http://s.hatena.ne.jp/images/comment.gif"></span><span class="hatena-star-star-container"><img class="hatena-star-add-button" style="cursor: pointer; margin: 0px 3px; padding: 0px; border: medium none; vertical-align: middle;" title="Add Star" alt="Add Star" tabindex="0" src="http://hatenablog.com/images/theme/star/hatena-star-add-button.png"></span></div>
+
+
+
+                    <div class="customized-footer">
+                      <div class="social-buttons">
+
+
+                        <iframe style="width: 106px; height: 20px;" src="javascript:false" title="この記事をはてなブックマークに追加" class="hatena-bookmark-button-frame" frameborder="0" height="20" scrolling="no" width="130"></iframe>
+
+
+                        <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmanaten.hatenablog.jp%2Fentry%2F2014%2F05%2F05%2F140340&amp;layout=button_count&amp;show_faces=false&amp;width=130&amp;action=like&amp;height=21" class="facebook-like-button" style="border:none; overflow:hidden; width:130px; height:21px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+
+
+                        <iframe allowtransparency="true" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fmanaten.hatenablog.jp%2Fentry%2F2014%2F05%2F05%2F140340&amp;text=%E3%83%9E%E3%83%BC%E3%82%AF%E3%83%80%E3%82%A6%E3%83%B3%E3%83%86%E3%82%B9%E3%83%88%20-%20MANA-DOT-TEST&amp;lang=ja" class="twitter-share-button" style="width:130px; height:20px;" frameborder="0" scrolling="no"></iframe>
+
+
+                        <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" src="https://apis.google.com/u/0/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;origin=http%3A%2F%2Fmanaten.hatenablog.jp&amp;url=http%3A%2F%2Fmanaten.hatenablog.jp%2Fentry%2F2014%2F05%2F05%2F140340&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.vMquq0VrB3A.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Fz%3Dzcms%2Frs%3DAItRSTMU2jN4kiG7F3gj7X0DgTLSIyHDCA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I0_1399278789393&amp;parent=http%3A%2F%2Fmanaten.hatenablog.jp&amp;pfname=&amp;rpctoken=84127055" name="I0_1399278789393" id="I0_1399278789393" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div>
+
+
+
+
+                      </div>
+
+
+                    </div>
+
+                    <div class="comment-box">
+
+                      <ul class="comment"><li id="comment-12921228815723312224" class="entry-comment
+                        comment-hatena-user
+                        " data-comment-uuid="12921228815723312224" data-blog-uuid="12921228815723240555" onclick="">
+                        <p class="comment-user-name"><img src="http://cdn1.www.st-hatena.com/users/ma/manaten/profile.gif?1377100491" class="hatena-id-icon" alt="" title=""> <a href="http://blog.hatena.ne.jp/manaten/" class="comment-user-id"><span class="comment-nickname" data-load-nickname="1" data-user-name="manaten">id:manaten</span></a></p>
+                        <div class="comment-content"><p>コメント1</p><p>コメント</p>
+                        </div>
+
+                        <p class="comment-metadata">
+
+                          <a href="http://manaten.hatenablog.jp/entry/2014/05/05/140340#comment-12921228815723312224" class="permalink" style="display:none"></a>
+
+                          <time data-relative="" data-epoch="1399278702000">1分前</time>
+                          <span class="hatena-star-comment-container"><img class="hatena-star-comment-button" style="cursor: pointer; margin: 0px 3px; padding: 0px; border: medium none; vertical-align: middle; display: inline;" title="Comments" alt="Comments" tabindex="0" src="http://s.hatena.ne.jp/images/comment.gif"></span><span class="hatena-star-star-container"><img class="hatena-star-add-button" style="cursor: pointer; margin: 0px 3px; padding: 0px; border: medium none; vertical-align: middle;" title="Add Star" alt="Add Star" tabindex="0" src="http://hatenablog.com/images/theme/star/hatena-star-add-button.png"></span></p>
+
+                          <a href="#" class="comment-delete-button">
+                            <img alt="delete" src="http://blog.hatena.ne.jp/api/comment.delete.image?comment=12921228815723312224&amp;blog=12921228815723240555"></a>
+                          </li>
+                          <li id="comment-12921228815723312231" class="entry-comment
+                          comment-hatena-user
+                          " data-comment-uuid="12921228815723312231" data-blog-uuid="12921228815723240555" onclick="">
+                          <p class="comment-user-name"><img src="http://cdn1.www.st-hatena.com/users/ma/manaten/profile.gif?1377100491" class="hatena-id-icon" alt="" title=""> <a href="http://blog.hatena.ne.jp/manaten/" class="comment-user-id"><span class="comment-nickname" data-load-nickname="1" data-user-name="manaten">id:manaten</span></a></p>
+                          <div class="comment-content"><p>コメント2</p>
+                          </div>
+
+                          <p class="comment-metadata">
+
+                            <a href="http://manaten.hatenablog.jp/entry/2014/05/05/140340#comment-12921228815723312231" class="permalink" style="display:none"></a>
+
+                            <time data-relative="" data-epoch="1399278710000">1分前</time>
+                            <span class="hatena-star-comment-container"><img class="hatena-star-comment-button" style="cursor: pointer; margin: 0px 3px; padding: 0px; border: medium none; vertical-align: middle; display: inline;" title="Comments" alt="Comments" tabindex="0" src="http://s.hatena.ne.jp/images/comment.gif"></span><span class="hatena-star-star-container"><img class="hatena-star-add-button" style="cursor: pointer; margin: 0px 3px; padding: 0px; border: medium none; vertical-align: middle;" title="Add Star" alt="Add Star" tabindex="0" src="http://hatenablog.com/images/theme/star/hatena-star-add-button.png"></span></p>
+
+                            <a href="#" class="comment-delete-button">
+                              <img alt="delete" src="http://blog.hatena.ne.jp/api/comment.delete.image?comment=12921228815723312231&amp;blog=12921228815723240555"></a>
+                            </li>
+
+
+
+                          </ul>
+
+                          <a class="leave-comment-title">コメントを書く</a>
+
+                        </div>
+                      </footer>
+                    </div>
+                  </article>
+
+
+
+
+
+
+
+
+                  <article class="entry hentry js-entry-article date-first autopagerize_page_element chars-200 words-100 mode-html entry-even" id="entry-12921228815723249968" data-keyword-campaign="" data-uuid="12921228815723249968">
+                    <div class="entry-inner">
+                      <header class="entry-header">
+                        <div class="date first">
+                          <a href="http://manaten.hatenablog.jp/entries/2014/05/04" rel="nofollow">
+                            <time pubdate="" datetime="2014-05-04T14:26:39Z" title="2014-05-04T14:26:39Z">
+                              <span class="date-year">2014</span><span class="hyphen">-</span><span class="date-month">05</span><span class="hyphen">-</span><span class="date-day">04</span>
+                            </time>
+                          </a>
+                        </div>
+                        <h1 class="entry-title">
+                          <a href="http://manaten.hatenablog.jp/entry/2014/05/04/232639" class="entry-title-link bookmark">きじに</a>
+                        </h1>
+
+                        <div class="categories ">
+
+                          <a href="http://manaten.hatenablog.jp/category/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA1">カテゴリ1</a>
+
+                          <a href="http://manaten.hatenablog.jp/category/%E3%82%AB%E3%83%86%E3%82%B4%E3%83%AA2">カテゴリ2</a>
+
+                        </div>
+
+                        <div style="display: none;" class="entry-header-menu"><a href="javascript:void">編集</a></div></header>
+                        <div class="entry-content">
+
+
+                          <p>きじふたつめだよ</p>
+
+
+                        </div>
+                        <footer class="entry-footer">
+                          <p class="entry-footer-section">
+                            <span class="author vcard"><span class="fn" data-load-nickname="1" data-user-name="manaten">manaten</span></span>
+                            <span class="entry-footer-time"><a href="http://manaten.hatenablog.jp/entry/2014/05/04/232639"><time data-relative="" datetime="2014-05-04T14:26:39Z" title="2014-05-04T14:26:39Z" pubdate="" class="updated">18時間前</time></a></span>
+                          </p>
+                          <div class="hatena-star-container">
+                            <span class="hatena-star-comment-container"><img class="hatena-star-comment-button" style="cursor: pointer; margin: 0px 3px; padding: 0px; border: medium none; vertical-align: middle; display: inline;" title="Comments" alt="Comments" tabindex="0" src="http://s.hatena.ne.jp/images/comment.gif"></span><span class="hatena-star-star-container"><img class="hatena-star-add-button" style="cursor: pointer; margin: 0px 3px; padding: 0px; border: medium none; vertical-align: middle;" title="Add Star" alt="Add Star" tabindex="0" src="http://hatenablog.com/images/theme/star/hatena-star-add-button.png"></span></div>
+
+
+
+                            <div class="customized-footer">
+                              <div class="social-buttons">
+
+
+                                <iframe style="width: 106px; height: 20px;" src="javascript:false" title="この記事をはてなブックマークに追加" class="hatena-bookmark-button-frame" frameborder="0" height="20" scrolling="no" width="130"></iframe>
+
+
+                                <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmanaten.hatenablog.jp%2Fentry%2F2014%2F05%2F04%2F232639&amp;layout=button_count&amp;show_faces=false&amp;width=130&amp;action=like&amp;height=21" class="facebook-like-button" style="border:none; overflow:hidden; width:130px; height:21px;" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+
+
+                                <iframe allowtransparency="true" src="https://platform.twitter.com/widgets/tweet_button.html?url=http%3A%2F%2Fmanaten.hatenablog.jp%2Fentry%2F2014%2F05%2F04%2F232639&amp;text=%E3%81%8D%E3%81%98%E3%81%AB%20-%20MANA-DOT-TEST&amp;lang=ja" class="twitter-share-button" style="width:130px; height:20px;" frameborder="0" scrolling="no"></iframe>
+
+
+                                <div id="___plusone_1" style="text-indent: 0px; margin: 0px; padding: 0px; background: none repeat scroll 0% 0% transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px;"><iframe title="+1" data-gapiattached="true" src="https://apis.google.com/u/0/_/+1/fastbutton?usegapi=1&amp;size=medium&amp;origin=http%3A%2F%2Fmanaten.hatenablog.jp&amp;url=http%3A%2F%2Fmanaten.hatenablog.jp%2Fentry%2F2014%2F05%2F04%2F232639&amp;gsrc=3p&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.vMquq0VrB3A.O%2Fm%3D__features__%2Fam%3DEQ%2Frt%3Dj%2Fd%3D1%2Fz%3Dzcms%2Frs%3DAItRSTMU2jN4kiG7F3gj7X0DgTLSIyHDCA#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh&amp;id=I1_1399278789401&amp;parent=http%3A%2F%2Fmanaten.hatenablog.jp&amp;pfname=&amp;rpctoken=42401353" name="I1_1399278789401" id="I1_1399278789401" vspace="0" tabindex="0" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" marginwidth="0" marginheight="0" hspace="0" frameborder="0" scrolling="no" width="100%"></iframe></div>
+
+
+
+
+                              </div>
+
+
+                            </div>
+
+                            <div class="comment-box">
+
+                              <ul class="comment">
+
+                               <li class="read-more-comments" style="display: none;"><a>もっと読む (0)</a></li>
+
+                             </ul>
+
+                             <a class="leave-comment-title">コメントを書く</a>
+
+                           </div>
+                         </footer>
+                       </div>
+                     </article>
+
+                     <div class="permalink pager">
+
+
+                      <span class="pager-prev">
+                        <a href="" rel="prev">
+                          <span class="pager-arrow">« </span>
+                          前のページ
+                        </a>
+                      </span>
+
+
+
+                      <span class="pager-next">
+                        <a href="" rel="next">
+                          次のページ
+                          <span class="pager-arrow"> »</span>
+                        </a>
+                      </span>
+
+                    </div>
+
+                    <!-- rakuten_ad_target_end -->
+                    <!-- google_ad_section_end -->
+
+
+
+                  </div>
+                </div>
+
+                <aside id="box1">
+                  <div id="box1-inner">
+                  </div>
+                </aside>
+
+              </div><!-- #wrapper -->
+
+              <aside id="box2">
+                <div id="box2-inner">
+
+
+
+
+                  <div class="hatena-module hatena-module-profile">
+                    <div class="hatena-module-title">
+                      プロフィール
+                    </div>
+                    <div class="hatena-module-body">
+
+                      <a href="http://blog.manaten.net/about">
+                        <img src="http://cdn1.www.st-hatena.com/users/ma/manaten/profile.gif?1377100491"
+                        alt="id:manaten" class="profile-icon" />
+                      </a>
+
+
+
+                      <span class="id">
+                        <a href="http://blog.manaten.net/about"><span data-load-nickname="1" data-user-name="manaten">id:manaten</span></a>
+
+
+
+
+                        <a href="http://blog.hatena.ne.jp/guide/pro" title="はてなブログPro"><i class="icon-pro" /></i></a>
+
+
+
+
+                      </span>
+
+
+
+                      <div class="profile-description">
+                        <p>ドット絵とかプログラミングとか</p>
+
+                      </div>
+
+
+
+                      <div class="hatena-follow-button-box btn-subscribe">
+                        <a href="#" class="hatena-follow-button">
+                          <span class="subscribing">
+                            <span class="foreground">購読中です</span>
+                            <span class="background">読者をやめる</span>
+                          </span>
+                          <span class="unsubscribing">
+                            <span class="foreground">読者になる</span>
+                            <span class="background">読者になる</span>
+                          </span>
+                        </a>
+                        <div class="subscription-count-box">
+                          <span class="subscription-balloon">
+                          </span>
+                          <span class="subscription-count">
+                          </span>
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+                      <div class="hatena-follow-button-box btn-twitter">
+                        <a href="https://twitter.com/manaten" class="twitter-follow-button" data-show-count="false" data-lang="ja">
+                          @manatenをフォロー
+                        </a>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="hatena-module hatena-module-html">
+
+                    <div class="hatena-module-title">はてなブックマーク</div>
+
+                    <div class="hatena-module-body">
+
+                      <div id="hatena-bookmark-widget0" class="hatena-bookmark hatena-module"><div class="hatena-moduletitle"><a href="http://b.hatena.ne.jp/entrylist?url=http://blog.manaten.net&amp;sort=count"><img src="http://b.hatena.ne.jp/images/widget/favicon.gif"></a></div><div class="hatena-modulebody"><ul><li><a href="http://blog.manaten.net/entry/pixel-webfont" class="hatena-bookmark-entrytitle">ドット絵のWebフォントをつくってみたよ - まなドット</a><span class="hatena-bookmark-count"><strong><a href="http://b.hatena.ne.jp/entry/http://blog.manaten.net/entry/pixel-webfont">17users</a></strong></span></li><li><a href="http://blog.manaten.net/archives/19" class="hatena-bookmark-entrytitle">JavaScriptのthisについて | まなドット</a><span class="hatena-bookmark-count"><strong><a href="http://b.hatena.ne.jp/entry/http://blog.manaten.net/archives/19">13users</a></strong></span></li><li><a href="http://blog.manaten.net/entry/702" class="hatena-bookmark-entrytitle">Cygwinで sshが ~/.ssh/config を見てくれない - まなドット</a><span class="hatena-bookmark-count"><a href="http://b.hatena.ne.jp/entry/http://blog.manaten.net/entry/702">4users</a></span></li><li><a href="http://blog.manaten.net/entry/764" class="hatena-bookmark-entrytitle">node.js で elasticsearchを使ってみる - まなドット</a><span class="hatena-bookmark-count"><a href="http://b.hatena.ne.jp/entry/http://blog.manaten.net/entry/764">2users</a></span></li><li><a href="http://blog.manaten.net/entry/808" class="hatena-bookmark-entrytitle">zshプロンプトで今いるレポジトリに下線が出るようにした -...</a><span class="hatena-bookmark-count"><a href="http://b.hatena.ne.jp/entry/http://blog.manaten.net/entry/808">2users</a></span></li><li><a href="http://blog.manaten.net/entry/pixeltip-grunt-browserify" class="hatena-bookmark-entrytitle">ドット絵のパレットその他を表示するJSをGruntやbrowserifyで作...</a><span class="hatena-bookmark-count"><a href="http://b.hatena.ne.jp/entry/http://blog.manaten.net/entry/pixeltip-grunt-browserify">2users</a></span></li><li><a href="http://blog.manaten.net/entry/windows-phplint" class="hatena-bookmark-entrytitle">WindowsでPHPMDやPHPCSを入れてSublimeLinterでLintする - まなドット</a><span class="hatena-bookmark-count"><a href="http://b.hatena.ne.jp/entry/http://blog.manaten.net/entry/windows-phplint">2users</a></span></li><li><a href="http://blog.manaten.net/entry/573" class="hatena-bookmark-entrytitle">githubのwebhookを使って、push時に自動でサーバーを更新させる...</a><span class="hatena-bookmark-count"><a href="http://b.hatena.ne.jp/entry/http://blog.manaten.net/entry/573">2users</a></span></li><li><a href="http://blog.manaten.net/entry/548" class="hatena-bookmark-entrytitle">HubotでIRCbot consoleと同等のことをする - まなドット</a><span class="hatena-bookmark-count"><a href="http://b.hatena.ne.jp/entry/http://blog.manaten.net/entry/548">2users</a></span></li><li><a href="http://blog.manaten.net/entry/pixel-svgfont" class="hatena-bookmark-entrytitle">ドット絵からsvgフォントを作るプログラムを書いたよ - ま...</a><span class="hatena-bookmark-count"><a href="http://b.hatena.ne.jp/entry/http://blog.manaten.net/entry/pixel-svgfont">2users</a></span></li></ul></div><div class="hatena-modulefooter"><a href="http://b.hatena.ne.jp"><span>Hatena::Bookmark</span></a></div></div>
+                    </div>
+                  </div>
+
+
+                  <div class="hatena-module hatena-module-recent-entries">
+                    <div class="hatena-module-title">
+                      <a href="http://blog.manaten.net/archive">
+                        最新記事
+                      </a>
+                    </div>
+                    <div class="hatena-module-body">
+                      <ul class="hatena-urllist">
+
+                        <li>
+                          <a href="http://blog.manaten.net/entry/867">              <span class="recent-entries-entry-title">正規表現による置換の繰り返しだけでライフゲームを作る</span>          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/entry/858">              <span class="recent-entries-entry-title">HubotでURLが貼られたらページのタイトルをしゃべるようにする</span>          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/entry/852">              <span class="recent-entries-entry-title">hubotにIRCのなると(オペレータ権限)配布をやらせる</span>          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/entry/819">              <span class="recent-entries-entry-title">今使っている WordPress のプラグイン</span>          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/entry/808">              <span class="recent-entries-entry-title">zshプロンプトで今いるレポジトリに下線が出るようにした</span>          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="hatena-module hatena-module-category">
+                    <div class="hatena-module-title">
+                      カテゴリー
+                    </div>
+                    <div class="hatena-module-body">
+                      <ul class="hatena-urllist">
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/CoffeeScript">
+                            CoffeeScript (6)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/Cygwin">
+                            Cygwin (1)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/Dropbox">
+                            Dropbox (1)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/elasticsearch">
+                            elasticsearch (1)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/git">
+                            git (4)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/Hubot">
+                            Hubot (4)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/JavaScript">
+                            JavaScript (13)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/nginx">
+                            nginx (1)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/node.js">
+                            node.js (3)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/PHP">
+                            PHP (6)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/PHP%20bad%20parts">
+                            PHP bad parts (4)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/Play2">
+                            Play2 (2)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/sass">
+                            sass (2)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/Scala">
+                            Scala (2)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/Wordpress">
+                            Wordpress (2)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/zsh">
+                            zsh (4)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/%E3%83%89%E3%83%83%E3%83%88%E7%B5%B5">
+                            ドット絵 (6)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0">
+                            プログラミング (30)
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="http://blog.manaten.net/archive/category/%E3%83%A1%E3%83%A2">
+                            メモ (7)
+                          </a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+
+
+
+
+                  <div class="hatena-module hatena-module-archive">
+                    <div class="hatena-module-title">
+                      <a href="http://blog.manaten.net/archive">月別アーカイブ</a>
+                    </div>
+                    <div class="hatena-module-body">
+                    </div>
+                  </div>
+
+
+                  <div class="hatena-module hatena-module-links">
+                    <div class="hatena-module-title">
+                      リンク
+                    </div>
+                    <div class="hatena-module-body">
+                      <ul class="hatena-urllist">
+
+                        <li>
+                          <a href="http://hatenablog.com/">はてなブログ</a>
+                        </li>
+
+                        <li>
+                          <a href="http://hatenablog.com/guide?via=200109">ブログをはじめる（無料）</a>
+                        </li>
+
+                        <li>
+                          <a href="http://staff.hatenablog.com">お知らせ</a>
+                        </li>
+
+                        <li>
+                          <a href="http://hatenablog.com/g/">はてなブログ グループ</a>
+                        </li>
+
+                      </ul>
+                    </div>
+                  </div>
+
+
+
+                </div>
+              </aside>
+
+            </div>
+          </div>
+
+
+
+
+
+
+
+        </div>
+      </div>
+
+
+      <footer id="footer" data-brand="hatenablog">
+        <div id="footer-inner">
+          <address>
+
+            <a href="http://blog.manaten.net/about"><img src="http://cdn1.www.st-hatena.com/users/ma/manaten/profile.gif?1377100491" width="16" height="16" alt=""/> manaten</a>
+          </address>
+          <p class="services"><a href="http://hatenablog.com/">Hatena Blog</a> / <a href="http://d.hatena.ne.jp/">Hatena::Diary</a></p>
+        </div>
+      </footer>
+
+
+
+    </body>
+    </html>

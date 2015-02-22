@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: '6x6_fat';
+    src:url('http://manaten.net/wp-content/uploads/2014/02/6x6_fat.eot?-rwlf8g');
+    src:url('http://manaten.net/wp-content/uploads/2014/02/6x6_fat.eot?#iefix-rwlf8g') format('embedded-opentype'),
+        url('http://manaten.net/wp-content/uploads/2014/02/6x6_fat.woff?-rwlf8g') format('woff'),
+        url('http://manaten.net/wp-content/uploads/2014/02/6x6_fat.ttf?-rwlf8g') format('truetype'),
+        url('http://manaten.net/wp-content/uploads/2014/02/6x6_fat.svg?-rwlf8g#6x6_fat') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: '8x8_bold';
+    src:url('http://manaten.net/wp-content/uploads/2014/02/8x8_bold.eot?qerfg');
+    src:url('http://manaten.net/wp-content/uploads/2014/02/8x8_bold.eot?#iefixqerfg') format('embedded-opentype'),
+        url('http://manaten.net/wp-content/uploads/2014/02/8x8_bold.woff?qerfg') format('woff'),
+        url('http://manaten.net/wp-content/uploads/2014/02/8x8_bold.ttf?qerfg') format('truetype'),
+        url('http://manaten.net/wp-content/uploads/2014/02/8x8_bold.svg?qerfg#8x8_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* -------- variables --------  */
+$brand-primary: #476;
+$body-bg: #FEFEFE;
+$screen-lg: 1500px;
+$font-family-sans-serif: 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'MS PGothic', sans-serif;
+
+$main-border-color: #CCC;
+
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+@import "bootstrap";
+//@import "header";
+@import "boilerplate";

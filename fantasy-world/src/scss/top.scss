@@ -1,0 +1,33 @@
+@charset "utf-8";
+
+@mixin sprite($x, $y, $width, $height) {
+  width:  $width;
+  height: $height;
+  display: block;
+  overflow: hidden;
+  background-position: $x*-1 $y*-1;
+  text-indent: 1000%;
+  white-space: nowrap;
+}
+
+div#top-image {
+  width: 400px;
+  max-width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+
+  div {
+    max-width: 100%;
+    background-image: inline-image("top.gif");
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.layer1 { @include sprite(0, 300px, 400px, 300px); }
+    &.layer2 { @include sprite(0, 0, 400px, 300px); }
+    &.layer3 { @include sprite(0, 600px, 400px, 300px); }
+    &.layer4 { @include sprite(0, 900px, 400px, 300px); }
+    &.layer5 { @include sprite(0, 1200px, 400px, 300px); }
+  }
+}
