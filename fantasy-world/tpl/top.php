@@ -17,8 +17,8 @@ $(function() {
   });
 
   var mouceHandler = function(ev) {
-    var dx = (ev.pageX || baseX) - baseX;
-    var dy = (ev.pageY || baseY) - baseY;
+    var dx = (ev.pageX !== undefined ? ev.pageX : baseX) - baseX;
+    var dy = (ev.pageY !== undefined ? ev.pageY : baseY) - baseY;
     $.each(layers, function(_, layer) {
       layer.$.css({
         left: layer.baseX * scale() + (dx * layer.factor) + 'px',
