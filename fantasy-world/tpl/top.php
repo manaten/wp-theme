@@ -46,6 +46,32 @@ $(function() {
 </script>
 
 <style>
+
+@-moz-keyframes anime {
+0% {opacity: 0;}
+80% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+@-webkit-keyframes anime {
+0% {opacity: 0;}
+80% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+@-o-keyframes anime {
+0% {opacity: 0;}
+80% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+@-ms-keyframes anime {
+0% {opacity: 0;}
+80% {opacity: 0;}
+100% {opacity: 1;}
+}
+
+
 div.pixelParallax {
   margin: 0 auto;
   width: 0px;
@@ -59,18 +85,30 @@ div#fantasy.pixelParallax div {
   position: absolute;
 }
 div#fantasy div.Priest {
+  -moz-animation: anime 5s ease -3.5s 1 alternate;
+  -webkit-animation: anime 5s ease -3.5s 1 alternate;
+  -o-animation: anime 5s ease -3.5s 1 alternate;
+  -ms-animation: anime 5s ease -3.5s 1 alternate;
   width: 160px; height: 192px;
   background-position: -640px -0px;
   left: 160px; top: 160px;
   z-index: 9;
 }
 div#fantasy div.Mage {
+  -moz-animation: anime 5s ease -2.5s 1 alternate;
+  -webkit-animation: anime 5s ease -2.5s 1 alternate;
+  -o-animation: anime 5s ease -2.5s 1 alternate;
+  -ms-animation: anime 5s ease -2.5s 1 alternate;
   width: 192px; height: 224px;
   background-position: -640px -192px;
   left: 128px; top: 0px;
   z-index: 8;
 }
 div#fantasy div.Fighter {
+  -moz-animation: anime 5s ease -3s 1 alternate;
+  -webkit-animation: anime 5s ease -3s 1 alternate;
+  -o-animation: anime 5s ease -3s 1 alternate;
+  -ms-animation: anime 5s ease -3s 1 alternate;
   width: 192px; height: 160px;
   background-position: -832px -192px;
   left: -320px; top: 64px;
