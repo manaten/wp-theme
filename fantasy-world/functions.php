@@ -228,6 +228,7 @@ function allow_upload_psd( $mimes ) {
     $mimes['svg'] = 'image/svg-xml';
     $mimes['ttf'] = 'font/ttf';
     $mimes['eot'] = 'application/x-font-opentype';
+    $mimes['jar'] = 'application/x-jar';
     return $mimes;
 }
 add_filter( 'upload_mimes', 'allow_upload_psd' );
